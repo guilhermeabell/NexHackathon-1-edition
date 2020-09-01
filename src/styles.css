@@ -1,0 +1,31 @@
+:root {
+    --primary-color: #15AB89;
+    --secondary-color: #76D9B9;
+    --tertiary-color: #2FDF84;
+    --quaternary-color: #E4E4E4;
+    --text-color: #f4f4f4;
+    --background-color: #020E17;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: var(--background-color);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body, input, button {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .waves {
+    width: 100%;
+  }
