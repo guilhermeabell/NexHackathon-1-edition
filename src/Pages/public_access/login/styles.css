@@ -1,0 +1,156 @@
+#loginPublic-page .loginPublic-content {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  gap: 10vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#loginPublic-page .loginPublic-content .loginPublic-header {
+  width: 65%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+#loginPublic-page .loginPublic-content .loginPublic-header .login-backButton:hover {
+  transition: 0.2s;
+  cursor: pointer;
+  filter: opacity(70%);
+}
+
+
+#loginPublic-page .loginPublic-content .loginPublic-header .login-text {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 2rem;
+  width: 200px;
+
+  display: flex;
+  align-items: center;
+}
+
+#loginPublic-page .loginPublic-content .loginPublic-form {
+  width: 50%;
+}
+
+#loginPublic-page .loginPublic-content .loginPublic-form form .loginForm-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#loginPublic-page .loginPublic-content .loginPublic-form form .loginForm-field span {
+  margin: 0 0 5px 10px;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 16px;
+}
+#loginPublic-page .loginPublic-content .loginPublic-form form .loginForm-field input {
+  width: 100%;
+  margin-bottom: 10px;
+
+  background: var(--quarternary-color);
+  border-radius: 10px;
+  border: 0;
+  padding: 12px 14px;
+  font-size: 16px;
+  color: #2e2e2e;
+  outline: 0;
+}
+#loginPublic-page .loginPublic-content .loginPublic-form form .form-submitButton {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+#loginPublic-page .loginPublic-content .loginPublic-form form .form-submitButton button {
+  width: 40%;
+  background: var(--primary-color);
+  border-radius: 10px;
+  border: 0;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+  outline: 0;
+  transition: 0.2s;
+}
+
+#loginPublic-page .loginPublic-content .loginPublic-form form .form-submitButton button:hover {
+  background: var(--primary-dark-color);
+  cursor: pointer;
+}
+
+#loginPublic-page .loginPublic-content .loginPublic-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loginPublic-page .loginPublic-content .loginPublic-footer p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-color);
+}
+
+#loginPublic-page .loginPublic-content .loginPublic-footer a {
+  margin-left: 5px;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+#loginPublic-page .loginPublic-content .loginPublic-footer a:hover {
+  filter: opacity(70%);
+}
+
+@media (max-width: 600px) {
+  #loginPublic-page .loginPublic-content .loginPublic-header {
+    width: 90%;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  #loginPublic-page .loginPublic-content .loginPublic-form {
+    width: 80%;
+  }
+
+  #loginPublic-page .loginPublic-content .loginPublic-form form .form-submitButton button {
+    width: 100%;
+  }
+
+  #loginPublic-page .loginPublic-content .loginPublic-footer p {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--text-color);
+  }
+  
+  #loginPublic-page .loginPublic-content .loginPublic-footer a {
+    margin-left: 5px;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 300px) {
+  #loginPublic-page .loginPublic-content .loginPublic-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
