@@ -11,8 +11,7 @@
 
 .header-line {
   width: 100%;
-  position: absolute;
-  top: 11%;
+  margin-top: 10px;
 }
 
 .homePublic-header .header-content {
@@ -33,15 +32,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .homePublic-header  .header-content .header-links a button {
-  width: 15vw;
-  height: 7vh;
-  margin-right: 10px;
+  padding: 10px 20px;
+
   background: var(--primary-color);
   border: none;
-  border-radius: 1vw;
+  border-radius: 10px;
 
   color: var(--text-color);
   font-size: 2.2vh;
@@ -53,9 +52,14 @@
   padding-top: 5px;
 }
 
-.homePublic-header .header-content .header-links a:hover {
+.homePublic-header .header-content .header-links a button:hover {
   transition: 0.2s;
-  opacity: 70%;
+  background: var(--primary-dark-color);
+}
+
+.homePublic-header .header-content .header-links a svg:hover {
+  transition: 0.2s;
+  filter: opacity(80%);
 }
 
 @media (max-width: 900px) {
@@ -77,7 +81,20 @@
   }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 600px) {
+  .homePublic-header  .header-content .header-links a button {
+    background: var(--primary-color);
+    border: none;
+    border-radius: 1vw;
+
+    color: var(--text-color);
+    font-size: 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 462px) {
   .homePublic-header .header-content img{
     width: 200px;
     margin-right: 15px;
@@ -85,11 +102,5 @@
 
   .homePublic-header  .header-content .header-links a button {
     display: none;
-  }
-
-  .header-line {
-    width: 100%;
-    position: absolute;
-    top: 10%;
   }
 }

@@ -49,11 +49,13 @@ const AboutSectionComponent = () => {
 
                 </div>
 
-                <Link to="/register">
-                    <button>
-                        Inscreva-se
-                    </button>
-                </Link>
+                <div className="section4-about-button" >
+                    <Link to="/register">
+                        <button>
+                            Inscreva-se
+                        </button>
+                    </Link>
+                </div>
             </div>
         </div>
         </>

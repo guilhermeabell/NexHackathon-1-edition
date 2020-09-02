@@ -61,9 +61,12 @@
   text-align: justify;
 }
 
-.homePublic-section4 .section4-content a button {
+.homePublic-section4 .section4-content .section4-about-button {
+  margin: 50px 0;
+}
+
+.homePublic-section4 .section4-content .section4-about-button a button {
   padding: 10px 20px;
-  margin-top: 10vh;
   background: var(--primary-color);
   border: none;
   border-radius: 10px;
@@ -76,8 +79,8 @@
   cursor: pointer;
 }
 
-.homePublic-section4 .section4-content a button:hover {
-  opacity: 80%;
+.homePublic-section4 .section4-content .section4-about-button a button:hover {
+  background: var(--primary-dark-color);
 }
 
 .waveSection4 {

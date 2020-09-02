@@ -134,4 +134,8 @@
     font-family: 'Poppins', sans-serif;
     text-align: right;
   }
+
+  .moving-mouse-holder {
+    display: none;
+  }
 }

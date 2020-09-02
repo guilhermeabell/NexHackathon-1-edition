@@ -26,9 +26,8 @@ const HeaderComponent = () => {
                     </Link>
                 </div>
             </div>
+            <hr className="header-line" />
         </div>
-
-        <hr className="header-line" />
         </>
     )
 }
