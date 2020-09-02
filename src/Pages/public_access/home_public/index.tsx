@@ -7,8 +7,12 @@ import ThemesSectionComponent from './components/ThemesSection/index'
 import TimeLineComponent from './components/Timeline/index'
 import AboutSectionComponent from './components/AboutSection/index'
 import AwardSectionComponent from './components/AwardSection/index'
+import PartnersSection from './components/PartnersSection/index'
 
 import './styles.css'
+
+// Images
+import GreenHeart from './assets/Home/greenHeart.svg'
 
 const PublicHomePage = () => {
     return (
@@ -33,6 +37,16 @@ const PublicHomePage = () => {
                 {/* Quinta Seção */}
                 <AwardSectionComponent />
 
+                {/* Sexta Seção */}
+                <PartnersSection />
+
+
+                <div className="homePublic-footer">
+                    <span>
+                        Total de <b>200</b> participantes já cadastrados.
+                        <img src={GreenHeart} />
+                    </span>
+                </div>
             </div>
         </div>
     )

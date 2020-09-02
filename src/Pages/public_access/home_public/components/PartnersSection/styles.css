@@ -1,0 +1,32 @@
+.homePublic-section6 {
+  background: #D8D8D8;
+}
+
+.homePublic-section6 .section6-content {
+  padding: 44px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homePublic-section6 .section6-content .section6-patners-title {
+  margin-bottom: 50px;
+
+  font-size: 22px;
+  font-weight: 600;
+  color: #9F9F9F;
+  text-transform: uppercase;
+}
+
+.homePublic-section6 .section6-content .section6-patners-items .section6-patners-item-first img {
+  margin-bottom: 100px;
+  width: 19vw;
+}
+
+@media (max-width: 600px) {
+  .homePublic-section6 .section6-content .section6-patners-items .section6-patners-item-first img {
+    margin-bottom: 100px;
+    width: 200px;
+  }
+}

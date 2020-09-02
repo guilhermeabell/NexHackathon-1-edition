@@ -1,3 +1,30 @@
-#homePublic-page {
+#homePublic-page .homePublic-content .homePublic-footer {
+  padding: 50px 0;
 
+  display: flex;
+  justify-content: center;
+}
+
+#homePublic-page .homePublic-content span {
+  display: flex;
+  align-items: center;
+
+  font-size: 2vh;
+  color: var(--text-color);
+}
+
+#homePublic-page .homePublic-content span b {
+  color: var(--tertiary-color);
+  margin: 0 5px;
+}
+
+#homePublic-page .homePublic-content span img {
+  width: 15px;
+  margin-left: 10px;
+}
+
+@media (max-width: 300px) {
+  #homePublic-page .homePublic-content span {
+    font-size: 1.5vh;
+  }
 }

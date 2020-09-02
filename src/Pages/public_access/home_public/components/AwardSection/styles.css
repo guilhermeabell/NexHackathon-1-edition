@@ -17,6 +17,7 @@
 }
 
 .homePublic-section5 .section5-content .section5-award-items {
+  margin-bottom: 70px;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
