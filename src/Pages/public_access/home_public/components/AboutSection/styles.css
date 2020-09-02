@@ -1,0 +1,98 @@
+.homePublic-section4 {
+  background: var(--secondary-color);
+
+  display: flex;
+  justify-content: center;
+}
+
+.homePublic-section4 .section4-content {
+  width: 85%;
+  margin: 30px 0 70px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.homePublic-section4 .section4-content .section4-about-title {
+  font-size: 4vh;
+  font-weight: 700;
+  color: var(--text-color);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.homePublic-section4 .section4-content .section4-about-description {
+  width: 80%;
+  margin-top: 30px;
+
+  font-size: 2.5vh;
+  font-weight: 400;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.homePublic-section4 .section4-content .section4-about-subtitle {
+  margin: 30px 0 50px 0;
+
+  font-size: 3vh;
+  font-weight: 400;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.homePublic-section4 .section4-content .section4-about-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 41px;
+}
+
+.homePublic-section4 .section4-content .section4-about-items .section4-about-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.homePublic-section4 .section4-content .section4-about-items .section4-about-item .section4-item-description {
+  font-size: 2.5vh;
+  font-weight: 400;
+  color: var(--text-color);
+  text-align: justify;
+}
+
+.homePublic-section4 .section4-content a button {
+  padding: 10px 20px;
+  margin-top: 10vh;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 10px;
+
+  font-size: 2.5vh;
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.homePublic-section4 .section4-content a button:hover {
+  opacity: 80%;
+}
+
+.waveSection4 {
+  width: 100%;
+  margin-bottom: -10px;
+}
+
+@media (max-width: 600px) {
+
+  .homePublic-section4 .section4-content .section4-about-items {
+    grid-template-columns: 1fr;
+  }
+
+  .homePublic-section4 .section4-content .section4-about-items .section4-about-item {
+    flex-direction: column;
+    align-items: center;
+  }
+}

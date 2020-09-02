@@ -1,0 +1,86 @@
+
+.homePublic-section3 {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.homePublic-section3 .section3-content {
+  width: 100%;
+  margin-bottom: 30vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homePublic-section3 .section3-content .section3-title {
+  margin-top: 5vh;
+  color: var(--text-color);
+  font-size: 22px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+
+.homePublic-section3 .section3-content .section3-timeline {
+  position: relative;
+  width: 85%;
+  margin-top: 70px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.homePublic-section3 .section3-content .section3-timeline .section3-timeline-line {
+  position: absolute;
+  
+  height: 20px;
+  margin-left: 5px;
+  background: rgba(21, 171, 137, 0.5);
+}
+
+.homePublic-section3 .section3-content .section3-timeline .section3-timeline-dots {
+  width: 94%;
+  position: absolute;
+  
+  display: flex;
+  justify-content: space-between;
+}
+
+.homePublic-section3 .section3-content .section3-timeline .section3-timeline-dots .section3-timeline-dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f4f4f4;
+}
+
+.homePublic-section3 .section3-content .section3-timeline .section3-line {
+  width: 94%;
+  border: 0;
+  border-bottom: 5px dashed #f4f4f4;
+}
+
+.homePublic-section3 .section3-content .section3-timeline-times {
+  width: 85%;
+  margin-top: 50px;
+  
+  display: flex;
+  justify-content: space-between;
+}
+
+.homePublic-section3 .section3-content .section3-timeline-times .section3-timeline-time .section3-timeline-desc {
+  margin-top: 10px;
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 598px) {
+  .homePublic-section3 {
+    display: none;
+  }
+}

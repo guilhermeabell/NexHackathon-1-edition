@@ -1,0 +1,63 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+// Icons
+import EditIcon from '../../assets/Home/aboutIcons/edit.svg'
+import GroupIcon from '../../assets/Home/aboutIcons/group.svg'
+import NetworkIcon from '../../assets/Home/aboutIcons/network.svg'
+import RouteIcon from '../../assets/Home/aboutIcons/route.svg'
+
+// Wave
+import Wave from '../../assets/Home/waves/waveSection4.svg'
+
+
+import './styles.css'
+
+const AboutSectionComponent = () => {
+    return (
+        <>
+        <img className="waveSection4" src={Wave} />
+
+        <div className="homePublic-section4">
+            <div className="section4-content">
+                
+                <p className="section4-about-title" >Como funciona?</p>
+                <p className="section4-about-description" >Hackathon é um evento inovador, que reúne programadores, designers e outros profissionais ligados ao desenvolvimento de soluções em maratonas de trabalho com o objetivo de criar resoluções específicas para um ou vários desafios.</p>
+                <p className="section4-about-subtitle">Siga os passos a seguir para participar da competição</p>
+
+                <div className="section4-about-items">
+
+                    <div className="section4-about-item">
+                        <img src={EditIcon} />
+                        <p className="section4-item-description">O primeiro passo para participar do nosso hackathon é você se registrar, assim podemos ter acesso aos seus dados e saber se você é uma pessoa real, além de poder  receber os prêmios e benefícios.</p>
+                    </div>
+
+                    <div className="section4-about-item">
+                        <img src={GroupIcon} />
+                        <p className="section4-item-description">O primeiro passo para participar do nosso hackathon é você se registrar, assim podemos ter acesso aos seus dados e saber se você é uma pessoa real, além de poder  receber os prêmios e benefícios.</p>
+                    </div>
+
+                    <div className="section4-about-item">
+                        <img src={NetworkIcon} />
+                        <p className="section4-item-description">O primeiro passo para participar do nosso hackathon é você se registrar, assim podemos ter acesso aos seus dados e saber se você é uma pessoa real, além de poder  receber os prêmios e benefícios.</p>
+                    </div>
+
+                    <div className="section4-about-item">
+                        <img src={RouteIcon} />
+                        <p className="section4-item-description">O primeiro passo para participar do nosso hackathon é você se registrar, assim podemos ter acesso aos seus dados e saber se você é uma pessoa real, além de poder  receber os prêmios e benefícios.</p>
+                    </div>
+
+                </div>
+
+                <Link to="/register">
+                    <button>
+                        Inscreva-se
+                    </button>
+                </Link>
+            </div>
+        </div>
+        </>
+    )
+}
+
+export default AboutSectionComponent
