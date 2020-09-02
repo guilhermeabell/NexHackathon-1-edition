@@ -22,6 +22,8 @@ const LoginPage = () => {
                                 type="email"
                                 name="email"
                                 id="email"
+                                autoCapitalize="none"
+                                autoComplete="false"
                                 placeholder="Digite seu e-mail"
                             />
                         </div>
@@ -32,6 +34,8 @@ const LoginPage = () => {
                                 type="password"
                                 name="password"
                                 id="password"
+                                autoCapitalize="none"
+                                autoComplete="off"
                                 placeholder="Digite sua senha"
                             />
                         </div>
