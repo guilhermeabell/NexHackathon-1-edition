@@ -12,7 +12,7 @@
 .header-line {
   width: 100%;
   position: absolute;
-  top: 10vh;
+  top: 11%;
 }
 
 .homePublic-header .header-content {
@@ -85,5 +85,11 @@
 
   .homePublic-header  .header-content .header-links a button {
     display: none;
+  }
+
+  .header-line {
+    width: 100%;
+    position: absolute;
+    top: 10%;
   }
 }

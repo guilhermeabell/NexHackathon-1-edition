@@ -7,6 +7,7 @@ import './styles.css'
 
 const InfoSectionComponent = () => {
     return (
+        <>
         <div className="homePublic-section1">
             <div className="section1-content">
                 <img src={Illustration} />
@@ -24,6 +25,13 @@ const InfoSectionComponent = () => {
                 </div>
             </div>
         </div>
+        
+        <div className="moving-mouse-holder">
+            <div className="mouse">
+            <div className="mouse-button">&nbsp;</div>
+            </div>
+        </div>
+    </>
     )
 }
 

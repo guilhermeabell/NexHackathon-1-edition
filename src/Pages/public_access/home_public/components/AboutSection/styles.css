@@ -95,4 +95,8 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .homePublic-section4 .section4-content .section4-about-items .section4-about-item .section4-item-description {
+    font-size: 2.1vh;
+  }
 }
