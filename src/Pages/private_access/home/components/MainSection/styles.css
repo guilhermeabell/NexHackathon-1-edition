@@ -1,0 +1,105 @@
+.homePrivate-main {
+  width: 100%;
+  margin-top: 5vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+.homePrivate-main .homePrivate-main-content {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.homePrivate-main .homePrivate-main-content .main-section {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.homePrivate-main .homePrivate-main-content .main-section .main-item-container {
+  width: 45%;
+  padding: 15vh 10px;
+  background: var(--foreground-color);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.homePrivate-main .homePrivate-main-content .main-section .main-item-container p {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+}
+
+@media (max-width: 900px) {
+  .homePrivate-main .homePrivate-main-content {
+    width: 85%;
+  }
+
+  .homePrivate-main .homePrivate-main-content .main-section {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .homePrivate-main .homePrivate-main-content .main-section .main-item-container {
+    min-width: 150px;
+  }
+
+  .homePrivate-main .homePrivate-main-content .main-section::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .homePrivate-main .homePrivate-main-content {
+    width: 95%;
+  }
+
+  .homePrivate-main .homePrivate-main-content .main-section {
+    margin-left: 12vw;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .homePrivate-main .homePrivate-main-content .main-section .main-item-container {
+    min-width: 300px;
+  }
+
+  .homePrivate-main .homePrivate-main-content .main-section::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .homePrivate-main .homePrivate-main-content {
+    width: 95%;
+  }
+
+  .homePrivate-main .homePrivate-main-content .main-section {
+    margin-left: 12vw;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .homePrivate-main .homePrivate-main-content .main-section .main-item-container {
+    min-width: 245px;
+  }
+
+  .homePrivate-main .homePrivate-main-content .main-section::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+}

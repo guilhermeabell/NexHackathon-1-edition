@@ -1,8 +1,7 @@
-.homePublic-header {
+.homePrivate-header {
   width: 100%;
-  top: 15px;
+  margin-top: 15px;
   margin-bottom: 2vh;
-  position: absolute;
 
   display: flex;
   align-items: center;
@@ -12,10 +11,10 @@
 .header-line {
   width: 100%;
   margin-top: 10px;
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--secondary-color);
 }
 
-.homePublic-header .header-content {
+.homePrivate-header .header-content {
   width: 85%;
 
   display: flex;
@@ -23,11 +22,11 @@
   justify-content: space-between;
 }
 
-.homePublic-header .header-content img{
+.homePrivate-header .header-content img{
   width: 18vw;
 }
 
-.homePublic-header .header-content .header-links {
+.homePrivate-header .header-content .header-links {
   height: 100%;
 
   display: flex;
@@ -36,7 +35,7 @@
   gap: 20px;
 }
 
-.homePublic-header  .header-content .header-links a button {
+.homePrivate-header  .header-content .header-links a button {
   padding: 10px 20px;
 
   background: var(--primary-color);
@@ -49,26 +48,26 @@
   cursor: pointer;
 }
 
-.homePublic-header  .header-content .header-links a svg {
+.homePrivate-header  .header-content .header-links a svg {
   padding-top: 5px;
 }
 
-.homePublic-header .header-content .header-links a button:hover {
+.homePrivate-header .header-content .header-links a button:hover {
   transition: 0.2s;
   background: var(--primary-dark-color);
 }
 
-.homePublic-header .header-content .header-links a svg:hover {
+.homePrivate-header .header-content .header-links a svg:hover {
   transition: 0.2s;
   filter: opacity(80%);
 }
 
 @media (max-width: 900px) {
-  .homePublic-header .header-content img{
+  .homePrivate-header .header-content img{
     width: 200px;
   }
 
-  .homePublic-header  .header-content .header-links a button {
+  .homePrivate-header  .header-content .header-links a button {
     height: 6vh;
     width: 29vw;
     background: var(--primary-color);
@@ -83,7 +82,7 @@
 }
 
 @media (max-width: 600px) {
-  .homePublic-header  .header-content .header-links a button {
+  .homePrivate-header  .header-content .header-links a button {
     background: var(--primary-color);
     border: none;
     border-radius: 1vw;
@@ -96,12 +95,12 @@
 }
 
 @media (max-width: 462px) {
-  .homePublic-header .header-content img{
+  .homePrivate-header .header-content img{
     width: 200px;
     margin-right: 15px;
   }
 
-  .homePublic-header  .header-content .header-links a button {
+  .homePrivate-header  .header-content .header-links a button {
     display: none;
   }
 }

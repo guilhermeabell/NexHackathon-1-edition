@@ -68,8 +68,12 @@
   justify-content: center;
 }
 
+#loginPublic-page .loginPublic-content .loginPublic-form form .form-submitButton a {
+  width: 65%;
+}
+
 #loginPublic-page .loginPublic-content .loginPublic-form form .form-submitButton button {
-  width: 40%;
+  width: 100%;
   background: var(--primary-color);
   border-radius: 10px;
   border: 0;
@@ -112,6 +116,7 @@
 }
 
 @media (max-width: 600px) {
+
   #loginPublic-page .loginPublic-content .loginPublic-header {
     width: 90%;
   
@@ -123,6 +128,10 @@
 
   #loginPublic-page .loginPublic-content .loginPublic-form {
     width: 80%;
+  }
+
+  #loginPublic-page .loginPublic-content .loginPublic-form form .form-submitButton a {
+    width: 100%;
   }
 
   #loginPublic-page .loginPublic-content .loginPublic-form form .form-submitButton button {

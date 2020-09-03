@@ -1,15 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
+import HeaderComponent from '../../../Components/HeaderPrivateComponent/index'
+import MainSection from './components/MainSection/index'
+import ShortcutSection from './components/ShortcutSection/index'
 
-const PublicHomePage = () => {
+const PrivateHomePage = () => {
     return (
-        <div id="homePublic-page">
-            <div className="homePublic-content">
-                <p className="homePublic-text">Home Page publica!</p>
+        <div id="homePrivate-page">
+            <div className="homePrivate-content">
+                <HeaderComponent />
+
+                <MainSection />
+
+                <ShortcutSection />
             </div>
         </div>
     )
 }
 
-export default PublicHomePage
+export default PrivateHomePage

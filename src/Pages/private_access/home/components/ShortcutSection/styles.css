@@ -1,0 +1,91 @@
+.homePrivate-shortcuts {
+  width: 100%;
+  margin-top: 5vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+.homePrivate-shortcuts .homePrivate-shortcuts-content {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.homePrivate-shortcuts .homePrivate-shortcuts-content .shortcut-section-title .shortcut-title {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.homePrivate-shortcuts .homePrivate-shortcuts-content .shortcuts-section {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.homePrivate-shortcuts .homePrivate-shortcuts-content .shortcuts-section .shortcut-item {
+  width: 150px;
+  height: 150px;
+  border: 3px solid var(--quintenary-color);
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.homePrivate-shortcuts .homePrivate-shortcuts-content .shortcuts-section .shortcut-item:hover {
+  background: rgba(118, 255, 206, 0.15);
+}
+
+.homePrivate-shortcuts .homePrivate-shortcuts-content .shortcuts-section .shortcut-item img {
+  width: 70px;
+}
+
+.homePrivate-shortcuts .homePrivate-shortcuts-content .shortcuts-section .shortcut-item p {
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .homePrivate-shortcuts .homePrivate-shortcuts-content {
+    width: 80%;
+  }
+
+  .homePrivate-shortcuts .homePrivate-shortcuts-content .shortcuts-section {
+    overflow-x: auto;
+  }
+
+  .homePrivate-shortcuts .homePrivate-shortcuts-content .shortcuts-section::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .homePrivate-shortcuts .homePrivate-shortcuts-content {
+    width: 100%;
+  }
+  .homePrivate-shortcuts .homePrivate-shortcuts-content .shortcut-section-title .shortcut-title {
+    margin-left: 10vw;
+  }
+
+  .homePrivate-shortcuts .homePrivate-shortcuts-content .shortcuts-section {
+    margin-left: 12vw;
+    overflow-x: auto;
+  }
+
+  .homePrivate-shortcuts .homePrivate-shortcuts-content .shortcuts-section::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+}

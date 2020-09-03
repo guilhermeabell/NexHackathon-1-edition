@@ -10,7 +10,9 @@ const LoginPage = () => {
         <div id="loginPublic-page">
             <div className="loginPublic-content">
                 <div className="loginPublic-header">
-                    <IoIosArrowRoundBack className="login-backButton" size="50" color="#f4f4f4" />
+                    <Link to="/" >
+                        <IoIosArrowRoundBack className="login-backButton" size="50" color="#f4f4f4" />
+                    </Link>
                     <p className="login-text">É bom te ver por aqui!</p>
                 </div>
 
@@ -41,7 +43,9 @@ const LoginPage = () => {
                         </div>
 
                         <div className="form-submitButton">
-                            <button type="submit">Fazer Login</button>
+                            <Link to="/home">
+                                <button type="submit">Fazer Login</button>
+                            </Link>
                         </div>
                     </form>
                 </div>
