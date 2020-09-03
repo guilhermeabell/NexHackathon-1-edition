@@ -78,7 +78,7 @@
   }
 
   .homePrivate-shortcuts .homePrivate-shortcuts-content .shortcuts-section {
-    margin-left: 12vw;
+    padding: 0 8vw;
     overflow-x: auto;
   }
 
@@ -88,4 +88,11 @@
     overflow: hidden;
   }
 
+}
+
+@media (hover: hover) { 
+  a:hover {
+    background: transparent;
+    color: transparent;
+  }
 }
