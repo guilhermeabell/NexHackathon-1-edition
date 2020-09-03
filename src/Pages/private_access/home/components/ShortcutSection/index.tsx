@@ -22,7 +22,7 @@ const MainShortcutComponent = () => {
                         <Link to="/rank" className="shortcut-item">
                             <img className="shortcut-item-image" src={RankingImg} />
 
-                            <p className="shortcut-item-title">Comunidade</p>
+                            <p className="shortcut-item-title">Classificação</p>
                         </Link>
                     </div>
 

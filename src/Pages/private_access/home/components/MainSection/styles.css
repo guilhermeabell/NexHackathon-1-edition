@@ -1,6 +1,6 @@
 .homePrivate-main {
   width: 100%;
-  margin-top: 5vh;
+  margin-top: 2vh;
 
   display: flex;
   justify-content: center;
@@ -13,7 +13,6 @@
 }
 
 .homePrivate-main .homePrivate-main-content .main-section {
-  margin-top: 5vh;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;

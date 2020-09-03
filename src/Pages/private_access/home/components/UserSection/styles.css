@@ -1,0 +1,55 @@
+.homePrivate-user {
+  width: 100%;
+  margin-top: 5vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+.homePrivate-user .homePrivate-user-content {
+  width: 65%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.homePrivate-user .homePrivate-user-content .user-section-img {
+  width: 70px;
+  height: 70px;
+  position: relative;
+}
+
+.homePrivate-user .homePrivate-user-content .user-section-img .user-green-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #020E17;
+  bottom: 1px;
+  right: 1px;
+  position: absolute;
+
+  background: #07F9A2;
+}
+
+.homePrivate-user .homePrivate-user-content .user-section-img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.homePrivate-user .homePrivate-user-content .user-section-title {
+  margin-left: 20px;
+}
+
+.homePrivate-user .homePrivate-user-content .user-section-title p {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 1.2rem;
+
+  color: var(--text-color);
+}
+
+@media (max-width: 600px) {
+  .homePrivate-user .homePrivate-user-content {
+    width: 90%;
+  }
+}

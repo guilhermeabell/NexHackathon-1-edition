@@ -19,7 +19,8 @@
 }
 
 .homePrivate-shortcuts .homePrivate-shortcuts-content .shortcuts-section {
-  margin-top: 5vh;
+  margin-top: 2vh;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
