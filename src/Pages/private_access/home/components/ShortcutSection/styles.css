@@ -71,14 +71,10 @@
 
 @media (max-width: 600px) {
   .homePrivate-shortcuts .homePrivate-shortcuts-content {
-    width: 100%;
-  }
-  .homePrivate-shortcuts .homePrivate-shortcuts-content .shortcut-section-title .shortcut-title {
-    margin-left: 10vw;
+    width: 90%;
   }
 
   .homePrivate-shortcuts .homePrivate-shortcuts-content .shortcuts-section {
-    padding: 0 8vw;
     overflow-x: auto;
   }
 
@@ -86,13 +82,5 @@
     width: 0;
     height: 0;
     overflow: hidden;
-  }
-
-}
-
-@media (hover: hover) { 
-  a:hover {
-    background: transparent;
-    color: transparent;
   }
 }

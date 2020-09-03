@@ -14,7 +14,7 @@
 
 .homePrivate-main .homePrivate-main-content .main-section {
   margin-top: 5vh;
-  border-radius: 15px;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,7 +70,7 @@
   }
 
   .homePrivate-main .homePrivate-main-content .main-section .main-item-container {
-    min-width: 300px;
+    min-width: 350px;
   }
 
   .homePrivate-main .homePrivate-main-content .main-section::-webkit-scrollbar {
@@ -93,7 +93,7 @@
   }
 
   .homePrivate-main .homePrivate-main-content .main-section .main-item-container {
-    min-width: 280px;
+    min-width: 350px;
   }
 
   .homePrivate-main .homePrivate-main-content .main-section::-webkit-scrollbar {

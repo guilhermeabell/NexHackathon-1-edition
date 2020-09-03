@@ -20,33 +20,33 @@ const MainShortcutComponent = () => {
 
                     <div className="shortcut-item-container">
                         <Link to="/rank" className="shortcut-item">
-                                <img className="shortcut-item-image" src={RankingImg} />
+                            <img className="shortcut-item-image" src={RankingImg} />
 
-                                <p className="shortcut-item-title">Comunidade</p>
+                            <p className="shortcut-item-title">Comunidade</p>
                         </Link>
                     </div>
 
                     <div className="shortcut-item-container">
                         <Link to="/rank" className="shortcut-item">
-                                <img className="shortcut-item-image" src={MaterialsImg} />
+                            <img className="shortcut-item-image" src={MaterialsImg} />
 
-                                <p className="shortcut-item-title">Materiais</p>
+                            <p className="shortcut-item-title">Materiais</p>
                         </Link>
                     </div>
 
                     <div className="shortcut-item-container">
                         <Link to="/rank" className="shortcut-item">
-                                <img className="shortcut-item-image" src={ProfileImg} />
+                            <img className="shortcut-item-image" src={ProfileImg} />
 
-                                <p className="shortcut-item-title">Perfil</p>
+                            <p className="shortcut-item-title">Perfil</p>
                         </Link>
                     </div>
 
                     <div className="shortcut-item-container">
                         <Link to="/rank" className="shortcut-item">
-                                <img className="shortcut-item-image" src={GroupImg} />
+                            <img className="shortcut-item-image" src={GroupImg} />
 
-                                <p className="shortcut-item-title">Grupos</p>
+                            <p className="shortcut-item-title">Grupos</p>
                         </Link>
                     </div>
 
