@@ -1,0 +1,24 @@
+.teamsPrivate-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content {
+    width: 85%;
+  
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-section2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-card {
+    margin-top: 5vh;
+    width: 100%;
+    height: 150%;
+    border: 3px solid var(--quintenary-color);
+    border-radius: 20px; 
+}
