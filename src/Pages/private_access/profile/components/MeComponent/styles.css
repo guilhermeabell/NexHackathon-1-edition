@@ -1,0 +1,59 @@
+.profilePrivate-me {
+  width: 50%;
+  margin-top: 5vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+.profilePrivate-me .profilePrivate-me-content {
+  width: 90%;
+  background: var(--foreground-color);
+  border-radius: 15px;
+  padding: 20px 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profilePrivate-me .profilePrivate-me-content .profilePrivate-me-img .me-img-content {
+  width: 170px;
+  height: 170px;
+  border: 3px solid var(--quintenary-color);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profilePrivate-me .profilePrivate-me-content .profilePrivate-me-img .me-img-content img {
+  width: 94%;
+  border-radius: 20px;
+}
+
+.profilePrivate-me .profilePrivate-me-content .me-username {
+  margin: 20px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.profilePrivate-me .profilePrivate-me-content .aboutContact-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profilePrivate-me .profilePrivate-me-content .aboutContact-me .aboutContact-email {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.profilePrivate-me .profilePrivate-me-content .aboutContact-me p {
+  font-weight: 400;
+  color: var(--text-color);
+}

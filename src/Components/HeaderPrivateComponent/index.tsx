@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FiSettings } from 'react-icons/fi'
+import { FiHome } from 'react-icons/fi'
 
 import Logo from '../../assets/images/logo.svg'
 
@@ -14,8 +14,8 @@ const HeaderComponent = () => {
                     <img src={Logo} />
 
                 <div className="header-links">
-                    <Link to="/login">
-                        <FiSettings size='30' color='#76D9B9' />
+                    <Link to="/home">
+                        <FiHome size='30' color='#76D9B9' />
                     </Link>
                 </div>
             </div>
