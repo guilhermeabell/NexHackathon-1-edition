@@ -1,0 +1,31 @@
+.user-rank-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 1148px;
+  max-height: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 40px auto 80px auto;
+  background: var(--foreground-color);
+  padding: 50px;
+  border-radius: 12px;
+
+}
+
+.user-rank-list-container .container-user-rank {
+  margin: 0;
+}
+
+.user-rank-list-container .separator-rank {
+  display: table;
+  margin: 0;
+}
+
+.user-rank-list-container .user-rank-icon img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}

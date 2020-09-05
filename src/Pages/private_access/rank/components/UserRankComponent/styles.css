@@ -8,7 +8,8 @@
   height: 150px;
   margin: 80px auto;
   padding: 22px;
-  border-radius: 8px;
+  border-radius: 12px;  
+  color: var(--text-color);
 
   background: var(--foreground-color);
 }
@@ -32,8 +33,23 @@
   color: var(--tertiary-color)
 }
 
+.user-rank-score {
+  text-align: right;
+}
+
+.rank-text-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--text-color);
+}
+
 span.separator-rank {
   width: 934px;
-  height: 2px;
-  background: var(--text-color)
+  height: 1px;
+  background: var(--text-color);
+  margin-top: 60px;
+
 }
