@@ -32,7 +32,8 @@
 }
 
 .homePrivate-user .homePrivate-user-content .user-section-img img {
-  width: 100%;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
 }
 
@@ -51,5 +52,11 @@
 @media (max-width: 600px) {
   .homePrivate-user .homePrivate-user-content {
     width: 90%;
+  }
+}
+
+@media (max-width: 300px) {
+  .homePrivate-user .homePrivate-user-content .user-section-title p {
+    font-size: 0.8rem;
   }
 }

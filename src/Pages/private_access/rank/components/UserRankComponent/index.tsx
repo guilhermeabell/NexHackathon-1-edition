@@ -5,21 +5,21 @@ import './styles.css'
 
 const UserRank: React.FC = () => {
   return(
-    <section className="container-user-rank">
-      <div className="user-rank-icon">
-        <img src={rankIcon} alt="Crown rank"/>      
-      </div>
-      <div className="user-rank-info">
-        <span>
-          <p>Uau</p>
-          <p>Você bla bla bla <strong>1</strong> bla bla bla</p>
-        </span>
-        <span>
+    <div className="rankPrivate-userRank">
+      <div className="rankPrivate-userRank-content">
+          <div className="user-rank-info">
+            <img src={rankIcon} alt="Crown rank"/>   
+            <div className="user-rank-title">
+              <p>Uau.</p>
+              <p>Você está em <strong>1°</strong> no ranking geral!</p>
+            </div>
+          </div>   
+        <div className="user-rank-points">
           <p><strong>3800</strong></p>
-          <p>pontos</p>
-        </span>
-      </div>
-    </section>
+          <p>Pontos</p>
+        </div>
+      </div>    
+    </div>
   )
 }
 
