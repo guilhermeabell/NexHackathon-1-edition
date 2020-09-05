@@ -19,6 +19,8 @@
   }
   
   body {
+    width: 100%;
+    min-height: 400px;
     background: var(--background-color);
     -webkit-font-smoothing: antialiased;
   }
