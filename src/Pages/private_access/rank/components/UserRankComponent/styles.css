@@ -1,0 +1,39 @@
+
+.container-user-rank {
+  display: grid;
+  grid-template-columns: 0.8fr 3.2fr;
+  grid-template-areas: 'icon info';
+
+  width: 1148px;
+  height: 150px;
+  margin: 80px auto;
+  padding: 22px;
+  border-radius: 8px;
+
+  background: var(--foreground-color);
+}
+
+.user-rank-icon {
+  grid-area: icon;
+  margin-left: 40px;
+}
+
+.user-rank-info {
+  grid-area: info;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 40px;
+
+}
+
+.user-rank-info strong {
+  color: var(--tertiary-color)
+}
+
+span.separator-rank {
+  width: 934px;
+  height: 2px;
+  background: var(--text-color)
+}
