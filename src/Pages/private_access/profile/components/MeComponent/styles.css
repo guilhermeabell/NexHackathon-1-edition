@@ -8,14 +8,30 @@
 
 .profilePrivate-me .profilePrivate-me-content {
   width: 90%;
+  height: 51vh;
   background: var(--foreground-color);
   border-radius: 15px;
-  padding: 20px 5px;
+  padding: 5px 5px;
+  min-height: 349px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.profilePrivate-me .profilePrivate-me-content .me-editicon {
+  width: 90%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profilePrivate-me .profilePrivate-me-content .me-editicon svg:hover {
+  transition: 0.2s;
+  cursor: pointer;
+  filter: brightness(60%);
+  transform: translateY(1px);
 }
 
 .profilePrivate-me .profilePrivate-me-content .profilePrivate-me-img .me-img-content {
@@ -54,6 +70,20 @@
 }
 
 .profilePrivate-me .profilePrivate-me-content .aboutContact-me p {
-  font-weight: 400;
-  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-secondary-color);
+}
+
+@media (max-width: 840px) {
+  .profilePrivate-me {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .profilePrivate-me .profilePrivate-me-content .aboutContact-me p {
+    font-size: 0.99rem;
+    text-align: center;
+  }
 }

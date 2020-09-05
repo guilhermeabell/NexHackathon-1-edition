@@ -2,23 +2,111 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 5vh;
 }
 
 .teamsPrivate-main .teamsPrivate-main-content {
     width: 85%;
-  
 }
 
-.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-section2 {
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-title {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 5vh 0;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
 }
 
-.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-card {
-    margin-top: 5vh;
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card {
+    position: relative;
     width: 100%;
-    height: 150%;
+    height: 45vh;
     border: 3px solid var(--quintenary-color);
     border-radius: 20px; 
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card .teamsPrivate-item-header {
+    width: 100%;
+    border-bottom: 3px solid var(--quintenary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px; 
+    padding: 10px 35px;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card .teamsPrivate-item-header .teamsPrivate-item-title {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card .teamsPrivate-item-header .card-header-count {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card .teamsPrivate-item-header .card-header-count p {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card .teamsPrivate-item-main {
+    padding: 20px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card .teamsPrivate-item-main p {
+    white-space: nowrap; 
+    width: 15em; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card .teamsPrivate-item-footer {
+    position: absolute;
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    bottom: 20px;
+    right: 20px;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card .teamsPrivate-item-footer button {
+    border: 2px solid var(--quintenary-color);
+    padding: 5px 30px;
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 1rem;
+    outline: none;
+    background: none;
+    border-radius: 15px;
+    transition: ease 0.2s;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card .teamsPrivate-item-footer button:hover {
+    background: #5d9b7b2a;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 455px) {
+    .teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section {
+        grid-template-columns: 1fr;
+    }
 }

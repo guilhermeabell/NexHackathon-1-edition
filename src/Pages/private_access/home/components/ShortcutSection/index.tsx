@@ -27,7 +27,7 @@ const MainShortcutComponent = () => {
                     </div>
 
                     <div className="shortcut-item-container">
-                        <Link to="/rank" className="shortcut-item">
+                        <Link to="/materials" className="shortcut-item">
                             <img className="shortcut-item-image" src={MaterialsImg} />
 
                             <p className="shortcut-item-title">Materiais</p>
@@ -35,7 +35,7 @@ const MainShortcutComponent = () => {
                     </div>
 
                     <div className="shortcut-item-container">
-                        <Link to="/rank" className="shortcut-item">
+                        <Link to="/profile" className="shortcut-item">
                             <img className="shortcut-item-image" src={ProfileImg} />
 
                             <p className="shortcut-item-title">Perfil</p>
@@ -43,7 +43,7 @@ const MainShortcutComponent = () => {
                     </div>
 
                     <div className="shortcut-item-container">
-                        <Link to="/rank" className="shortcut-item">
+                        <Link to="/teams" className="shortcut-item">
                             <img className="shortcut-item-image" src={GroupImg} />
 
                             <p className="shortcut-item-title">Grupos</p>

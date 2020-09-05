@@ -6,8 +6,10 @@
     --quarternary-color: #E4E4E4;
     --quintenary-color: #07F9A2;
     --text-color: #f4f4f4;
+    --text-secondary-color: #b7b7b7;
     --background-color: #020E17;
     --foreground-color: #343434;
+
 }
 
 * {
