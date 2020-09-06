@@ -1,31 +1,136 @@
-.user-rank-list-container {
+.user-rankList-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.user-rankList-container .user-rankList-content {
+  width: 65%;
+  height: 600px;
+  background: var(--foreground-color);
+  border-radius: 15px;
+  padding: 25px 25px;
+  min-height: 349px;
+  margin: 5vh 0;
+
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
-  width: 1148px;
-  max-height: 600px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  margin: 40px auto 80px auto;
-  background: var(--foreground-color);
-  padding: 50px;
-  border-radius: 12px;
-
 }
 
-.user-rank-list-container .container-user-rank {
-  margin: 0;
-}
-
-.user-rank-list-container .separator-rank {
-  display: table;
-  margin: 0;
-}
-
-.user-rank-list-container .user-rank-icon img {
-  width: 100px;
+.user-rankList-container .user-rankList-content .user-rankList-users {
+  width: 90%;
   height: 100px;
+  margin: 10px 0;
+  border-bottom: 1px solid var(--text-color);
+  
+
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 5px;
+}
+
+.user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-usersInfo {
+  height: 85px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-usersInfo img {
+  height: 90%;
   border-radius: 50%;
 }
+
+.user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-usersInfo p {
+  font-weight: 400;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-usersInfo b {
+  font-weight: 600;
+  color: var(--tertiary-color);
+  font-size: 1.09rem;
+}
+
+.user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-points {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-points b {
+  font-weight: 600;
+  color: var(--tertiary-color);
+  font-size: 1.09rem;
+}
+
+.user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-points p {
+  font-weight: 400;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .user-rankList-container .user-rankList-content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 360px) {
+  .user-rankList-container .user-rankList-content {
+    width: 90%;
+  }
+
+  .user-rankList-container .user-rankList-content .user-rankList-users {
+    width: 90%;
+    height: 150px;
+    margin: 17px 0;
+    
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 5px;
+  }
+
+  .user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-usersInfo {
+    width: 100%;
+    height: 85px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-usersInfo .user-rank-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-usersInfo p {
+    font-size: 1rem;
+  }
+  
+  .user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-usersInfo b {
+    font-size: 1rem;
+  }
+
+  .user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-points {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+}
+

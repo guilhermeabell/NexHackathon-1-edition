@@ -1,0 +1,43 @@
+#rankPrivate-page {
+  width: 100%;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+}
+
+#rankPrivate-page .rank-text-info {
+  width: 65%;
+  margin: 5vh 0;
+  align-self: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#rankPrivate-page .rank-text-info p {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+#rankPrivate-page .rank-text-info hr {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+
+  #rankPrivate-page .rank-text-info {
+    width: 90%;
+    margin: 5vh 0;
+  }
+
+  #rankPrivate-page .rank-text-info p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import UserRank from '../UserRankComponent';
-
 import IgorImg from '../../../../../../src/assets/images/igorimg.jpg'
 import KevelynImg from '../../../../../../src/assets/images/kevelynimg.jpg'
 import PedroImg from '../../../../../../src/assets/images/profileImg.jpg'
@@ -12,46 +10,68 @@ import './styles.css';
 const members = [
   {
     avatar: PedroImg,
-    name: '<strong>Pedro Augusto</strong>',
-    category: 'mestre',
-    score: '3800'
+    name: 'Pedro Augusto',
+    score: 3800
   },
   {
     avatar: KevelynImg,
-    name: '<strong>Gabriela Kevelyn</strong>',
-    category: 'mestre',
-    score: '2500'
+    name: 'Gabriela Kevelyn',
+    score: 2500
   },
   {
     avatar: IgorImg,
-    name: '<strong>Igor Gonçalves</strong>',
-    category: 'veterano',
-    score: '1860'
+    name: 'Igor Gonçalves',
+    score: 1860
   },
   {
     avatar: MarianneImg,
-    name: '<strong>Marianne Alencar</strong>',
-    category: 'calouro',
-    score: '987'
+    name: 'Marianne Alencar',
+    score: 987
+  },
+  {
+    avatar: PedroImg,
+    name: 'Pedro Augusto',
+    score: 3800
+  },
+  {
+    avatar: KevelynImg,
+    name: 'Gabriela Kevelyn',
+    score: 2500
+  },
+  {
+    avatar: IgorImg,
+    name: 'Igor Gonçalves',
+    score: 1860
+  },
+  {
+    avatar: MarianneImg,
+    name: 'Marianne Alencar',
+    score: 987
   }
 ]
 
 const UserRankList: React.FC = () => {
     return(
-      <section className="user-rank-list-container">
-        {members.map((member, index) => (
-          <>
-            <UserRank
-              key={index}
-              image={member.avatar} 
-              description={{ title: member.name, category: member.category }}
-              score={`<strong>${member.score}</strong>`}
-            />
-            <span className="separator-rank"></span>
-          </>
-        ))}
-        
-      </section>
+      <div className="user-rankList-container">
+          <div className="user-rankList-content">
+          {members.map((member, index) => (
+            <div className="user-rankList-users">
+              <div className="user-rankList-usersInfo">
+                <img src={member.avatar} />   
+                <div className="user-rank-title">
+                  <p>{member.name}</p>
+                  <b>{`${(member.score >= 2000 ? 'Mestre' : member.score >= 1000 ? 'Veterano' : 'Calouro')}`}</b>
+                </div>
+              </div>
+
+              <div className="user-rankList-points"> 
+                <b>{member.score}</b>
+                <p>Pontos</p>
+              </div>
+            </div>
+          ))}
+          </div>
+      </div>
     )
 }
 

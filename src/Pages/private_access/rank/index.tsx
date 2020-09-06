@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 import HeaderComponent from '../../../Components/HeaderPrivateComponent/index'
 import UserSectionComponent from './components/UserSectionComponent/index'
 
@@ -7,6 +7,8 @@ import rankIcon from '../rank/assets/crownRank.svg'
 
 import UserRank from '../rank/components/UserRankComponent'
 import UserRankList from './components/UserRankList'
+
+import './styles.css'
 
 const PrivateRankPage = () => {
     const description = {
@@ -27,7 +29,7 @@ const PrivateRankPage = () => {
             />
             <div className="rank-text-info">                
                 <p>Para aumentar sua pontuação participe das atividades!</p>
-                <span className="separator-rank"></span>          
+                <hr />       
             </div>
 
             <UserRankList />
