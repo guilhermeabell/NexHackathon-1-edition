@@ -1,33 +1,25 @@
 import React from 'react'
 
+import rankIcon from '../../assets/crownRank.svg'
 import './styles.css'
 
-interface UserRankProps {
-    image: string;
-    description: {
-        title: string;
-        category: string;
-    },
-    score: string;
-}
-
-const UserRank: React.FC<UserRankProps> = ({ image, description, score }) => {
+const UserRank: React.FC = () => {
   return(
-    <section className="container-user-rank">
-      <div className="user-rank-icon">
-        <img src={image} alt="Crown rank"/>      
-      </div>
-      <div className="user-rank-info">
-        <span>
-          <p dangerouslySetInnerHTML={{__html: description.title}}></p>
-          <p dangerouslySetInnerHTML={{__html: description.category}}></p>
-        </span>
-        <span>
-          <p className="user-rank-score" dangerouslySetInnerHTML={{__html: score }}></p>
-          <p>pontos</p>
-        </span>
-      </div>
-    </section>
+    <div className="rankPrivate-userRank">
+      <div className="rankPrivate-userRank-content">
+          <div className="user-rank-info">
+            <img src={rankIcon} alt="Crown rank"/>   
+            <div className="user-rank-title">
+              <p>Uau.</p>
+              <p>Você está em <strong>1°</strong> no ranking geral!</p>
+            </div>
+          </div>   
+        <div className="user-rank-points">
+          <p><strong>3800</strong></p>
+          <p>Pontos</p>
+        </div>
+      </div>    
+    </div>
   )
 }
 

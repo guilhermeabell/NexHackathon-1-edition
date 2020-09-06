@@ -1,0 +1,153 @@
+#registerPublic-page .registerPublic-content {
+    width: 100%;
+    display: flex;
+    gap: 10vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#registerPublic-page .registerPublic-content .registerPublic-header {
+    margin-top: 5vh;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#registerPublic-page .registerPublic-content .registerPublic-header .register-backButton:hover {
+    transition: 0.2s;
+    cursor: pointer;
+    filter: opacity(70%);
+}
+
+#registerPublic-page .registerPublic-content .registerPublic-header .register-text {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 2rem;
+    width: 200px;
+  
+    display: flex;
+    align-items: center;
+}
+
+#registerPublic-page .registerPublic-content .registerPublic-form {
+    width: 50%;
+}
+
+#registerPublic-page .registerPublic-content .registerPublic-form form .registerForm-field{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#registerPublic-page .registerPublic-content .registerPublic-form form .registerForm-field span {
+    margin: 0 0 5px 10px;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#registerPublic-page .registerPublic-content .registerPublic-form form .registerForm-field input, select {
+    width: 100%;
+    margin-bottom: 10px;
+    background: var(--quarternary-color);
+    border-radius: 10px;
+    border: 0;
+    padding: 12px 14px;
+    font-size: 16px;
+    color: #2e2e2e;
+    outline: 0;
+}
+#registerPublic-page .registerPublic-content .registerPublic-form form .registerForm-field select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 16px 14px;
+    background: var(--quarternary-color) url('./assets/arrow.svg') 98% 50% no-repeat;
+
+}
+
+#registerPublic-page .registerPublic-content .registerPublic-form form .registerForm-field select > option {
+    margin: 10px;
+    padding: 10px; 
+    border: 2px solid purple; 
+    width: 200px;
+    appearance: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+#registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton a{
+    width: 65%;
+    display: flex;
+    justify-content: center;
+}
+
+#registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton input{
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 0; 
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s
+}
+
+#registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton input:hover{
+    opacity: 80%;
+}
+
+#registerPublic-page .registerPublic-content .registerPublic-form .registerPublic-Footer{
+    margin: 5vh 0;
+}
+
+#registerPublic-page .registerPublic-content .registerPublic-form .registerPublic-Footer p{
+    color: var(--text-color);
+}
+
+#registerPublic-page .registerPublic-content .registerPublic-form .registerPublic-Footer p > a{
+    color: var(--secondary-color);
+    transition: 0.2s
+}
+
+#registerPublic-page .registerPublic-content .registerPublic-form .registerPublic-Footer p > a:hover{
+    opacity: 80%;
+}
+
+@media (max-width: 600px) {
+    #registerPublic-page .registerPublic-content .registerPublic-header{
+        width: 90%;
+    }
+
+    #registerPublic-page .registerPublic-content .registerPublic-form{
+        width: 80%;
+    }
+
+    #registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton a{
+        width: 100%;
+    }
+
+    #registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton input{
+        width: 100%;
+    }
+
+    #registerPublic-page .registerPublic-content .registerPublic-form .registerPublic-Footer p{
+        text-align: center;
+    }
+
+    #registerPublic-page .registerPublic-content .registerPublic-form .registerPublic-Footer p > a:hover{
+        opacity: none;
+    }
+}

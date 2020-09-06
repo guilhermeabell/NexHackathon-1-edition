@@ -1,55 +1,105 @@
+.rankPrivate-userRank {
+  width: 100%;
+  margin-top: 5vh;
 
-.container-user-rank {
-  display: grid;
-  grid-template-columns: 0.8fr 3.2fr;
-  grid-template-areas: 'icon info';
+  display: flex;
+  justify-content: center;
+}
 
-  width: 1148px;
-  height: 150px;
-  margin: 80px auto;
-  padding: 22px;
-  border-radius: 12px;  
-  color: var(--text-color);
+.rankPrivate-userRank .rankPrivate-userRank-content {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+
+  padding: 5px 30px;
+  border-radius: 15px;
 
   background: var(--foreground-color);
 }
 
-.user-rank-icon {
-  grid-area: icon;
-  margin-left: 40px;
-}
-
-.user-rank-info {
-  grid-area: info;
-
+.rankPrivate-userRank .rankPrivate-userRank-content .user-rank-info {
+  height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-right: 40px;
-
+  gap: 10px;
 }
 
-.user-rank-info strong {
+.rankPrivate-userRank .rankPrivate-userRank-content .user-rank-info .user-rank-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  color: var(--text-color);
+  gap: 5px;
+}
+
+.rankPrivate-userRank .rankPrivate-userRank-content .user-rank-info .user-rank-title strong {
   color: var(--tertiary-color)
 }
 
-.user-rank-score {
-  text-align: right;
+.rankPrivate-userRank .rankPrivate-userRank-content .user-rank-info img {
+  height: 80%;
 }
 
-.rank-text-info {
+.rankPrivate-userRank .rankPrivate-userRank-content .user-rank-points {
+  width: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-
-  color: var(--text-color);
+  align-items: flex-end;
 }
 
-span.separator-rank {
-  width: 934px;
-  height: 1px;
-  background: var(--text-color);
-  margin-top: 60px;
+.rankPrivate-userRank .rankPrivate-userRank-content .user-rank-points p {
+  color: var(--text-color);
+  font-size: 1.13rem;
+}
 
+.rankPrivate-userRank .rankPrivate-userRank-content .user-rank-points p strong {
+  color: var(--tertiary-color)
+}
+
+@media (max-width: 600px) {
+  .rankPrivate-userRank .rankPrivate-userRank-content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  .rankPrivate-userRank .rankPrivate-userRank-content {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .rankPrivate-userRank .rankPrivate-userRank-content .user-rank-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .rankPrivate-userRank .rankPrivate-userRank-content .user-rank-info .user-rank-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .rankPrivate-userRank .rankPrivate-userRank-content .user-rank-points {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .rankPrivate-userRank .rankPrivate-userRank-content .user-rank-points p {
+    color: var(--text-color);
+    font-size: 1.13rem;
+    text-align: end;
+  }
 }

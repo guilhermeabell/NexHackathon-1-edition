@@ -3,7 +3,7 @@ import { Route, BrowserRouter} from 'react-router-dom';
 
 // Public Access
 import HomePublic from './Pages/public_access/home_public/index'
-import Register from './Pages/public_access/login/index'
+import Register from './Pages/public_access/register/index'
 import Login from './Pages/public_access/login/index'
 
 // Private Access
