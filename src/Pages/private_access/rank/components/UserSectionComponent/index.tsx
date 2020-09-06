@@ -5,8 +5,8 @@ import './styles.css'
 
 const UserSectionComponent = () => {
     return (
-        <div className="homePrivate-user">
-            <div className="homePrivate-user-content">
+        <div className="rankPrivate-user">
+            <div className="rankPrivate-user-content">
                 <div className="user-section-img">
                   <img src={ProfileImg}></img>
                   <div className="user-green-dot"></div>
