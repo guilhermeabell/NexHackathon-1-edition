@@ -68,12 +68,8 @@
   justify-content: center;
 }
 
-#loginPublic-page .loginPublic-content .loginPublic-form form .form-submitButton a {
-  width: 65%;
-}
-
 #loginPublic-page .loginPublic-content .loginPublic-form form .form-submitButton button {
-  width: 100%;
+  width: 65%;
   background: var(--primary-color);
   border-radius: 10px;
   border: 0;

@@ -1,14 +1,40 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useHistory } from 'react-router-dom'
+import { useAlert } from 'react-alert'
+import api from '../../../services/api'
 
 import { IoIosArrowRoundBack } from 'react-icons/io'
 
 import './styles.css'
 
+
 const LoginPage = () => {
+
+    const alert = useAlert()
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const history = useHistory()
+
+    async function handleLogin(e) {
+        e.preventDefault() 
+        
+        try{
+            const response = await api.post('/auth', {email, password})
+
+            localStorage.setItem('Auth', response.data.token)
+            history.push('/home')
+        } catch (err) {
+            console.log(err);
+            alert.error('Ops! Tente novamente')
+        }
+    }
+
     return (
         <div id="loginPublic-page">
             <div className="loginPublic-content">
+
                 <div className="loginPublic-header">
                     <Link to="/" >
                         <IoIosArrowRoundBack className="login-backButton" size="50" color="#f4f4f4" />
@@ -17,7 +43,7 @@ const LoginPage = () => {
                 </div>
 
                 <div className="loginPublic-form">
-                    <form action="">
+                    <form onSubmit={handleLogin}>
                         <div className="loginForm-field">
                         <span>E-mail</span>
                             <input
@@ -27,6 +53,7 @@ const LoginPage = () => {
                                 autoCapitalize="none"
                                 autoComplete="false"
                                 placeholder="Digite seu e-mail"
+                                onChange={e => setEmail(e.target.value)}
                             />
                         </div>
 
@@ -39,13 +66,12 @@ const LoginPage = () => {
                                 autoCapitalize="none"
                                 autoComplete="off"
                                 placeholder="Digite sua senha"
+                                onChange={e => setPassword(e.target.value)}
                             />
                         </div>
 
                         <div className="form-submitButton">
-                            <Link to="/home">
-                                <button type="submit">Fazer Login</button>
-                            </Link>
+                            <button type="submit">Fazer Login</button>
                         </div>
                     </form>
                 </div>
