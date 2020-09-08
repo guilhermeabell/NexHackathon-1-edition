@@ -15,6 +15,7 @@ const options = {
 
 function App() {
   return (
+    
     <Provider template={AlertTemplate} {...options}>
       <Routes />
     </Provider>

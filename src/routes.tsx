@@ -5,6 +5,7 @@ import { Route, BrowserRouter} from 'react-router-dom';
 import HomePublic from './Pages/public_access/home_public/index'
 import Register from './Pages/public_access/register/index'
 import Login from './Pages/public_access/login/index'
+import SuccessFlashPage from './Pages/public_access/FlashPageSuccess/index'
 
 // Private Access
 import Home from './Pages/private_access/home/index'
@@ -22,6 +23,7 @@ const Routes = () => {
             <Route component={HomePublic} path="/" exact />
             <Route component={Login} path="/login" />
             <Route component={Register} path="/register" />
+            <Route component={SuccessFlashPage} path="/success-flash" />
 
             <Route component={Home} path="/home" />
             <Route component={Rank} path="/rank" />

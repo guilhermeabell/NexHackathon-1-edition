@@ -1,3 +1,8 @@
+#registerPublic-page {
+    width: 100%;
+    height: 100vh;
+}
+
 #registerPublic-page .registerPublic-content {
     width: 100%;
     display: flex;
@@ -65,19 +70,17 @@
     -moz-appearance: none;
     appearance: none;
     padding: 16px 14px;
+    color: #2e2e2e;
     background: var(--quarternary-color) url('./assets/arrow.svg') 98% 50% no-repeat;
 
 }
 
 #registerPublic-page .registerPublic-content .registerPublic-form form .registerForm-field select > option {
-    margin: 10px;
-    padding: 10px; 
-    border: 2px solid purple; 
-    width: 200px;
     appearance: none;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    color: #2e2e2e;
 }
 
 #registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton{
@@ -86,14 +89,8 @@
     justify-content: center;
 }
 
-#registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton a{
+#registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton button{
     width: 65%;
-    display: flex;
-    justify-content: center;
-}
-
-#registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton input{
-    width: 100%;
     padding: 10px 12px;
     border-radius: 10px;
     border: 0; 
@@ -105,8 +102,9 @@
     transition: 0.2s
 }
 
-#registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton input:hover{
-    opacity: 80%;
+#registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton button:hover{
+    cursor: pointer;
+    filter: opacity(70%);
 }
 
 #registerPublic-page .registerPublic-content .registerPublic-form .registerPublic-Footer{
@@ -115,6 +113,7 @@
 
 #registerPublic-page .registerPublic-content .registerPublic-form .registerPublic-Footer p{
     color: var(--text-color);
+    text-align: center;
 }
 
 #registerPublic-page .registerPublic-content .registerPublic-form .registerPublic-Footer p > a{
@@ -123,7 +122,8 @@
 }
 
 #registerPublic-page .registerPublic-content .registerPublic-form .registerPublic-Footer p > a:hover{
-    opacity: 80%;
+    cursor: pointer;
+    filter: opacity(70%);
 }
 
 @media (max-width: 600px) {
