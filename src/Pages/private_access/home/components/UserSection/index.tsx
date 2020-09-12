@@ -1,14 +1,13 @@
 import React from 'react'
 
-import ProfileImg from '../../../../../assets/images/profileImg.jpg'
-
 import './styles.css'
 
 var data = new Date();
 var hour = data.getHours();
 
 interface UserSectionProps {
-  name: string;
+  name: string,
+  profile_image: string,
 }
 
 const UserSectionComponent : React.FC<UserSectionProps> = (props) => {
@@ -16,7 +15,8 @@ const UserSectionComponent : React.FC<UserSectionProps> = (props) => {
         <div className="homePrivate-user">
             <div className="homePrivate-user-content">
                 <div className="user-section-img">
-                  <img src={ProfileImg}></img>
+                  <div className={`${(props.profile_image == null ? 'unknow-image' : 'image-true')}`} ></div>
+                  <img src={props.profile_image} className={`${(props.profile_image == null ? 'no-image' : 'with-image')}`} />
                   <div className="user-green-dot"></div>
                 </div>
                 <div className="user-section-title">

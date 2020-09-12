@@ -23,7 +23,7 @@ interface User {
 
 const PrivateHomePage = () => {
 
-    const [user, setUser] = useState<User[]>([]);
+    const [user, setUser] = useState<User>({} as User);
 
     const token = localStorage.getItem("Auth")
 
@@ -40,8 +40,6 @@ const PrivateHomePage = () => {
             }
         }).then(response => {  
             setUser(response.data);
-            console.log(response.data)
-            console.log(user)
           });
     }, [token, user]);
 
@@ -51,7 +49,8 @@ const PrivateHomePage = () => {
                 <HeaderComponent />
 
                 <UserSection 
-                    name="pedro"
+                    name={user.name}
+                    profile_image={user.profile_image}
                 />
 
                 <MainSection />
