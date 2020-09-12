@@ -7,7 +7,11 @@ import './styles.css'
 var data = new Date();
 var hour = data.getHours();
 
-const UserSectionComponent = () => {
+interface UserSectionProps {
+  name: string;
+}
+
+const UserSectionComponent : React.FC<UserSectionProps> = (props) => {
     return (
         <div className="homePrivate-user">
             <div className="homePrivate-user-content">
@@ -16,7 +20,7 @@ const UserSectionComponent = () => {
                   <div className="user-green-dot"></div>
                 </div>
                 <div className="user-section-title">
-                  <p className="user-title" >Olá Pedro,</p>
+                  <p className="user-title" >Olá {props.name},</p>
                   <p className="user-title" >tenha {`${(hour <= 12 ? 'um bom dia!' : hour <= 17 ? 'uma boa tarde!' : 'uma boa noite!')}`}</p>
                 </div>
             </div>

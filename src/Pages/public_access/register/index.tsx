@@ -25,8 +25,6 @@ const PublicHomePage = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-    console.log(date_of_birth)
-
     const history = useHistory()
 
     async function handleRegister(e) {
@@ -111,7 +109,7 @@ const PublicHomePage = () => {
                                 type="text" 
                                 name="date_of_birth" 
                                 id="date_of_birth" 
-                                mask="99/99/9999" 
+                                mask="99-99-9999" 
                                 maskChar={null} 
                                 placeholder="Digite sua data de nascimento"
                                 onChange={e => setDate_of_birth(e.target.value)}
