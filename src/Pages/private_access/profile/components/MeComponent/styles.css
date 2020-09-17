@@ -47,7 +47,8 @@
 }
 
 .profilePrivate-me .profilePrivate-me-content .profilePrivate-me-img .me-img-content img {
-  width: 94%;
+  width: 154px;
+  height: 154px;
   border-radius: 20px;
 }
 

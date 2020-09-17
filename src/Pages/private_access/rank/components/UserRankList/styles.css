@@ -79,7 +79,7 @@
 }
 
 .user-rankList-container .user-rankList-content .user-rankList-users-equal {
-  width: 90%;
+  width: 95%;
   height: 15vh;
   margin: 10px 0;
   padding: 0 15px;
@@ -140,7 +140,7 @@
 
 @media (max-width: 600px) {
   .user-rankList-container .user-rankList-content {
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -148,6 +148,7 @@
   .user-rankList-container .user-rankList-content {
     width: 95%;
   }
+
 
   .user-rankList-container .user-rankList-content .user-rankList-users {
     width: 100%;
@@ -195,7 +196,7 @@
   }
 
   .user-rankList-container .user-rankList-content .user-rankList-users-equal {
-    width: 100%;
+    width: 110%;
   }
 }
 
