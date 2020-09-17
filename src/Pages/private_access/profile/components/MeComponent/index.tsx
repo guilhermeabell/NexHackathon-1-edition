@@ -1,14 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 import { FiMail } from 'react-icons/fi'
 import { FaPen } from 'react-icons/fa'
 
-import ProfileImg from '../../../../../assets/images/profileImg.jpg'
+import DefaultImage from '../../../../../assets/images/defaultProfile.jpg'
 
 import './styles.css'
 
-const MeComponent = () => {
+interface UserMeProps {
+  school: string
+  profile_image: string
+  name: string
+  headline: string
+  email: string
+}
+
+const MeComponent : React.FC<UserMeProps> = (props) => {
     return (
         <div className="profilePrivate-me">
           <div className="profilePrivate-me-content">
@@ -18,18 +25,18 @@ const MeComponent = () => {
 
               <div className="profilePrivate-me-img">
                 <div className="me-img-content">
-                  <img src={ProfileImg} />
+                  <img src={`${(props.profile_image == null ? DefaultImage : props.profile_image)}`} />
                 </div>  
               </div>                
 
-                <p className="me-username">Pedro Augusto</p>
+              <p className="me-username">{props.name}</p>
 
               <div className="aboutContact-me">
-                <p>Desenvolvedor | Vicente Leporace</p>
+                <p>{`${(props.headline == null ? '' : `${props.headline} |` )}`} {props.school}</p>
 
                 <div className="aboutContact-email">
                   <FiMail size="20" color="#b7b7b7" />
-                  <p>p.augusto.rib@gmail.com</p>
+                  <p>{props.email}</p>
                 </div>
               </div>
           </div>

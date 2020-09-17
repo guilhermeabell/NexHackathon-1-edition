@@ -11,18 +11,20 @@
   height: 51vh;
   background: var(--foreground-color);
   border-radius: 15px;
-  padding: 5px 5px;
+  padding: 0px 5px;
   min-height: 349px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .profilePrivate-me .profilePrivate-me-content .me-editicon {
+  top: 25px;
   width: 90%;
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: flex-end;
 }
@@ -79,11 +81,19 @@
   .profilePrivate-me {
     width: 100%;
   }
+
+  .profilePrivate-me .profilePrivate-me-content .me-editicon {
+    top: 25px;
+  }
 }
 
 @media (max-width: 360px) {
   .profilePrivate-me .profilePrivate-me-content .aboutContact-me p {
     font-size: 0.99rem;
     text-align: center;
+  }
+
+  .profilePrivate-me .profilePrivate-me-content .me-editicon {
+    top: 15px;
   }
 }

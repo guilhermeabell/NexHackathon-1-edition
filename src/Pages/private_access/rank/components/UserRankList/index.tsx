@@ -2,7 +2,7 @@ import React from 'react';
 
 import IgorImg from '../../../../../../src/assets/images/igorimg.jpg'
 import KevelynImg from '../../../../../../src/assets/images/kevelynimg.jpg'
-import PedroImg from '../../../../../../src/assets/images/profileImg.jpg'
+import PedroImg from '../../../../../../src/assets/images/defaultProfile.jpg'
 import MarianneImg from '../../../../../../src/assets/images/mariimg.jpg'
 
 import './styles.css';

@@ -1,41 +1,67 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { FaPen } from 'react-icons/fa'
 import { AiFillGithub } from 'react-icons/ai'
 import { GrLinkedinOption } from 'react-icons/gr'
 import { GrInstagram } from 'react-icons/gr'
 
 import './styles.css'
 
-const BioComponent = () => {
+interface UserBioProps {
+  name: string
+  description: string,
+  linkedin: string,
+  github: string,
+  instagram: string
+}
+
+const BioComponent : React.FC<UserBioProps> = (props) => {
+
     return (
         <div className="profilePrivate-bio">
+          
           <div className="profilePrivate-bio-content">
               <div className="bio-title">
                 <p>Sobre mim</p>
-                <FaPen size="15" color="#b7b7b7" />
               </div>
 
               <div className="profilePrivate-bio-description">
-                 <p>Pedro é um jovem apaixonado por programação, atualmente atuando como desenvolvedor FullStack. Cursando Redes de Computadores em 2020. JavaScript. </p>
+                <p>{`${(props.description == null ? `${props.name} é um ótimo participante e está nessa para aprender e compartilhar suas ideias incríveis. Seu forte é a vontade de aprender!` : props.description)}`}</p>
               </div>                
 
               <div className="linksContact-bio">
-                <div className="link-bio-item">
-                  <GrLinkedinOption size="25" color="#f4f4f4" />
-                  <p>Linkedin</p>
-                </div>
+                <Link 
+                  className={`${(props.linkedin == null || undefined ? 'handlelink-bio-false' : '')}`}
+                  to={{ pathname: `${props.linkedin}` }} 
+                  target="_blank" 
+                >
+                  <div className="link-bio-item">
+                    <GrLinkedinOption size="25" color="#f4f4f4" />
+                    <p>Linkedin</p>
+                  </div>
+                </Link>
 
-                <div className="link-bio-item">
-                  <AiFillGithub size="30" color="#f4f4f4" />
-                  <p>Github</p>
-                </div>
+                <Link 
+                  className={`${(props.github == null || undefined ? 'handlelink-bio-false' : '')}`}
+                  to={{ pathname: `${props.github}` }} 
+                  target="_blank" 
+                >
+                  <div className="link-bio-item">
+                    <AiFillGithub size="30" color="#f4f4f4" />
+                    <p>Github</p>
+                  </div>
+                </Link>
 
-                <div className="link-bio-item">
-                  <GrInstagram size="25" color="#f4f4f4" />
-                  <p>Instagram</p>
-                </div>
+                <Link 
+                  className={`${(props.instagram == null || undefined ? 'handlelink-bio-false' : '')}`}
+                  to={{ pathname: `${props.instagram}` }} 
+                  target="_blank" 
+                >
+                  <div className="link-bio-item">
+                    <GrInstagram size="25" color="#f4f4f4" />
+                    <p>Instagram</p>
+                  </div>
+                </Link>
               </div>
           </div>
         </div>

@@ -20,8 +20,8 @@
 }
 
 .homePrivate-user .homePrivate-user-content .user-section-img .user-green-dot {
-  width: 15px;
-  height: 15px;
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
   border: 2px solid #020E17;
   bottom: 1px;
@@ -31,22 +31,7 @@
   background: #07F9A2;
 }
 
-.homePrivate-user .homePrivate-user-content .user-section-img .unknow-image {
-  background: #343434;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-}
-
-.homePrivate-user .homePrivate-user-content .user-section-img .image-true {
-  overflow: hidden;
-}
-
-.homePrivate-user .homePrivate-user-content .user-section-img .no-image {
-  overflow: hidden;
-}
-
-.homePrivate-user .homePrivate-user-content .user-section-img .with-image {
+.homePrivate-user .homePrivate-user-content .user-section-img img {
   width: 70px;
   height: 70px;
   border-radius: 50%;

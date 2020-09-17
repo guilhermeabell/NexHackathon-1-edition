@@ -12,7 +12,7 @@
   border-radius: 15px;
   padding: 25px 25px;
   min-height: 349px;
-  margin: 5vh 0;
+  margin: 0 0 5vh 0;
 
   overflow-y: auto;
   display: flex;
@@ -22,7 +22,7 @@
 
 .user-rankList-container .user-rankList-content .user-rankList-users {
   width: 90%;
-  height: 100px;
+  height: 15vh;
   margin: 10px 0;
   border-bottom: 1px solid var(--text-color);
   
@@ -83,15 +83,15 @@
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
   .user-rankList-container .user-rankList-content {
-    width: 90%;
+    width: 95%;
   }
 
   .user-rankList-container .user-rankList-content .user-rankList-users {
-    width: 90%;
-    height: 150px;
-    margin: 17px 0;
+    width: 100%;
+    height: 15vh;
+    margin: 2vh 0;
     
   
     display: flex;
@@ -103,7 +103,7 @@
 
   .user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-usersInfo {
     width: 100%;
-    height: 85px;
+    height: 70px;
   
     display: flex;
     align-items: center;

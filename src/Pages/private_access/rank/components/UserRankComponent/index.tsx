@@ -2,30 +2,25 @@ import React from 'react'
 
 import './styles.css'
 
+import DefaultImage from '../../../../../assets/images/defaultProfile.jpg'
+
 interface UserRankProps {
-    image: string;
-    description: {
-        title: string;
-        category: string;
-    },
-    score: string;
+  name: string,
+  profile_image: string,
+  points: number,
 }
 
-const UserRank: React.FC<UserRankProps> = ({ image, description, score }) => {
+const UserRank: React.FC<UserRankProps> = (props) => {
   return(
     <div className="rankPrivate-userRank">
       <div className="rankPrivate-userRank-content">
           <div className="user-rank-info">
-            <img src={image} alt="Crown rank"/>   
+            <img src={`${(props.profile_image == null ? DefaultImage : props.profile_image)}`} />  
             <div className="user-rank-title">
-              <p dangerouslySetInnerHTML={{__html: description.title}}></p>
-              <p dangerouslySetInnerHTML={{__html: description.category}}></p>
+              <p>{props.name} parece que você tem <b>{props.points}</b> pontos</p>
+              <p>Vamos {`${(props.points === 0 ? 'subir' : 'subir ainda mais')}`} esse número?</p>
             </div>
           </div>   
-        <div className="user-rank-points"> 
-          <p dangerouslySetInnerHTML={{__html: score }}></p>
-          <p>Pontos</p>
-        </div>
       </div>    
     </div>
   )
