@@ -42,7 +42,8 @@
 }
 
 .user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-usersInfo img {
-  height: 90%;
+  height: 70px;
+  width: 70px;
   border-radius: 50%;
 }
 
@@ -72,6 +73,66 @@
 }
 
 .user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-points p {
+  font-weight: 400;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.user-rankList-container .user-rankList-content .user-rankList-users-equal {
+  width: 90%;
+  height: 15vh;
+  margin: 10px 0;
+  padding: 0 15px;
+  border-radius: 15px;
+  background: var(--tertiary-color);
+  
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.user-rankList-container .user-rankList-content .user-rankList-users-equal .user-rankList-usersInfo-equal {
+  height: 85px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-rankList-container .user-rankList-content .user-rankList-users-equal .user-rankList-usersInfo-equal img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.user-rankList-container .user-rankList-content .user-rankList-users-equal .user-rankList-usersInfo-equal b {
+  font-weight: 600;
+  color: var(--quarternary-color);
+  font-size: 1.09rem;
+}
+
+.user-rankList-container .user-rankList-content .user-rankList-users-equal .user-rankList-usersInfo-equal p {
+  font-weight: 400;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.user-rankList-container .user-rankList-content .user-rankList-users-equal .user-rankList-points-equal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.user-rankList-container .user-rankList-content .user-rankList-users-equal .user-rankList-points-equal b {
+  font-weight: 600;
+  color: var(--quarternary-color);
+  font-size: 1.09rem;
+}
+
+.user-rankList-container .user-rankList-content .user-rankList-users-equal .user-rankList-points-equal p {
   font-weight: 400;
   color: var(--text-color);
   font-size: 1.1rem;
@@ -131,6 +192,10 @@
     align-items: center;
     justify-content: flex-end;
     gap: 5px;
+  }
+
+  .user-rankList-container .user-rankList-content .user-rankList-users-equal {
+    width: 100%;
   }
 }
 

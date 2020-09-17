@@ -1,71 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'
 
-import IgorImg from '../../../../../../src/assets/images/igorimg.jpg'
-import KevelynImg from '../../../../../../src/assets/images/kevelynimg.jpg'
-import PedroImg from '../../../../../../src/assets/images/defaultProfile.jpg'
-import MarianneImg from '../../../../../../src/assets/images/mariimg.jpg'
+import api from '../../../../../services/api'
 
-import './styles.css';
+import './styles.css'
 
-const members = [
-  {
-    avatar: PedroImg,
-    name: 'Pedro Augusto',
-    score: 3800
-  },
-  {
-    avatar: KevelynImg,
-    name: 'Gabriela Kevelyn',
-    score: 2500
-  },
-  {
-    avatar: IgorImg,
-    name: 'Igor Gonçalves',
-    score: 1860
-  },
-  {
-    avatar: MarianneImg,
-    name: 'Marianne Alencar',
-    score: 987
-  },
-  {
-    avatar: PedroImg,
-    name: 'Pedro Augusto',
-    score: 3800
-  },
-  {
-    avatar: KevelynImg,
-    name: 'Gabriela Kevelyn',
-    score: 2500
-  },
-  {
-    avatar: IgorImg,
-    name: 'Igor Gonçalves',
-    score: 1860
-  },
-  {
-    avatar: MarianneImg,
-    name: 'Marianne Alencar',
-    score: 987
-  }
-]
+interface Rank {
+    id: number,
+    name: string,
+    profile_image: string,
+    points: number,
+}
 
-const UserRankList: React.FC = () => {
+interface UserRankListProps {
+  name: string,
+}
+
+const UserRankList: React.FC<UserRankListProps> = (props) => {
+
+  const [rank, setRank] = useState<Rank[]>([])
+
+    useEffect(() => {
+        api.get('/rank').then((response) => {
+            if (response && response.data) {
+                setRank(response.data)
+            }
+        })
+    })
+
     return(
       <div className="user-rankList-container">
           <div className="user-rankList-content">
-          {members.map((member, index) => (
-            <div className="user-rankList-users">
-              <div className="user-rankList-usersInfo">
-                <img src={member.avatar} />   
+          {rank.map((member, index) => (
+            <div className={`${(member.name === props.name ? 'user-rankList-users-equal' : 'user-rankList-users')}`} key={member.id}>
+              <div className={`${(member.name === props.name ? 'user-rankList-usersInfo-equal' : 'user-rankList-usersInfo')}`}>
+                <img src={member.profile_image} />   
                 <div className="user-rank-title">
                   <p>{member.name}</p>
-                  <b>{`${(member.score >= 2000 ? 'Mestre' : member.score >= 1000 ? 'Veterano' : 'Calouro')}`}</b>
+                  <b>{`${(member.points >= 2000 ? 'Mestre' : member.points >= 1000 ? 'Veterano' : 'Calouro')}`}</b>
                 </div>
               </div>
 
-              <div className="user-rankList-points"> 
-                <b>{member.score}</b>
+              <div className={`${(member.name === props.name ? 'user-rankList-points-equal' : 'user-rankList-points')}`}> 
+                <b>{member.points}</b>
                 <p>Pontos</p>
               </div>
             </div>

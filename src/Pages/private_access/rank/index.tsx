@@ -23,6 +23,12 @@ interface User {
     instagram: string
 }
 
+interface Rank {
+    name: string,
+    profile_image: string,
+    points: number,
+}
+
 const PrivateRankPage = () => {
 
     const [user, setUser] = useState<User>({} as User);
@@ -63,7 +69,9 @@ const PrivateRankPage = () => {
                 <hr />       
             </div>
 
-            <UserRankList />
+            <UserRankList 
+                name={user.name}
+            />
             
         </div>
     )

@@ -27,6 +27,11 @@
   gap: 20px;
 }
 
+.rankPrivate-userRank .rankPrivate-userRank-content .user-rank-info .user-rank-title {
+  display: flex;
+  flex-direction: column;
+}
+
 .rankPrivate-userRank .rankPrivate-userRank-content .user-rank-info p {
   color: var(--text-color);
   font-size: 1rem;
