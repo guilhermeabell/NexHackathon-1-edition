@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { FiMail } from 'react-icons/fi'
 import { FaPen } from 'react-icons/fa'
@@ -16,11 +17,14 @@ interface UserMeProps {
 }
 
 const MeComponent : React.FC<UserMeProps> = (props) => {
+
     return (
         <div className="profilePrivate-me">
           <div className="profilePrivate-me-content">
               <div className="me-editicon">
-                <FaPen size="15" color="#b7b7b7" />
+                <Link to="/update-profile" >
+                  <FaPen size="15" color="#b7b7b7" />
+                </Link>
               </div>
 
               <div className="profilePrivate-me-img">
