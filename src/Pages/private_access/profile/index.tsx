@@ -41,7 +41,6 @@ const ProfilePrivate = () => {
             }
         }).then(response => {  
             setUser(response.data);
-            console.log(response.data)
           }).catch(err => {
             history.push('/login')
           });

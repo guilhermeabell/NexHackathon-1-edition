@@ -43,7 +43,10 @@ const LoginPage = () => {
                 </div>
 
                 <div className="loginPublic-form">
-                    <form onSubmit={handleLogin}>
+                    <form 
+                        onSubmit={handleLogin}
+                        autoComplete="off"
+                    >
                         <div className="loginForm-field">
                         <span>E-mail</span>
                             <input
@@ -51,7 +54,6 @@ const LoginPage = () => {
                                 name="email"
                                 id="email"
                                 autoCapitalize="none"
-                                autoComplete="false"
                                 placeholder="Digite seu e-mail"
                                 onChange={e => setEmail(e.target.value)}
                             />
