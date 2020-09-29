@@ -32,7 +32,7 @@ const Routes = () => {
             <Route component={UpdateProfile} path="/update-profile" />
             <Route component={UsersProfile} path="/user-profile" />
             <Route component={Teams} path="/teams" />
-            <Route component={Materials} path="/support-materials" />
+            <Route component={Materials} path="/materials" />
         </BrowserRouter>
     )
 }

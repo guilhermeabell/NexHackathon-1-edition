@@ -1,14 +1,27 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const PublicHomePage = () => {
+import HeaderComponent from '../../../Components/HeaderPrivateComponent'
+import Spotlight from './components/spotlight/index'
+import MaterialsMain from './components/materialsMain/index'
+
+import './styles.css'
+
+const MaterialsPage = () => {
     return (
-        <div id="homePublic-page">
-            <div className="homePublic-content">
-                <p className="homePublic-text">Home Page publica!</p>
+        <div id="materials-page">
+            <div className="materials-content">
+                <HeaderComponent />
+
+                <Spotlight />
+
+                <MaterialsMain />
+                <MaterialsMain />
+                <MaterialsMain />
+                <MaterialsMain />
             </div>
         </div>
     )
 }
 
-export default PublicHomePage
+export default MaterialsPage
