@@ -57,3 +57,5 @@ dist/
 *.log
 
 *.psd
+
+src/services/api.ts
