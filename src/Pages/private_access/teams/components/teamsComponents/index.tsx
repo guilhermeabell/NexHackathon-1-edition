@@ -1,10 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaRegUser } from 'react-icons/fa'
 
+import api from '../../../../../services/api'
+
 import './styles.css'
 
+interface Teams {
+    id_teams: number,
+    title: string,
+}
+
+interface UsersTeam {
+    id_user: number,
+    name: string,
+}
+
 const TeamsPrivate = () => {
+
+    const [teams, setTeams] = useState<Teams[]>([])
+    const [users, setUsers] = useState<UsersTeam[]>([])
+
+    useEffect(() => {
+        api.get('/teams').then((response) => {
+            if(response && response.data) {
+                setTeams(response.data)
+            }
+        })
+    })
+
+    useEffect(() => {
+        api.get('/users-team').then((response) => {
+            if(response && response.data) {
+                setUsers(response.data)
+            }
+        })
+    })
+
     return (
         <div className="teamsPrivate-main">
             <div className="teamsPrivate-main-content">
@@ -13,9 +45,11 @@ const TeamsPrivate = () => {
                     </div>
 
                     <div className="teamsPrivate-main-section">
-                        <div className="teamsPrivate-main-card">
+                        
+                        {teams.map((team, index) => (
+                        <div className="teamsPrivate-main-card" key={team.id_teams}>
                             <div className="teamsPrivate-item-header">
-                                <p className='teamsPrivate-item-title'>Time 1</p>
+                                <p className='teamsPrivate-item-title'>Time {team.title}</p>
                                 <div className="card-header-count">
                                     <FaRegUser size='25' color='#f4f4f4'/>
                                     <p className='teamsPrivate-item-count'>2/5</p>
@@ -28,70 +62,10 @@ const TeamsPrivate = () => {
                             </div>
 
                             <div className="teamsPrivate-item-footer">
-                                <button>Participar</button>
-                            </div>
-                        </div>
-
-                        <div className="teamsPrivate-main-card">
-                            <div className="teamsPrivate-item-header">
-                                <p className='teamsPrivate-item-title'>Time 2</p>
-                                <div className="card-header-count">
-                                    <FaRegUser size='25' color='#f4f4f4'/>
-                                    <p className='teamsPrivate-item-count'>3/5</p>
-                                </div>
-                            </div>
-
-                            <div className="teamsPrivate-item-main">
-                                <p>Miguel Murilo Vieira</p>
-                                <p>Tânia Lívia Carla</p>
-                                <p>Tereza Olivia</p>
-                            </div>
-
-                            <div className="teamsPrivate-item-footer">
-                                <button>Participar</button>
-                            </div>
-                        </div>
-
-                        <div className="teamsPrivate-main-card">
-                            <div className="teamsPrivate-item-header">
-                                <p className='teamsPrivate-item-title'>Time 3</p>
-                                <div className="card-header-count">
-                                    <FaRegUser size='25' color='#f4f4f4'/>
-                                    <p className='teamsPrivate-item-count'>2/5</p>
-                                </div>
-                            </div>
-
-                            <div className="teamsPrivate-item-main">
-                                <p>Laís Luzia</p>
-                                <p>Martin Roberto</p>
-                            </div>
-
-                            <div className="teamsPrivate-item-footer">
-                                <button>Participar</button>
-                            </div>
-                        </div>
-
-                        <div className="teamsPrivate-main-card">
-                            <div className="teamsPrivate-item-header">
-                                <p className='teamsPrivate-item-title'>Time 1</p>
-                                <div className="card-header-count">
-                                    <FaRegUser size='25' color='#f4f4f4'/>
-                                    <p className='teamsPrivate-item-count'>5/5</p>
-                                </div>
-                            </div>
-
-                            <div className="teamsPrivate-item-main">
-                                <p>Mirella Sônia Galvão</p>
-                                <p>Márcia Olivia</p>
-                                <p>Márcio Tiago Figueiredo</p>
-                                <p>Daiane Vanessa Lívia Figueiredo</p>
-                                <p>Manuel Cauê Diogo Galvão</p>
-                            </div>
-
-                            <div className="teamsPrivate-item-footer">
                                 <button style={{display: "none"}}>Participar</button>
                             </div>
                         </div>
+                        ))}
 
                     </div>
             </div>

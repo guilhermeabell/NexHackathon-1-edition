@@ -22,18 +22,50 @@
 
 .homePrivate-main .homePrivate-main-content .main-section .main-item-container {
   width: 45%;
-  padding: 15vh 10px;
+  height: 25vh;
+  padding: 0 20px;
   background: var(--foreground-color);
   border-radius: 15px;
   display: flex;
+  gap: 30px;
+  flex-direction: column;
   justify-content: center;
+}
+
+.homePrivate-main .homePrivate-main-content .main-section .main-item-container  .main-item-alert {
+  color: var(--quintenary-color);
+  font-size: 1rem;
+  font-weight: 700;
+  outline: none;
 }
 
 .homePrivate-main .homePrivate-main-content .main-section .main-item-container p {
   color: var(--text-color);
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   outline: none;
+}
+
+.homePrivate-main .homePrivate-main-content .main-section .main-item-container .main-item-container-title {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 400;
+  outline: none;
+}
+
+.homePrivate-main .homePrivate-main-content .main-section .main-item-container a {
+  padding: 5px 0;
+  border: 1px solid var(--quintenary-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: 0.2s;
+}
+
+.homePrivate-main .homePrivate-main-content .main-section .main-item-container a:hover {
+  background: rgba(118, 255, 206, 0.15);
 }
 
 @media (max-width: 900px) {

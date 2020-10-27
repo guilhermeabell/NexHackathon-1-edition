@@ -51,16 +51,13 @@ const ProfilePrivate = () => {
             <div className="profilePrivate-content">
                 <HeaderComponent />
                 
-                <div className="profilePrivate-content-main">
-                    <MeComponent
-                        profile_image={user.profile_image}
-                        name={user.name}
-                        headline={user.headline}
-                        email={user.email}
-                        school={user.school}
-                    />
-                    <SkillsComponent />
-                </div>
+                <MeComponent
+                    profile_image={user.profile_image}
+                    name={user.name}
+                    headline={user.headline}
+                    email={user.email}
+                    school={user.school}
+                />
 
                 <BioComponent 
                     name={user.name}
