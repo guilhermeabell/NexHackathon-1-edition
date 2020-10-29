@@ -16,7 +16,7 @@ const HeaderComponent = () => {
                 <div className="header-links">
                     <Link to="/register">
                         <button>
-                            Como funciona?
+                            INSCREVA-SE
                         </button>
                     </Link>
 

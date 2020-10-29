@@ -1,6 +1,6 @@
 .homePrivate-main {
   width: 100%;
-  margin-top: 2vh;
+  margin-top: 5vh;
 
   display: flex;
   justify-content: center;
@@ -54,7 +54,7 @@
 }
 
 .homePrivate-main .homePrivate-main-content .main-section .main-item-container a {
-  padding: 5px 0;
+  padding: 10px 0;
   border: 1px solid var(--quintenary-color);
   border-radius: 10px;
   display: flex;

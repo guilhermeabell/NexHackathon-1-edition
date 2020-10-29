@@ -20,23 +20,23 @@ const formatData = ("0" + data.getDate()).substr(-2) + "/"
 var value = "0%"
 
 switch(formatData) {
-    case "01/09/2020":
+    case "29/10/2020":
       value = "5%";
     break;
 
-    case "02/09/2020":
+    case "30/10/2020":
       value = "24%";
     break;
 
-    case "03/09/2020":
+    case "31/10/2020":
       value = "47%";
     break;
 
-    case "04/09/2020":
+    case "01/11/2020":
       value = "70%";
     break;
 
-    case "05/09/2020":
+    case "02/11/2020":
       value = "92%";
     break;
 }

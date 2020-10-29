@@ -2,7 +2,9 @@ import React from 'react'
 
 // Logos
 import VicenteLeporace from '../../assets/Home/patnersLogos/VicenteLeporace.svg'
+import ETECUirapuru from '../../assets/Home/patnersLogos/LogoUirapuru.svg'
 import Tivit from '../../assets/Home/patnersLogos/LogoTIVIT.svg'
+import Tecnisa from '../../assets/Home/patnersLogos/LogoTECNISA.svg'
 
 
 import './styles.css'
@@ -20,6 +22,10 @@ const AwardSectionComponent = () => {
                         <img src={VicenteLeporace} />
                     </div>
 
+                    <div className="section6-patners-item-first">
+                        <img src={ETECUirapuru} />
+                    </div>
+
                 </div>
 
                 <p className="section6-patners-title" >Parceiros</p>
@@ -28,6 +34,10 @@ const AwardSectionComponent = () => {
 
                     <div className="section6-patners-item-first">
                         <img src={Tivit} />
+                    </div>
+
+                    <div className="section6-patners-item-first">
+                        <img src={Tecnisa} />
                     </div>
 
                 </div>

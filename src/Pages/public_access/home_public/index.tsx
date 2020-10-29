@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import api from '../../../services/api'
 
 // Components
 import HeaderComponent from './components/HeaderComponent/index'
@@ -15,6 +16,15 @@ import './styles.css'
 import GreenHeart from './assets/Home/greenHeart.svg'
 
 const PublicHomePage = () => {
+
+    const [count, setCount] = useState(0)
+
+    useEffect(() => {
+        api.get('/count-users').then(response => {  
+            setCount(response.data);
+          }).catch(err => {});
+    }, []);
+
     return (
         <div id="homePublic-page">
             <div className="homePublic-content">
@@ -43,7 +53,7 @@ const PublicHomePage = () => {
 
                 <div className="homePublic-footer">
                     <span>
-                        Total de <b>200</b> participantes já cadastrados.
+                        Total de <b>{count}</b> participantes já cadastrados.
                         <img src={GreenHeart} />
                     </span>
                 </div>

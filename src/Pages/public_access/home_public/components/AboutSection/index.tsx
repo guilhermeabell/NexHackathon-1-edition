@@ -29,12 +29,12 @@ const AboutSectionComponent = () => {
 
                     <div className="section4-about-item">
                         <img src={EditIcon} />
-                        <p className="section4-item-description">O primeiro passo para participar do nosso hackathon é você se registrar, assim podemos ter acesso aos seus dados e saber se você é uma pessoa real, além de poder  receber os prêmios e benefícios.</p>
+                        <p className="section4-item-description">O primeiro passo para participar do nosso Hackathon é você se registrar, assim podemos ter acesso aos seus dados e saber se você é uma pessoa real, ao se inscrever você afirmar ter consentimento dos pais ou responsáveis para participar. Além de autorizar uso da sua imagem.</p>
                     </div>
 
                     <div className="section4-about-item">
                         <img src={GroupIcon} />
-                        <p className="section4-item-description">Em seguida você deverá formar uma equipe de até 5 pessoas com os participantes deste evento, lembre-se, as funções para os membros da equipe são Business, Marketing, UI/UX e Desenvolvedores.</p>
+                        <p className="section4-item-description">Em seguida você deverá formar uma equipe auto organizável, com os participantes deste evento, você terá acesso a mentores da TIVIT, para te apoiar no desenvolvimento do seu projeto durante o evento.</p>
                     </div>
 
                     <div className="section4-about-item">

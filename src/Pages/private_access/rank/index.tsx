@@ -11,6 +11,7 @@ import UserRankList from './components/UserRankList'
 import './styles.css'
 
 interface User {
+    id:number,
     name: string,
     school: string,
     email: string,
@@ -71,6 +72,7 @@ const PrivateRankPage = () => {
 
             <UserRankList 
                 name={user.name}
+                id={user.id}
             />
             
         </div>

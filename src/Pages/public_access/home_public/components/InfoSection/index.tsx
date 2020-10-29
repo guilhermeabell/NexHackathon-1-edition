@@ -13,13 +13,13 @@ const InfoSectionComponent = () => {
 
                 <div className="section1-info">
                     <div className="section1-info-top">
-                        <p className="section1-date">De 3 à 17 de Agosto de 2020</p>
+                        <p className="section1-date">De ## à ## de Novembro de 2020</p>
                         <p className="section1-method">Online</p>
                     </div>
 
                     <div className="section1-info-bottom">
                         <p className="section1-title">O que é um Hackathon?</p>
-                        <p className="section1-description">O hackaton é um evento no qual utilizamos a tecnologia e a criatividade para solucionar problemas do dia a dia, e propor ideias inovadoras.</p>
+                        <p className="section1-description">Hackathons são maratonas que envolvem pessoas interessadas em solucionar problemas e desenvolver soluções inovadoras para questões específicas.</p>
                     </div>
                 </div>
             </div>
