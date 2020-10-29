@@ -17,12 +17,14 @@ import GreenHeart from './assets/Home/greenHeart.svg'
 
 const PublicHomePage = () => {
 
-    const [count, setCount] = useState(0)
+    const [totalConnections, settotalConnections] = useState(0);
 
     useEffect(() => {
-        api.get('/count-users').then(response => {  
-            setCount(response.data);
-          }).catch(err => {});
+        api.get('/count-users').then(response => {
+        const { total } = response.data;
+
+        settotalConnections(total);
+        });
     }, []);
 
     return (
@@ -53,7 +55,7 @@ const PublicHomePage = () => {
 
                 <div className="homePublic-footer">
                     <span>
-                        Total de <b>{count}</b> participantes já cadastrados.
+                        Total de <b>{totalConnections}</b> participantes já cadastrados.
                         <img src={GreenHeart} />
                     </span>
                 </div>
