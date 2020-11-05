@@ -47,10 +47,10 @@
 }
 
 .handlelink-bio-false {
-  display: none;
+  filter: opacity(30%);
 }
 
-.profilePrivate-bio .profilePrivate-bio-content .linksContact-bio a .link-bio-item {
+.profilePrivate-bio .profilePrivate-bio-content .linksContact-bio .handlelink-bio-false .link-bio-item {
   background: #404040;
   padding: 10px 20px;
   border-radius: 10px;
@@ -63,7 +63,20 @@
   transition: 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.profilePrivate-bio .profilePrivate-bio-content .linksContact-bio a:hover .link-bio-item {
+.profilePrivate-bio .profilePrivate-bio-content .linksContact-bio .handlelink-bio .link-bio-item {
+  background: #404040;
+  padding: 10px 20px;
+  border-radius: 10px;
+  min-height: 50px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.profilePrivate-bio .profilePrivate-bio-content .linksContact-bio .handlelink-bio:hover .link-bio-item {
   filter: brightness(90%);
   transform: translateY(1px);
 }

@@ -31,8 +31,8 @@ const BioComponent : React.FC<UserBioProps> = (props) => {
 
               <div className="linksContact-bio">
                 <Link 
-                  className={`${(props.linkedin == null || undefined ? 'handlelink-bio-false' : '')}`}
-                  to={{ pathname: `${props.linkedin}` }} 
+                  className={`${(props.linkedin == null || undefined ? 'handlelink-bio-false' : 'handlelink-bio')}`}
+                  to={{ pathname: `${(props.linkedin == null || undefined ? 'https://www.linkedin.com' : props.linkedin)}` }} 
                   target="_blank" 
                 >
                   <div className="link-bio-item">
@@ -42,8 +42,8 @@ const BioComponent : React.FC<UserBioProps> = (props) => {
                 </Link>
 
                 <Link 
-                  className={`${(props.github == null || undefined ? 'handlelink-bio-false' : '')}`}
-                  to={{ pathname: `${props.github}` }} 
+                  className={`${(props.github == null || undefined ? 'handlelink-bio-false' : 'handlelink-bio')}`}
+                  to={{ pathname: `${(props.github == null || undefined ? 'https://github.com/' : props.github)}` }} 
                   target="_blank" 
                 >
                   <div className="link-bio-item">
@@ -53,8 +53,8 @@ const BioComponent : React.FC<UserBioProps> = (props) => {
                 </Link>
 
                 <Link 
-                  className={`${(props.instagram == null || undefined ? 'handlelink-bio-false' : '')}`}
-                  to={{ pathname: `${props.instagram}` }} 
+                  className={`${(props.instagram == null || undefined ? 'handlelink-bio-false' : 'handlelink-bio')}`}
+                  to={{ pathname: `${(props.instagram == null || undefined ? 'https://instagram.com/' : props.instagram)}` }} 
                   target="_blank" 
                 >
                   <div className="link-bio-item">

@@ -2,7 +2,7 @@ import React from 'react'
 
 import './styles.css'
 
-import DefaultImage from '../../../../../assets/images/defaultProfile.jpg'
+import DefaultImage from '../../../../../assets/images/defaultProfile.svg'
 
 interface UserRankProps {
   name: string,

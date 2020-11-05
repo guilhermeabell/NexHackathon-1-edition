@@ -72,7 +72,7 @@ const PrivateRankPage = () => {
 
             <UserRankList 
                 name={user.name}
-                id={user.id}
+                email={user.email}
             />
             
         </div>

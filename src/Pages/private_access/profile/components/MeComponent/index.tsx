@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { FiMail } from 'react-icons/fi'
 import { FaPen } from 'react-icons/fa'
 
-import DefaultImage from '../../../../../assets/images/defaultProfile.jpg'
+import DefaultImage from '../../../../../assets/images/defaultProfile.svg'
 
 import './styles.css'
 

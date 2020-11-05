@@ -2,20 +2,21 @@ import React, { useEffect, useState } from 'react'
 
 import api from '../../../../../services/api'
 
-import DefaultImage from '../../../../../assets/images/defaultProfile.jpg'
+import DefaultImage from '../../../../../assets/images/defaultProfile.svg'
 
 
 import './styles.css'
 
 interface Rank {
     id: number,
+    email: string,
     name: string,
     profile_image: string,
     points: number,
 }
 
 interface UserRankListProps {
-  id: number,
+  email: string,
   name: string,
 }
 
@@ -35,8 +36,8 @@ const UserRankList: React.FC<UserRankListProps> = (props) => {
       <div className="user-rankList-container">
           <div className="user-rankList-content">
           {rank.map((member, index) => (
-            <div className={`${(member.id === props.id ? 'user-rankList-users-equal' : 'user-rankList-users')}`} key={member.id}>
-              <div className={`${(member.id === props.id ? 'user-rankList-usersInfo-equal' : 'user-rankList-usersInfo')}`}> 
+            <div className={`${(member.email === props.email ? 'user-rankList-users-equal' : 'user-rankList-users')}`} key={member.email}>
+              <div className={`${(member.email === props.email ? 'user-rankList-usersInfo-equal' : 'user-rankList-usersInfo')}`}> 
                 <img src={`${(member.profile_image == null ? DefaultImage : member.profile_image)}`} /> 
                 <div className="user-rank-title">
                   <p>{member.name}</p>
@@ -44,7 +45,7 @@ const UserRankList: React.FC<UserRankListProps> = (props) => {
                 </div>
               </div>
 
-              <div className={`${(member.id === props.id ? 'user-rankList-points-equal' : 'user-rankList-points')}`}> 
+              <div className={`${(member.email === props.email ? 'user-rankList-points-equal' : 'user-rankList-points')}`}> 
                 <b>{member.points}</b>
                 <p>Pontos</p>
               </div>
