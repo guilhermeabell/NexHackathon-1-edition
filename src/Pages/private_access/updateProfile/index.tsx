@@ -28,6 +28,8 @@ const updateProfile = () => {
 
   const [user, setUser] = useState<User>({} as User);
 
+  console.log(user)
+
   const [selectedFile, setSelectedFile] = useState<File>();
   const [headline, setHeadline] = useState("")
   const [description, setDescription] = useState("")
@@ -98,11 +100,6 @@ const updateProfile = () => {
                 <p className="register-text">Vamos atualizar algumas coisas.</p>
             </div>
 
-            <p>{user.id}</p>
-            <p>{user.email}</p>
-            <p>{user.profile_image}</p>
-            <p>{user.name}</p>
-            
             <div className="updateProfile-form">
             
                 <form  
