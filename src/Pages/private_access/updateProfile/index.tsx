@@ -97,6 +97,12 @@ const updateProfile = () => {
                 </Link>
                 <p className="register-text">Vamos atualizar algumas coisas.</p>
             </div>
+
+            <p>{user.id}</p>
+            <p>{user.email}</p>
+            <p>{user.profile_image}</p>
+            <p>{user.name}</p>
+            
             <div className="updateProfile-form">
             
                 <form  
