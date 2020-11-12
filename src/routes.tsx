@@ -15,6 +15,7 @@ import UsersProfile from './Pages/private_access/usersProfile/index'
 import Teams from './Pages/private_access/teams/index'
 import Materials from './Pages/private_access/materials/index'
 import UpdateProfile from './Pages/private_access/updateProfile/index'
+import CreateTeamPage from './Pages/private_access/createTeam/index';
 
 
 
@@ -32,6 +33,7 @@ const Routes = () => {
             <Route component={UpdateProfile} path="/update-profile" />
             <Route component={UsersProfile} path="/user-profile" />
             <Route component={Teams} path="/teams" />
+            <Route component={CreateTeamPage} path="/create-team" />
             <Route component={Materials} path="/materials" />
         </BrowserRouter>
     )

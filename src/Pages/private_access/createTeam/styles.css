@@ -1,0 +1,177 @@
+#createTeam-page {
+    width: 100%;
+    height: 100vh;
+}
+
+#createTeam-page .createTeam-content {
+    width: 100%;
+    display: flex;
+    gap: 10vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#createTeam-page .createTeam-content .createTeam-header {
+    margin-top: 5vh;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#createTeam-page .createTeam-content .createTeam-header .createTeam-backButton:hover {
+    transition: 0.2s;
+    cursor: pointer;
+    filter: opacity(70%);
+}
+
+#createTeam-page .createTeam-content .createTeam-header .createTeam-text {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 2rem;
+    width: 200px;
+  
+    display: flex;
+    align-items: center;
+}
+
+#createTeam-page .createTeam-content .createTeam-form {
+    width: 50%;
+}
+
+#createTeam-page .createTeam-content .createTeam-form form .createTeamForm-field{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#createTeam-page .createTeam-content .createTeam-form form .createTeamForm-field-select .field-header {
+    margin: 1.5vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#createTeam-page .createTeam-content .createTeam-form form .createTeamForm-field-select .field-header button {
+    background: none;
+    outline: 0;
+    border: none;
+    color: var(--tertiary-color);
+    font-size: 1rem;
+    font-weight: 400;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#createTeam-page .createTeam-content .createTeam-form form .createTeamForm-field-select .field-header button:hover {
+    filter: opacity(80%);
+    transform: translateY(1px);
+}
+
+#createTeam-page .createTeam-content .createTeam-form form .createTeamForm-field-select .field-header span {
+    margin: 0 0 5px 10px;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#createTeam-page .createTeam-content .createTeam-form form .createTeamForm-field span {
+    margin: 0 0 5px 10px;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#createTeam-page .createTeam-content .createTeam-form form .createTeamForm-field input, select {
+    width: 100%;
+    margin-bottom: 10px;
+    background: var(--quarternary-color);
+    border-radius: 10px;
+    border: 0;
+    padding: 12px 14px;
+    font-size: 16px;
+    color: #2e2e2e;
+    outline: 0;
+}
+
+#createTeam-page .createTeam-content .createTeam-form form .createTeamForm-field-select select {
+    width: 100%;
+    margin-bottom: 10px;
+    background: var(--quarternary-color);
+    border-radius: 10px;
+    border: 0;
+    padding: 12px 14px;
+    font-size: 16px;
+    color: #2e2e2e;
+    outline: 0;
+}
+
+#createTeam-page .createTeam-content .createTeam-form form .createTeamForm-field-select select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 16px 14px;
+    color: #2e2e2e;
+    background: var(--quarternary-color) url('./assets/arrow.svg') 98% 50% no-repeat;
+
+}
+
+#createTeam-page .createTeam-content .createTeam-form form .createTeamForm-field select > option {
+    appearance: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #2e2e2e;
+}
+
+#createTeam-page .createTeam-content .createTeam-form form .form-submitButton{
+    margin: 5vh 0 10vh 0;
+    display: flex;
+    justify-content: center;
+}
+
+#createTeam-page .createTeam-content .createTeam-form form .form-submitButton button{
+    width: 65%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 0; 
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s
+}
+
+#createTeam-page .createTeam-content .createTeam-form form .form-submitButton button:hover{
+    cursor: pointer;
+    filter: opacity(70%);
+}
+
+@media (max-width: 600px) {
+    #createTeam-page .createTeam-content .createTeam-header{
+        width: 90%;
+    }
+
+    #createTeam-page .createTeam-content .createTeam-form{
+        width: 80%;
+    }
+
+    #createTeam-page .createTeam-content .createTeam-form form .form-submitButton a{
+        width: 100%;
+    }
+
+    #createTeam-page .createTeam-content .createTeam-form form .form-submitButton input{
+        width: 100%;
+    }
+
+    #createTeam-page .createTeam-content .createTeam-form .createTeam-Footer p{
+        text-align: center;
+    }
+
+    #createTeam-page .createTeam-content .createTeam-form .createTeam-Footer p > a:hover{
+        opacity: none;
+    }
+}

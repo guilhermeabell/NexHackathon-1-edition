@@ -99,7 +99,6 @@ const PublicHomePage = () => {
                                 <option value="" hidden selected disabled>Selecione sua escola</option>
                                 <option value="Vicente Leporace">Vicente Leporace</option>
                                 <option value="ETEC Uirapuru">ETEC Uirapuru</option>
-                                <option value="2">Escola 3</option>
                             </select>
                         </div>  
 

@@ -13,7 +13,7 @@ const InfoSectionComponent = () => {
 
                 <div className="section1-info">
                     <div className="section1-info-top">
-                        <p className="section1-date">De ## à ## de Novembro de 2020</p>
+                        <p className="section1-date">De 16/11 à 18/12 de 2020</p>
                         <p className="section1-method">Online</p>
                     </div>
 

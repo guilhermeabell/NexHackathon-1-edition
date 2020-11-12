@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Component } from 'react'
+import Modal from 'react-awesome-modal';
 import { Link } from 'react-router-dom'
 import { FaRegUser } from 'react-icons/fa'
+import { AiOutlinePlus } from 'react-icons/ai'
+import { IoIosCloseCircle } from 'react-icons/io'
 
 import api from '../../../../../services/api'
 
@@ -11,35 +14,66 @@ interface Teams {
     title: string,
 }
 
-interface UsersTeam {
-    id_user: number,
-    name: string,
-}
-
 const TeamsPrivate = () => {
 
+    const [modal, setModal] = useState(false)
+
+    function openModal(id_teams) {
+        setModal(true);
+    }
+
+    function closeModal() {
+        setModal(false);
+    }
+
     const [teams, setTeams] = useState<Teams[]>([])
-    const [users, setUsers] = useState<UsersTeam[]>([])
 
-    useEffect(() => {
-        api.get('/teams').then((response) => {
-            if(response && response.data) {
-                setTeams(response.data)
-            }
-        })
-    })
-
-    useEffect(() => {
-        api.get('/users-team').then((response) => {
-            if(response && response.data) {
-                setUsers(response.data)
-            }
-        })
-    })
+    // useEffect(() => {
+    //     api.get('/teams').then((response) => {
+    //         if(response && response.data) {
+    //             setTeams(response.data)
+    //         }
+    //     })
+    // })
 
     return (
         <div className="teamsPrivate-main">
             <div className="teamsPrivate-main-content">
+
+                <Modal 
+                    visible={modal}
+                    backgroun="#000"
+                    effect="fadeInDown"
+                    onClickAway={() => closeModal()}
+                >
+                    <div className="teamsPrivate-modal">
+                        <div className="teamsPrivate-modal-header">
+                            <p className="teamsPrivate-modal-title">Time 1</p>
+                            <IoIosCloseCircle size="30" color="#ef233c" onClick={closeModal} />
+                        </div>
+
+                        <div className="teamsPrivate-modal-main">
+                            <p className="teamsPrivate-modal-user">Pedro Augusto Ribeiro Marques</p>
+                            <p className="teamsPrivate-modal-user">João Araujo Costa</p>
+                            <p className="teamsPrivate-modal-user">Igor de Paula Gonçalves</p>
+                            <p className="teamsPrivate-modal-user">Gabriel Mochnacz Cangelli</p>
+                            <p className="teamsPrivate-modal-user">Eduarda da Silva</p>
+                        </div>
+
+                        <div className="teamsPrivate-modal-footer">
+                            <p className="teamsPrivate-modal-footer-title">Esses são os integrantes desta equipe.</p>
+                            <p className="teamsPrivate-modal-footer-subtitle">Que tal fazer conexão com eles?</p>
+                        </div>
+                    </div>
+                </Modal>
+
+                    <div className="teamsPrivate-main-button">
+                            <Link to="/create-team">
+                                <p>Criar time</p>
+                                <AiOutlinePlus size="20" color="#fff" />
+                            </Link>
+                    </div>
+
                     <div className="teamsPrivate-title-section">
                         <p className="teamsPrivate-title">Veja também outros times!</p>
                     </div>
@@ -47,7 +81,7 @@ const TeamsPrivate = () => {
                     <div className="teamsPrivate-main-section">
                         
                         {teams.map((team, index) => (
-                        <div className="teamsPrivate-main-card" key={team.id_teams}>
+                        <div className="teamsPrivate-main-card" onClick={() => openModal(team.id_teams)} key={team.id_teams}>
                             <div className="teamsPrivate-item-header">
                                 <p className='teamsPrivate-item-title'>Time {team.title}</p>
                                 <div className="card-header-count">
@@ -55,17 +89,18 @@ const TeamsPrivate = () => {
                                     <p className='teamsPrivate-item-count'>2/5</p>
                                 </div>
                             </div>
-
-                            <div className="teamsPrivate-item-main">
-                                <p>Pedro Henrique</p>
-                                <p>Julio Antonio</p>
-                            </div>
-
-                            <div className="teamsPrivate-item-footer">
-                                <button style={{display: "none"}}>Participar</button>
-                            </div>
                         </div>
                         ))}
+
+                        <div className="teamsPrivate-main-card" onClick={openModal}>
+`                            <div className="teamsPrivate-item-header">
+                                <p className='teamsPrivate-item-title'>Time 1</p>
+                                <div className="card-header-count">
+                                    <FaRegUser size='25' color='#f4f4f4'/>
+                                    <p className='teamsPrivate-item-count'>2/5</p>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
             </div>

@@ -9,6 +9,70 @@
     width: 85%;
 }
 
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal {
+    width: 50vw;
+    height: 60vh;
+    background: var(--foreground-color);
+    padding: 5vh 3vw;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal .teamsPrivate-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal .teamsPrivate-modal-header .teamsPrivate-modal-title {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal .teamsPrivate-modal-header svg:hover {
+    transition: 0.8s;
+    cursor: pointer;
+    filter: opacity(70%);
+    transform: translateY(1px);
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal .teamsPrivate-modal-main {
+    margin: 5vh 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal .teamsPrivate-modal-user {
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal .teamsPrivate-modal-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal .teamsPrivate-modal-footer .teamsPrivate-modal-footer-title {
+    color: var(--quarternary-color);
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal .teamsPrivate-modal-footer .teamsPrivate-modal-footer-subtitle {
+    color: var( --secondary-color);
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+
+}
+
 .teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-title {
     color: var(--text-color);
     font-weight: 600;
@@ -22,38 +86,61 @@
     gap: 30px;
 }
 
-.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card {
-    position: relative;
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-button {
     width: 100%;
-    height: 45vh;
-    border: 3px solid var(--quintenary-color);
-    border-radius: 20px; 
+
+    margin: 10vh 0 5vh 0;
+    display: flex;
 }
 
-.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card .teamsPrivate-item-header {
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-button a {
+    padding: 2vh 7.5vw;
+    border: 3px solid var(--quintenary-color);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.2s;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-button a:hover {
+    filter: opacity(90%);
+    background: var(--primary-dark-color);
+    transform: translateY(1px);
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-button a p {
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card {
     width: 100%;
-    border-bottom: 3px solid var(--quintenary-color);
+    border: 3px solid var(--quintenary-color);
+    border-radius: 10px; 
+    padding: 3vh 5vh;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 20px; 
-    padding: 10px 35px;
 }
 
-.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card .teamsPrivate-item-header .teamsPrivate-item-title {
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card .teamsPrivate-item-title {
     color: var(--text-color);
     font-weight: 500;
     font-size: 1.3rem;
 }
 
-.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card .teamsPrivate-item-header .card-header-count {
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card .card-header-count {
     width: 30%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card .teamsPrivate-item-header .card-header-count p {
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section .teamsPrivate-main-card .card-header-count p {
     color: var(--text-color);
     font-weight: 500;
     font-size: 1.3rem;
@@ -100,12 +187,56 @@
 }
 
 @media (max-width: 700px) {
+
+    .teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-button a {
+        padding: 2vh 7.5vw;
+    }
+
+    .teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal {
+        width: 70vw;
+        height: 70vh;
+        background: var(--foreground-color);
+        padding: 5vh 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
     .teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section {
         grid-template-columns: 1fr 1fr;
     }
+    
 }
 
 @media (max-width: 455px) {
+
+    .teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal {
+        width: 85vw;
+        height: 70vh;
+        background: var(--foreground-color);
+        padding: 5vh 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal {
+        width: 85vw;
+        height: 90vh;
+        background: var(--foreground-color);
+        padding: 5vh 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
     .teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-main-section {
         grid-template-columns: 1fr;
     }

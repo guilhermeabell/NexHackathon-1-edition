@@ -17,15 +17,6 @@ import GreenHeart from './assets/Home/greenHeart.svg'
 
 const PublicHomePage = () => {
 
-    const [count, setCount] = useState(0);
-
-    useEffect(() => {
-        api.get('/count-users').then(response => {  
-            setCount(response.data);
-          }).catch(err => {});
-    });
-
-
     return (
         <div id="homePublic-page">
             <div className="homePublic-content">
@@ -54,7 +45,7 @@ const PublicHomePage = () => {
 
                 <div className="homePublic-footer">
                     <span>
-                        Total de <b>{count}</b> participantes já cadastrados.
+                        Com amor. Nex Hackathon
                         <img src={GreenHeart} />
                     </span>
                 </div>
