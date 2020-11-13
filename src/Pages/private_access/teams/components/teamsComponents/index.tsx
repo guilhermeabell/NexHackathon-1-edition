@@ -22,7 +22,7 @@ const TeamsPrivate = () => {
 
     function openModal(id_teams) {
 
-        api.get('/team').then((response) => {
+        api.get('/team', id_teams).then((response) => {
             if(response && response.data) {
                 setTeam(response.data)
             }
