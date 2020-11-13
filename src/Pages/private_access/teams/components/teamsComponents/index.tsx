@@ -42,13 +42,15 @@ const TeamsPrivate = () => {
 
                 <Modal 
                     visible={modal}
-                    backgroun="#000"
                     effect="fadeInDown"
                     onClickAway={() => closeModal()}
                 >
                     <div className="teamsPrivate-modal">
                         <div className="teamsPrivate-modal-header">
-                            <p className="teamsPrivate-modal-title">Time 1</p>
+                            <div className="modal-header-text">
+                                <p className="teamsPrivate-modal-title">Time 1</p>
+                                <p className="teamsPrivate-modal-subtitle">Roda de samba</p>
+                            </div>
                             <IoIosCloseCircle size="30" color="#ef233c" onClick={closeModal} />
                         </div>
 
@@ -93,12 +95,10 @@ const TeamsPrivate = () => {
                         ))}
 
                         <div className="teamsPrivate-main-card" onClick={openModal}>
-`                            <div className="teamsPrivate-item-header">
-                                <p className='teamsPrivate-item-title'>Time 1</p>
-                                <div className="card-header-count">
-                                    <FaRegUser size='25' color='#f4f4f4'/>
-                                    <p className='teamsPrivate-item-count'>2/5</p>
-                                </div>
+                            <p className='teamsPrivate-item-title'>Time 1</p>
+                            <div className="card-header-count">
+                                <FaRegUser size='25' color='#f4f4f4'/>
+                                <p className='teamsPrivate-item-count'>2/5</p>
                             </div>
                         </div>
 

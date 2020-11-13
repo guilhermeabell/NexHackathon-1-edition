@@ -45,7 +45,7 @@ const PublicHomePage = () => {
 
                 <div className="homePublic-footer">
                     <span>
-                        Com amor. Nex Hackathon
+                        Com carinho. Nex Hackathon
                         <img src={GreenHeart} />
                     </span>
                 </div>

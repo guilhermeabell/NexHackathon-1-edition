@@ -11,8 +11,8 @@
 
 .teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal {
     width: 50vw;
-    height: 60vh;
-    background: var(--foreground-color);
+    height: 65vh;
+    background: var(--background-color);
     padding: 5vh 3vw;
 }
 
@@ -26,6 +26,12 @@
     color: var(--text-color);
     font-weight: 600;
     font-size: 1.7rem;
+}
+
+.teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal .teamsPrivate-modal-header .teamsPrivate-modal-subtitle {
+    color: var(--quarternary-color);
+    font-weight: 300;
+    font-size: 1.2rem;
 }
 
 .teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal .teamsPrivate-modal-header svg:hover {
@@ -195,7 +201,7 @@
     .teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal {
         width: 70vw;
         height: 70vh;
-        background: var(--foreground-color);
+        background: var(--background-color);
         padding: 5vh 5vw;
         display: flex;
         flex-direction: column;
@@ -213,7 +219,7 @@
     .teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal {
         width: 85vw;
         height: 70vh;
-        background: var(--foreground-color);
+        background: var(--background-color);
         padding: 5vh 5vw;
         display: flex;
         flex-direction: column;
@@ -230,7 +236,7 @@
     .teamsPrivate-main .teamsPrivate-main-content .teamsPrivate-modal {
         width: 85vw;
         height: 90vh;
-        background: var(--foreground-color);
+        background: var(--background-color);
         padding: 5vh 5vw;
         display: flex;
         flex-direction: column;
