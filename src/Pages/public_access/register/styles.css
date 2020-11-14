@@ -65,6 +65,16 @@
     color: #2e2e2e;
     outline: 0;
 }
+
+#registerPublic-page .registerPublic-content .registerPublic-form form .registerForm-field p {
+    margin: 5px 0;
+    color: var(--text-color);
+    font-weight: 300;
+    font-size: 1rem;
+
+    transition: 0.2s;
+}
+
 #registerPublic-page .registerPublic-content .registerPublic-form form .registerForm-field select{
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -81,6 +91,24 @@
     -moz-border-radius: 5px;
     border-radius: 5px;
     color: #2e2e2e;
+}
+
+.forcebar {
+    width: 100%;
+    height: 0.5rem;
+    background: var(--foreground-color);
+    border-radius: 10px;
+
+    display: flex;
+}
+
+.forcebar .forcebar-load {
+    width: 40%;
+    height: 0.5rem;
+    background: var(--quintenary-color);
+    border-radius: 10px;
+
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton{

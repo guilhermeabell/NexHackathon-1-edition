@@ -9,9 +9,8 @@ import api from '../../../services/api'
 import './styles.css'
 
 interface Users {
-    id_user: number;
-    name: string;
-    email: string;
+    id_user: number,
+    email: string
 }
 
 interface User {
@@ -68,7 +67,7 @@ const CreateTeamPage = () => {
         })
     })
 
-    
+    console.log(available)
 
     async function handleCreateTeam (e: FormEvent) {
         e.preventDefault()

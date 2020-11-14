@@ -2,13 +2,16 @@ import React, { useState, useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { IoIosArrowRoundBack } from 'react-icons/io'
 import InputMask from 'react-input-mask';
-import api from '../../../services/api'
+import { useAlert } from 'react-alert'
 
+import api from '../../../services/api'
 
 import './styles.css'
 
 
 const PublicHomePage = () => {
+
+    const alert = useAlert()
 
     function onSuccess() {
             history.push('/success-flash')
@@ -27,6 +30,34 @@ const PublicHomePage = () => {
 
     const history = useHistory()
 
+    var value = 0
+    var color = '#db3249'
+    var passForce = ''
+
+    if(password.match(/[a-z]+/)){
+        value += 25;
+        passForce = 'Fraca'
+	}
+	if(password.match(/[A-Z]+/)){
+        value += 25;
+        passForce = 'Fraca'
+    }
+    if(password.length >= 8) {
+        value += 25;
+        passForce = 'Aceitável'
+        color = '#07F9A2'
+    }
+	if(password.match(/[!|@|#|$|%|^|&|*|(|)|-|_]/)){
+        value += 25;
+        passForce = 'Segura'
+        color = '#07F9A2'
+	}
+
+    const verifyStage = {
+        width: `${value}%`, 
+        background: `${color}`,
+     } as React.CSSProperties;
+
     async function handleRegister(e) {
         e.preventDefault();
     
@@ -40,14 +71,44 @@ const PublicHomePage = () => {
             password,
         };
     
-        try {
-          const response = await api.post("/users", data);
-    
-          onSuccess()
-
-        } catch (err) {
-          console.log(err);
-          alert("Erro no cadastro, tente novamente");
+        if(!name) {
+            alert.error('Precisamos de um nome!')
+        } else {
+            if(!ra) {
+                alert.error('Precisamos de um RA!')
+            } else {
+                if(!school) {
+                    alert.error('Selecione a sua escola!')
+                } else {
+                    if(!date_of_birth) {
+                        alert.error('Coloque sua data de nascimento!')
+                    } else { 
+                        if(!cell_phone) {
+                            alert.error('Informe o seu celular!')
+                        } else {
+                            if(!email) {
+                                alert.error('Precisamos de um e-mail!')
+                            } else {
+                                if(!password) {
+                                    alert.error('Sua senha é importante!')
+                                } else {
+                                    if(value >= 50) {
+                                        try {
+                                            const response = await api.post("/users", data);
+                                            onSuccess()
+                                        } catch (err) {
+                                            console.log(err);
+                                            alert.error("Erro no cadastro, tente novamente");
+                                        }
+                                    } else {
+                                        alert.error('Tente uma senha mais forte!')
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     
@@ -64,7 +125,10 @@ const PublicHomePage = () => {
                 </div>
                 <div className="registerPublic-form">
                 
-                    <form onSubmit={handleRegister}>
+                    <form 
+                        onSubmit={handleRegister}
+                        autoComplete="off"
+                    >
                         <div className="registerForm-field">
                             <span>Nome</span>
                             <input 
@@ -108,7 +172,7 @@ const PublicHomePage = () => {
                                 type="text" 
                                 name="date_of_birth" 
                                 id="date_of_birth" 
-                                mask="99-99-9999" 
+                                mask="99/99/9999" 
                                 maskChar={null} 
                                 placeholder="Digite sua data de nascimento"
                                 onChange={e => setDate_of_birth(e.target.value)}
@@ -148,6 +212,11 @@ const PublicHomePage = () => {
                                 placeholder="Digite sua senha"
                                 onChange={e => setPassword(e.target.value)}
                             />
+
+                            <div className="forcebar">
+                                <div className="forcebar-load" style={verifyStage} ></div>
+                            </div>
+                            <p>{passForce}</p>
                         </div>
 
                         <div className="form-submitButton">
