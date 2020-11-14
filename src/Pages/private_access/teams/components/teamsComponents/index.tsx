@@ -95,12 +95,10 @@ const TeamsPrivate = () => {
                         
                         {teams.map((team, index) => (
                         <div className="teamsPrivate-main-card" onClick={() => openModal(team.id_teams)} key={team.id_teams}>
-                            <div className="teamsPrivate-item-header">
-                                <p className='teamsPrivate-item-title'>Time {team.id_teams}</p>
-                                <div className="card-header-count">
-                                    <FaRegUser size='25' color='#f4f4f4'/>
-                                    <p className='teamsPrivate-item-count'>2/5</p>
-                                </div>
+                            <p className='teamsPrivate-item-title'>Time {team.id_teams}</p>
+                            <div className="card-header-count">
+                                <FaRegUser size='25' color='#f4f4f4'/>
+                                <p className='teamsPrivate-item-count'>2/5</p>
                             </div>
                         </div>
                         ))}
