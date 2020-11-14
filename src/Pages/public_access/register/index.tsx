@@ -94,7 +94,7 @@ const PublicHomePage = () => {
                                 } else {
                                     if(value >= 50) {
                                         try {
-                                            const response = await api.post("/users", data);
+                                            await api.post("/users", data);
                                             onSuccess()
                                         } catch (err) {
                                             console.log(err);
