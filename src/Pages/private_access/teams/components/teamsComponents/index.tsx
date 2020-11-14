@@ -14,19 +14,20 @@ interface Teams {
     title: string,
 }
 
+interface Team {
+    id: number,
+    title: string,
+}
+
 const TeamsPrivate = () => {
 
     const [modal, setModal] = useState(false)
 
-    const [team, setTeam] = useState('')
+    const [team, setTeam] = useState<Team>({} as Team)
 
-    function openModal(id_teams) {
+    async function openModal(id_teams: any) {
 
-        api.get('/team', id_teams).then((response) => {
-            if(response && response.data) {
-                setTeam(response.data)
-            }
-        })
+        const team = await api.get('/team', id_teams)
 
         console.log(team)
 
