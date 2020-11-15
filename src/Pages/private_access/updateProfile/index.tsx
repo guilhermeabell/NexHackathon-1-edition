@@ -28,8 +28,6 @@ const updateProfile = () => {
 
   const [user, setUser] = useState<User>({} as User);
 
-  console.log(user)
-
   const [selectedFile, setSelectedFile] = useState<File>();
   const [headline, setHeadline] = useState("")
   const [description, setDescription] = useState("")
@@ -73,19 +71,36 @@ const updateProfile = () => {
       data.append('profile_image', selectedFile)
     }
 
-    var userID = user.id
-
-    if (userID) { 
-      try {
-        const response = await api.post(`/update/${userID}`, data)
-        history.push('/login')
-
-      } catch (err) {
-        console.log(err);
-        alert("Erro ao atualizar, tente novamente");
-      }
+    if (!headline) { 
+      customAlert.error('Preencha todos os campos.')
     }else{
-      customAlert.error('Algo deu errado.')
+      if (!description) {
+        customAlert.error('Preencha todos os campos.')
+      } else {
+        if (!linkedin) {
+          customAlert.error('Preencha todos os campos.')
+        } else {
+          if (!github) {
+            customAlert.error('Preencha todos os campos.')
+          } else {
+            if (!instagram) {
+              customAlert.error('Preencha todos os campos.')
+            } else {
+              if (!selectedFile) {
+                customAlert.error('Envie uma foto.')
+              } else {
+                try {
+                  await api.post(`/update/${user.id}`, data)
+                  history.push('/login')
+                } catch (err) {
+                  console.log(err);
+                  alert("Erro ao atualizar, tente novamente");
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -119,7 +134,6 @@ const updateProfile = () => {
                           id="headline" 
                           placeholder="Digite sua função"
                           onChange={e => setHeadline(e.target.value)}
-                          defaultValue={user.headline}
                       />
                   </div>
 
@@ -130,7 +144,6 @@ const updateProfile = () => {
                           id="description" 
                           placeholder="Conte-nos um pouco mais sobre você"
                           onChange={e => setDescription(e.target.value)}
-                          defaultValue={user.description}
                       />
                   </div>
 
@@ -142,7 +155,6 @@ const updateProfile = () => {
                           id="linkedin" 
                           placeholder="Coloque o link do seu perfil do Linkedin"
                           onChange={e => setLinkedin(e.target.value)}
-                          defaultValue={user.linkedin}
                       />
                   </div>
 
@@ -154,7 +166,6 @@ const updateProfile = () => {
                           id="github" 
                           placeholder="Coloque o link do seu perfil do Github"
                           onChange={e => setGithub(e.target.value)}
-                          defaultValue={user.github}
                       />
                   </div>
 
@@ -166,7 +177,6 @@ const updateProfile = () => {
                           id="instagram" 
                           placeholder="Coloque o link do seu perfil do Instagram"
                           onChange={e => setInstagram(e.target.value)}
-                          defaultValue={user.instagram}
                       />
                   </div>
 

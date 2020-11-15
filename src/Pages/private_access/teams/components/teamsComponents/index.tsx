@@ -10,30 +10,38 @@ import api from '../../../../../services/api'
 import './styles.css'
 
 interface Teams {
-    id_teams: number,
+    id_teams: string,
     title: string,
 }
 
 interface Team {
-    id: number,
-    title: string,
+    id_teams: number;
+    title: string;
+}
+
+interface Members {
+    id_user: number;
+    name: string;
 }
 
 const TeamsPrivate = () => {
 
     const [modal, setModal] = useState(false)
 
-    const [team, setTeam] = useState<Team>({} as Team)
+    const [team, setTeam] = useState<Team>({} as Team);
+    const [membersTeam, setMmebersTeam] = useState<Members[]>([]);
 
-    async function openModal(id_teams: number) {
+    async function openModal(id_teams: string) {
 
-        api.get('/team', id_teams).then((response) => {
-            if(response && response.data) {
-                setTeam(response.data)
-            }
+        await api.get(`/team/${id_teams}`).then((response) => {
+            setTeam(response.data)
+            console.log(response.data)
         })
 
-        console.log(id_teams)
+        await api.get(`/members-team/${id_teams}`).then((response) => {
+            setMmebersTeam(response.data)
+            console.log(response.data)
+        })
 
         setModal(true);
     }
@@ -46,9 +54,7 @@ const TeamsPrivate = () => {
 
     useEffect(() => {
         api.get('/teams').then((response) => {
-            if(response && response.data) {
-                setTeams(response.data)
-            }
+            setTeams(response.data)
         })
     })
 
@@ -64,18 +70,16 @@ const TeamsPrivate = () => {
                     <div className="teamsPrivate-modal">
                         <div className="teamsPrivate-modal-header">
                             <div className="modal-header-text">
-                                <p className="teamsPrivate-modal-title">Time 1</p>
-                                <p className="teamsPrivate-modal-subtitle">Roda de samba</p>
+                                <p className="teamsPrivate-modal-title">Time {team.id_teams}</p>
+                                <p className="teamsPrivate-modal-subtitle">{team.title}</p>
                             </div>
                             <IoIosCloseCircle size="30" color="#ef233c" onClick={closeModal} />
                         </div>
 
                         <div className="teamsPrivate-modal-main">
-                            <p className="teamsPrivate-modal-user">Pedro Augusto Ribeiro Marques</p>
-                            <p className="teamsPrivate-modal-user">João Araujo Costa</p>
-                            <p className="teamsPrivate-modal-user">Igor de Paula Gonçalves</p>
-                            <p className="teamsPrivate-modal-user">Gabriel Mochnacz Cangelli</p>
-                            <p className="teamsPrivate-modal-user">Eduarda da Silva</p>
+                        {membersTeam.map((member, index) => (
+                            <p className="teamsPrivate-modal-user" key={member.id_user} >{member.name}</p>
+                        ))}
                         </div>
 
                         <div className="teamsPrivate-modal-footer">
