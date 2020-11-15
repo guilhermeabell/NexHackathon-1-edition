@@ -1,7 +1,7 @@
 import React, { useEffect, useState, Component } from 'react'
 import Modal from 'react-awesome-modal';
 import { Link } from 'react-router-dom'
-import { FaRegUser } from 'react-icons/fa'
+import { IoIosGitNetwork } from 'react-icons/io'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { IoIosCloseCircle } from 'react-icons/io'
 
@@ -25,11 +25,15 @@ const TeamsPrivate = () => {
 
     const [team, setTeam] = useState<Team>({} as Team)
 
-    async function openModal(id_teams: any) {
+    async function openModal(id_teams: number) {
 
-        const team = await api.get('/team', id_teams)
+        api.get('/team', id_teams).then((response) => {
+            if(response && response.data) {
+                setTeam(response.data)
+            }
+        })
 
-        console.log(team)
+        console.log(id_teams)
 
         setModal(true);
     }
@@ -97,10 +101,7 @@ const TeamsPrivate = () => {
                         {teams.map((team, index) => (
                         <div className="teamsPrivate-main-card" onClick={() => openModal(team.id_teams)} key={team.id_teams}>
                             <p className='teamsPrivate-item-title'>Time {team.id_teams}</p>
-                            <div className="card-header-count">
-                                <FaRegUser size='25' color='#f4f4f4'/>
-                                <p className='teamsPrivate-item-count'>2/5</p>
-                            </div>
+                            <IoIosGitNetwork size='25' color='#f4f4f4'/>
                         </div>
                         ))}
                     </div>

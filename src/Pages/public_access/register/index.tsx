@@ -36,22 +36,28 @@ const PublicHomePage = () => {
 
     if(password.match(/[a-z]+/)){
         value += 25;
-        passForce = 'Fraca'
 	}
 	if(password.match(/[A-Z]+/)){
         value += 25;
-        passForce = 'Fraca'
     }
     if(password.length >= 8) {
         value += 25;
-        passForce = 'Aceitável'
-        color = '#07F9A2'
     }
 	if(password.match(/[!|@|#|$|%|^|&|*|(|)|-|_]/)){
         value += 25;
-        passForce = 'Segura'
-        color = '#07F9A2'
+    }
+
+    if(value >= 25){
+        passForce = 'Fraca';
 	}
+	if(value >= 50){
+        passForce = 'Aceitável';
+            color = '#07F9A2';
+    }
+    if(value == 100) {
+        passForce = 'Segura';
+        color = '#07F9A2';
+    }
 
     const verifyStage = {
         width: `${value}%`, 

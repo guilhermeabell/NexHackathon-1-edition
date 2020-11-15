@@ -5,7 +5,6 @@ import { useAlert } from 'react-alert'
 
 import api from '../../../services/api'
 
-
 import './styles.css'
 
 interface Users {
@@ -14,10 +13,9 @@ interface Users {
 }
 
 interface User {
-    user_id: number,
+    id: number,
     email: string,
 }
-
 
 const CreateTeamPage = () => {
 
@@ -45,21 +43,13 @@ const CreateTeamPage = () => {
 
     const [name, setName] = useState("")
 
-    const [userItems, setUserItems] = useState([
-        { id: user.user_id, email: user.email },
-        { id: '', email: '' },
-        { id: '', email: '' },
-        { id: '', email: '' }
-    ])
+    const [member1, setMember1] = useState('')
+    const [member2, setMember2] = useState('')
+    const [member3, setMember3] = useState('')
+    const [member4, setMember4] = useState('')
+    const [member5, setMember5] = useState('')
 
     const [available, setAvailable] = useState<Users[]>([])
-
-    function addNewItem () {
-        setUserItems([
-            ...userItems,
-            { id: '', email: '' }
-        ])
-    }
 
     useEffect(() => {
         api.get('/available-users').then(response => {
@@ -67,32 +57,43 @@ const CreateTeamPage = () => {
         })
     })
 
-    console.log(available)
-
     async function handleCreateTeam (e: FormEvent) {
         e.preventDefault()
 
-        await api.post('/team', {
-            name,
-            members: userItems
-        }).then(() => {
-            history.push('/teams')
-        }).catch(() => {
-            alert.error('Ops! Tente novamente')
-        })
+        if(!name) {
+            alert.error('Dê um nome para a equipe!')
+        } else {
+            if(!member2) {
+                alert.error('Falta membro na equipe')
+            } else {
+                if(!member3) {
+                    alert.error('Falta membro na equipe')
+                } else {
+                    if(!member4) {
+                        alert.error('Falta membro na equipe')
+                    } else {
+                        if(!member5) {
+                            alert.error('Falta membro na equipe')
+                        } else {
+                            await api.post('/team', {
+                                name,
+                                member1: user.id,
+                                member2,
+                                member3,
+                                member4,
+                                member5,
+                            }).then(() => {
+                                history.push('/teams')
+                            }).catch(() => {
+                                alert.error('Ops! Tente novamente')
+                            })
+                        }
+                    }
+                }
+            }
+        }
+        
     }
-
-    function setUserItemValue(position: number, field: string, value: string) {
-        const updateUserItems = userItems.map((userItem, index) => {
-          if (index === position) {
-            return { ...userItem, [field]: value };
-          }
-    
-          return userItem;
-        });
-    
-        setUserItems(updateUserItems);
-      }
 
     return (
         <div id="createTeam-page">
@@ -106,7 +107,10 @@ const CreateTeamPage = () => {
                 </div>
                 <div className="createTeam-form">
                 
-                    <form onSubmit={handleCreateTeam}>
+                    <form 
+                        onSubmit={handleCreateTeam}
+                        autoComplete="off"
+                    >
                         <div className="createTeamForm-field">
                             <span>Nome do time</span>
                             <input 
@@ -121,27 +125,77 @@ const CreateTeamPage = () => {
                         <div className="createTeamForm-field-select">
                             <div className="field-header">
                                 <span>Integrantes</span>
-                                <button onClick={addNewItem} type="button">+ Novo Membro</button>
                             </div>
 
-                            {userItems.map((userItem, index) => {
-                                return (
-                                    <div className="field-select" key={userItem.id}>
-                                        <select 
-                                            name="member"  
-                                            id="member" 
-                                            onChange={e => setUserItemValue(index, 'id',e.target.value)}
-                                        >
-                                            <option value="" hidden selected disabled>Selecione um integrante</option>
-                                            {available.map((available) => (
-                                                <option key={available.id_user} value={available.id_user}>
-                                                    {available.email}
-                                                </option>
-                                            ))}
-                                        </select>
-                                    </div>
-                                );
-                            })}
+                            <div className="field-select">
+                                <select 
+                                    name="member"  
+                                    id="member" 
+                                    onChange={e => setMember1(e.target.value)}
+                                >
+                                    <option value={user.id} selected>{user.email}</option>
+                                </select>
+                            </div>
+
+                            <div className="field-select">
+                                <select 
+                                    name="member"  
+                                    id="member" 
+                                    onChange={e => setMember2(e.target.value)}
+                                >
+                                    <option value="" hidden selected disabled>Selecione um integrante</option>
+                                    {available.map((available) => (
+                                        <option key={available.id_user} value={available.id_user}>
+                                            {available.email}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+
+                            <div className="field-select">
+                                <select 
+                                    name="member"  
+                                    id="member" 
+                                    onChange={e => setMember3(e.target.value)}
+                                >
+                                    <option value="" hidden selected disabled>Selecione um integrante</option>
+                                    {available.map((available) => (
+                                        <option key={available.id_user} value={available.id_user}>
+                                            {available.email}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+
+                            <div className="field-select">
+                                <select 
+                                    name="member"  
+                                    id="member" 
+                                    onChange={e => setMember4(e.target.value)}
+                                >
+                                    <option value="" hidden selected disabled>Selecione um integrante</option>
+                                    {available.map((available) => (
+                                        <option key={available.id_user} value={available.id_user}>
+                                            {available.email}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+
+                            <div className="field-select">
+                                <select 
+                                    name="member"  
+                                    id="member" 
+                                    onChange={e => setMember5(e.target.value)}
+                                >
+                                    <option value="" hidden selected disabled>Selecione um integrante</option>
+                                    {available.map((available) => (
+                                        <option key={available.id_user} value={available.id_user}>
+                                            {available.email}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
                         </div>                        
 
                         <div className="form-submitButton">
