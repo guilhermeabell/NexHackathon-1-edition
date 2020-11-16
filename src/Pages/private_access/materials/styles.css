@@ -2,6 +2,83 @@
   width: 100%;
 }
 
-#materials-page .materials-content {
+#materials-page .materials-content .tutorials-media {
+  margin: 5vh 0;
+}
 
+.category-title {
+  margin-left: 5vw;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #7A7A7A;
+}
+
+.materials-content .materials-main {
+  margin: 3vh 0 5vh 5vw;
+  display: flex;
+  align-items: center;
+  gap: 4vh;
+  position: relative;
+  overflow-x: auto;
+}
+
+.materials-content .materials-main .materials-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.materials-content .materials-main .materials-item-container:hover {
+  transform: scale(0.95);
+}
+
+.materials-content .materials-main .materials-item-container img, iframe {
+  width: 20vw;
+}
+
+.materials-content .materials-main .materials-item-container .materials-item-title {
+  max-width: 20vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.materials-content .materials-main::-webkit-scrollbar {
+  overflow: hidden;
+}
+
+@media (max-width: 750px) {
+  .materials-content .materials-main .materials-item-container img, iframe {
+    width: 55vw;
+  }
+
+  .materials-content .materials-main .materials-item-container .materials-item-title {
+    max-width: 55vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .materials-content .materials-main .materials-item-container img, iframe  {
+    width: 55vw;
+  }
+
+  .materials-content .materials-main .materials-item-container .materials-item-title {
+    max-width: 55vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .materials-content .materials-main .materials-item-container img, iframe {
+    width: 55vw;
+  }
+
+  .materials-content .materials-main .materials-item-container .materials-item-title {
+    max-width: 55vw;
+  }
 }

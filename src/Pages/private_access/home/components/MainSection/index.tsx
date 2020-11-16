@@ -24,7 +24,7 @@ const MainComponent = () => {
 
                 <div className="main-item-container">
                     <p className="main-item-alert">ALERTA!!</p>
-                    <p className="main-item-title">Nós temos um encontro marcado dia ## para bater um papo sobre linkedin. Esperamos você :)</p>
+                    <p className="main-item-title">Nós temos um encontro marcado essa semana para bater um papo sobre carreira. Esperamos você :)</p>
                 </div>
               </div>
             </div>

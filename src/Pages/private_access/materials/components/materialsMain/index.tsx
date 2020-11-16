@@ -5,65 +5,24 @@ import thumbMat from '../../../../../assets/images/Thumb.png'
 
 import './styles.css'
 
-const MaterialsPage = () => {
+interface Props {
+    category: string;
+    video: {
+        link: string;
+        title: string;
+    }
+}
+
+const MaterialsPage: React.FC<Props> = (props) => {
     return (
       <>
-      <p className="category-title">Programação</p>
+      <p className="category-title">Unknown</p>
       <div className="materials-main">
+        <div className="materials-item-container" key={props.video.link} >
+            <iframe src="" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
-        <Link 
-          to={{ pathname: 'https://www.youtube.com/watch?v=_tTc3rH_Olk&t=20s'}} 
-          target="_blank" 
-        >
-        <div className="materials-item-container">
-            <img className="materials-item-image" src={thumbMat} />
-
-            <p className="materials-item-title">Como criar sua primeira API com...</p>
+            <p className="materials-item-title">Unknown</p>
         </div>
-        </Link>
-
-        <div className="materials-item-container">
-            <img className="materials-item-image" src={thumbMat} />
-
-            <p className="materials-item-title">Como criar sua primeira API com...</p>
-        </div>
-
-        <div className="materials-item-container">
-            <img className="materials-item-image" src={thumbMat} />
-
-            <p className="materials-item-title">Como criar sua primeira API com...</p>
-        </div>
-
-        <div className="materials-item-container">
-            <img className="materials-item-image" src={thumbMat} />
-
-            <p className="materials-item-title">Como criar sua primeira API com...</p>
-        </div>
-
-        <div className="materials-item-container">
-            <img className="materials-item-image" src={thumbMat} />
-
-            <p className="materials-item-title">Como criar sua primeira API com...</p>
-        </div>
-
-        <div className="materials-item-container">
-            <img className="materials-item-image" src={thumbMat} />
-
-            <p className="materials-item-title">Como criar sua primeira API com...</p>
-        </div>
-
-        <div className="materials-item-container">
-            <img className="materials-item-image" src={thumbMat} />
-
-            <p className="materials-item-title">Como criar sua primeira API com...</p>
-        </div>
-
-        <div className="materials-item-container">
-            <img className="materials-item-image" src={thumbMat} />
-
-            <p className="materials-item-title">Como criar sua primeira API com...</p>
-        </div>
-
       </div>
       </>
     )

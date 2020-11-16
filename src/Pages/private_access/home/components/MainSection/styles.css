@@ -17,13 +17,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 5vw;
 }
 
 .homePrivate-main .homePrivate-main-content .main-section .main-item-container {
   width: 45%;
   height: 25vh;
-  padding: 0 20px;
+  padding: 10px 20px;
   background: var(--foreground-color);
   border-radius: 15px;
   display: flex;
@@ -125,6 +125,7 @@
 
   .homePrivate-main .homePrivate-main-content .main-section .main-item-container {
     min-width: 350px;
+    padding: 10px 5vw;
   }
 
   .homePrivate-main .homePrivate-main-content .main-section::-webkit-scrollbar {

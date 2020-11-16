@@ -1,6 +1,6 @@
 import React, { useEffect, useState, Component } from 'react'
 import Modal from 'react-awesome-modal';
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { IoIosGitNetwork } from 'react-icons/io'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { IoIosCloseCircle } from 'react-icons/io'
@@ -22,6 +22,12 @@ interface Team {
 interface Members {
     id_user: number;
     name: string;
+}
+
+interface User {
+    id:number,
+    name: string,
+    team: number
 }
 
 const TeamsPrivate = () => {
@@ -58,6 +64,40 @@ const TeamsPrivate = () => {
         })
     })
 
+    const [user, setUser] = useState<User>({} as User);
+
+    const token = localStorage.getItem("Auth")
+
+    const history = useHistory()
+
+    if (!token) {
+        history.push('/login')
+    }
+
+    useEffect(() => {
+        api.get('/user', {
+            headers: {
+                Authorization: token,
+            }
+        }).then(response => {  
+            setUser(response.data);
+          }).catch(err => {
+            history.push('/login')
+          });
+    }, [token, user, history]);
+
+    var value = ''
+
+    if (user.team !== null) {
+        var value = 'none'
+    }
+
+    console.log(value)
+
+    const verifyTeam = {
+        display: `${value}`, 
+    } as React.CSSProperties;
+
     return (
         <div className="teamsPrivate-main">
             <div className="teamsPrivate-main-content">
@@ -89,10 +129,10 @@ const TeamsPrivate = () => {
                     </div>
                 </Modal>
 
-                    <div className="teamsPrivate-main-button">
-                            <Link to="/create-team">
-                                <p>Criar time</p>
-                                <AiOutlinePlus size="20" color="#fff" />
+                    <div className="teamsPrivate-main-button" style={verifyTeam}>
+                            <Link to="/create-team" style={verifyTeam}>
+                                <p style={verifyTeam}>Criar time</p>
+                                <AiOutlinePlus size="20" color="#fff" style={verifyTeam} />
                             </Link>
                     </div>
 

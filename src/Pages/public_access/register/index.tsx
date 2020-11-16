@@ -62,7 +62,7 @@ const PublicHomePage = () => {
     const verifyStage = {
         width: `${value}%`, 
         background: `${color}`,
-     } as React.CSSProperties;
+    } as React.CSSProperties;
 
     async function handleRegister(e) {
         e.preventDefault();
@@ -77,38 +77,35 @@ const PublicHomePage = () => {
             password,
         };
     
+        
         if(!name) {
-            alert.error('Precisamos de um nome!')
+            alert.error('Precisamos de um RA!')
         } else {
-            if(!ra) {
-                alert.error('Precisamos de um RA!')
+            if(!school) {
+                alert.error('Selecione a sua escola!')
             } else {
-                if(!school) {
-                    alert.error('Selecione a sua escola!')
-                } else {
-                    if(!date_of_birth) {
-                        alert.error('Coloque sua data de nascimento!')
-                    } else { 
-                        if(!cell_phone) {
-                            alert.error('Informe o seu celular!')
+                if(!date_of_birth) {
+                    alert.error('Coloque sua data de nascimento!')
+                } else { 
+                    if(!cell_phone) {
+                        alert.error('Informe o seu celular!')
+                    } else {
+                        if(!email) {
+                            alert.error('Precisamos de um e-mail!')
                         } else {
-                            if(!email) {
-                                alert.error('Precisamos de um e-mail!')
+                            if(!password) {
+                                alert.error('Sua senha é importante!')
                             } else {
-                                if(!password) {
-                                    alert.error('Sua senha é importante!')
-                                } else {
-                                    if(value >= 50) {
-                                        try {
-                                            await api.post("/users", data);
-                                            onSuccess()
-                                        } catch (err) {
-                                            console.log(err);
-                                            alert.error("Erro no cadastro, tente novamente");
-                                        }
-                                    } else {
-                                        alert.error('Tente uma senha mais forte!')
+                                if(value >= 50) {
+                                    try {
+                                        await api.post("/users", data);
+                                        onSuccess()
+                                    } catch (err) {
+                                        console.log(err);
+                                        alert.error("Erro no cadastro, tente novamente");
                                     }
+                                } else {
+                                    alert.error('Tente uma senha mais forte!')
                                 }
                             }
                         }
@@ -144,20 +141,7 @@ const PublicHomePage = () => {
                                 placeholder="Digite seu nome"
                                 onChange={e => setName(e.target.value)}
                             />
-                        </div>
-
-                        <div className="registerForm-field">
-                            <span>RA</span>
-                            <InputMask 
-                                type="text" 
-                                name="ra" 
-                                id="ra" 
-                                mask="000999999999-9" 
-                                maskChar={null} 
-                                placeholder="Digite seu RA"
-                                onChange={e => setRa(e.target.value)}
-                            />
-                        </div>   
+                        </div>  
 
                         <div className="registerForm-field">
                             <span>Escola</span>

@@ -8,12 +8,12 @@ const MaterialsPage = () => {
       <div className="spotlight" style={{
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundImage: `url(https://i.imgur.com/ZMjC1tB.png)`
+        backgroundImage: `url(https://i.imgur.com/ASa8vgJ.png)`
       }}>
         <div className="spotlight-main">
           <div className="spotlight-info">
-              <div className="spotlight-title">Live sobre pragramação</div>
-              <div className="spotlight-description">Assista  as nossas lives e fique por dentro de  tudo!</div>
+              <div className="spotlight-title">Em breve nossas lives estarão aqui!</div>
+              <div className="spotlight-description">Assista  as nossas lives e fique por dentro de  tudo.</div>
               <div className="spotlight-button">
                   <FaPlay size="1rem" color="#020E17" />
                   <p>Assistir</p>
