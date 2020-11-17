@@ -12,10 +12,7 @@ const MainComponent = () => {
 
                 <div className="main-item-container">
                     <p className="main-item-container-title">Entre na comunidade e conheça os outros participantes!</p>
-                    <Link 
-                        to={{ pathname: 'https://discord.gg/FnEkct'}} 
-                        target="_blank" 
-                        >
+                    <Link to="/chat">
                         <div className="main-item-button">
                             <p>Entrar no chat</p>
                         </div>
