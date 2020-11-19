@@ -29,7 +29,7 @@ const MeComponent : React.FC<UserMeProps> = (props) => {
 
               <div className="profilePrivate-me-img">
                 <div className="me-img-content">
-                  <img src={`${(props.profile_image == null ? DefaultImage : props.profile_image)}`} />
+                  <img src={`${(props.profile_image == null ? DefaultImage : `http://3.228.101.223:3333/uploads/${props.profile_image}`)}`} />
                 </div>  
               </div>                
 

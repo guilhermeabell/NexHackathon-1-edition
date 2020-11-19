@@ -28,6 +28,7 @@ interface Rank {
     name: string,
     profile_image: string,
     points: number,
+    image_url
 }
 
 const PrivateRankPage = () => {

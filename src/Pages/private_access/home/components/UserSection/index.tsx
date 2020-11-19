@@ -17,7 +17,7 @@ const UserSectionComponent : React.FC<UserSectionProps> = (props) => {
         <div className="homePrivate-user">
             <div className="homePrivate-user-content">
                 <div className="user-section-img">
-                  <img src={`${(props.profile_image == null ? DefaultImage : props.profile_image)}`} />
+                  <img src={`${(props.profile_image == null ? DefaultImage : `http://3.228.101.223:3333/uploads/${props.profile_image}`)}`} />
                   <div className="user-green-dot"></div>
                 </div>
                 <div className="user-section-title">
