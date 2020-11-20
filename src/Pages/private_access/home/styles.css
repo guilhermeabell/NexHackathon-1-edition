@@ -1,0 +1,10 @@
+#homePrivate-page {
+  height: 100vh;
+}
+
+#homePrivate-page .homePrivate-content {
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

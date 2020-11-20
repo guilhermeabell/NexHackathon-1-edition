@@ -23,7 +23,7 @@
 .homePrivate-main .homePrivate-main-content .main-section .main-item-container {
   width: 45%;
   height: 25vh;
-  padding: 10px 20px;
+  padding: 20px 30px;
   background: var(--foreground-color);
   border-radius: 15px;
   display: flex;
@@ -92,7 +92,7 @@
 
 @media (max-width: 600px) {
   .homePrivate-main .homePrivate-main-content {
-    width: 95%;
+    width: 90%;
   }
 
   .homePrivate-main .homePrivate-main-content .main-section {
@@ -114,17 +114,17 @@
 
 @media (max-width: 400px) {
   .homePrivate-main .homePrivate-main-content {
-    width: 95%;
+    width: 90%;
   }
 
   .homePrivate-main .homePrivate-main-content .main-section {
-    padding: 0 5vw;
+    /* padding: 0 5vw; */
     display: flex;
     overflow-x: auto;
   }
 
   .homePrivate-main .homePrivate-main-content .main-section .main-item-container {
-    min-width: 350px;
+    min-width: 337px;
     padding: 10px 5vw;
   }
 

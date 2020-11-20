@@ -6,12 +6,9 @@
 }
 
 .user-rankList-container .user-rankList-content {
-  width: 65%;
-  height: 600px;
-  background: var(--foreground-color);
+  width: 75%;
   border-radius: 15px;
-  padding: 25px 25px;
-  min-height: 349px;
+  padding: 0px 25px;
   margin: 0 0 5vh 0;
 
   overflow-y: auto;
@@ -22,10 +19,10 @@
 
 .user-rankList-container .user-rankList-content .user-rankList-users {
   width: 90%;
-  height: 15vh;
   margin: 10px 0;
-  border-bottom: 1px solid var(--text-color);
-  
+  padding: 20px 20px;
+  background: #18191B;
+  border-radius: 1rem;
 
   display: flex;
   justify-content: space-between;
@@ -42,8 +39,8 @@
 }
 
 .user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-usersInfo img {
-  height: 70px;
-  width: 70px;
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
 }
 
@@ -79,18 +76,15 @@
 }
 
 .user-rankList-container .user-rankList-content .user-rankList-users-equal {
-  width: 95%;
-  height: 15vh;
+  width: 90%;
   margin: 10px 0;
-  padding: 20px 15px;
-  border-radius: 15px;
-  background: var(--tertiary-color);
-  border-bottom: 1px solid var(--text-color);
-  
+  padding: 20px 20px;
+  background: var(--foreground-color);
+  border-radius: 1rem;
 
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   gap: 5px;
 }
 
@@ -103,14 +97,14 @@
 }
 
 .user-rankList-container .user-rankList-content .user-rankList-users-equal .user-rankList-usersInfo-equal img {
-  height: 70px;
-  width: 70px;
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
 }
 
 .user-rankList-container .user-rankList-content .user-rankList-users-equal .user-rankList-usersInfo-equal b {
   font-weight: 600;
-  color: var(--quarternary-color);
+  color: var(--tertiary-color);
   font-size: 1.09rem;
 }
 
@@ -129,7 +123,7 @@
 
 .user-rankList-container .user-rankList-content .user-rankList-users-equal .user-rankList-points-equal b {
   font-weight: 600;
-  color: var(--quarternary-color);
+  color: var(--tertiary-color);
   font-size: 1.09rem;
 }
 
@@ -141,21 +135,50 @@
 
 @media (max-width: 600px) {
   .user-rankList-container .user-rankList-content {
-    width: 95%;
+    width: 100%;
+  }
+
+  .user-rankList-container .user-rankList-content .user-rankList-users {
+    width: 100%;
+    margin: 1vh 0;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 5px;
+  }
+
+  .user-rankList-container .user-rankList-content .user-rankList-users-equal {
+    width: 100%;
+    margin: 10px 0;
+    padding: 20px 20px;
+    border-radius: 1rem;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 5px;
+  }
+
+  .user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-usersInfo {
+    width: 100%;
+    height: 70px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
 @media (max-width: 400px) {
   .user-rankList-container .user-rankList-content {
-    width: 95%;
+    width: 100%;
   }
 
 
   .user-rankList-container .user-rankList-content .user-rankList-users {
     width: 100%;
-    height: 15vh;
-    margin: 2vh 0;
-    
+    margin: 1vh 0;
   
     display: flex;
     flex-direction: column;
@@ -174,6 +197,7 @@
   }
 
   .user-rankList-container .user-rankList-content .user-rankList-users .user-rankList-usersInfo .user-rank-title {
+    text-align: right;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -195,9 +219,52 @@
     justify-content: flex-end;
     gap: 5px;
   }
+  
 
   .user-rankList-container .user-rankList-content .user-rankList-users-equal {
-    width: 120%;
+    width: 100%;
+    margin: 1vh 0;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 5px;
+  }
+
+  .user-rankList-container .user-rankList-content .user-rankList-users-equal .user-rankList-points-equal {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+
+  .user-rankList-container .user-rankList-content .user-rankList-users-equal .user-rankList-usersInfo-equal {
+    width: 100%;
+    height: 70px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .user-rankList-container .user-rankList-content .user-rankList-users-equal .user-rankList-usersInfo-equal .user-rank-title {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .user-rankList-container .user-rankList-content .user-rankList-users-equal .user-rankList-usersInfo-equal b {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  .user-rankList-container .user-rankList-content .user-rankList-users-equal .user-rankList-usersInfo-equal p {
+    font-weight: 400;
+    font-size: 1rem;
   }
 }
 

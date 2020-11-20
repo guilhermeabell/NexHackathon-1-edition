@@ -11,7 +11,7 @@ import UserRankList from './components/UserRankList'
 import './styles.css'
 
 interface User {
-    id:number,
+    id: number,
     name: string,
     school: string,
     email: string,
@@ -66,11 +66,7 @@ const PrivateRankPage = () => {
                 points={user.points}
                 name={user.name}
             />
-            <div className="rank-text-info">                
-                <p>Para aumentar sua pontuação participe das atividades!</p>
-                <hr />       
-            </div>
-
+            
             <UserRankList 
                 name={user.name}
                 email={user.email}

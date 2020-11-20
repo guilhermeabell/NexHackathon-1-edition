@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import api from '../../../services/api'
 
+import './styles.css'
+
 import HeaderComponent from '../../../Components/HeaderPrivateComponent/index'
 import MainSection from './components/MainSection/index'
 import ShortcutSection from './components/ShortcutSection/index'

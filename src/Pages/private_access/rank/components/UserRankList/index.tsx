@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link, useHistory } from 'react-router-dom'
 
 import api from '../../../../../services/api'
 
@@ -8,11 +9,10 @@ import DefaultImage from '../../../../../assets/images/defaultProfile.svg'
 import './styles.css'
 
 interface Rank {
-    id: number,
+    id_user: number,
     email: string,
     name: string,
     profile_image: string,
-    image_url
     points: number,
 }
 
@@ -28,19 +28,21 @@ const UserRankList: React.FC<UserRankListProps> = (props) => {
     useEffect(() => {
         api.get('/rank').then((response) => {
             if (response && response.data) {
-              console.log(response.data)
                 setRank(response.data)
             }
         })
     })
 
+
     return(
       <div className="user-rankList-container">
           <div className="user-rankList-content">
           {rank.map((member, index) => (
-            <div className={`${(member.email === props.email ? 'user-rankList-users-equal' : 'user-rankList-users')}`} key={member.email}>
-              <div className={`${(member.email === props.email ? 'user-rankList-usersInfo-equal' : 'user-rankList-usersInfo')}`}> 
-                <img src={`${(member.profile_image == null ? DefaultImage : `http://3.228.101.223:3333/uploads/${member.profile_image}`)}`} /> 
+            <div className={`${(member.email === props.email ? 'user-rankList-users-equal' : 'user-rankList-users')}`} key={member.id_user}>
+              <div className={`${(member.email === props.email ? 'user-rankList-usersInfo-equal' : 'user-rankList-usersInfo')}`}>
+                <Link to={`/user/${member.id_user}`}>
+                  <img src={`${(member.profile_image == null ? DefaultImage : `http://3.228.101.223:3333/uploads/${member.profile_image}`)}`} />
+                </Link>
                 <div className="user-rank-title">
                   <p>{member.name}</p>
                   <b>{`${(member.points >= 2000 ? 'Mestre' : member.points >= 1000 ? 'Veterano' : 'Calouro')}`}</b>

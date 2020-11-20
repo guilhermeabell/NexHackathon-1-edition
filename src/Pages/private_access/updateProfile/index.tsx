@@ -57,6 +57,8 @@ const updateProfile = () => {
       });
   }, [token, user, history]);
 
+
+
   async function handleSubmit(e) {
     e.preventDefault();
 
@@ -69,38 +71,16 @@ const updateProfile = () => {
     data.append('instagram', instagram)
     if (selectedFile) {
       data.append('profile_image', selectedFile)
+    } else {
+      customAlert.error('Você precisa de uma foto.')
     }
 
-    if (!headline) { 
-      customAlert.error('Preencha todos os campos.')
-    }else{
-      if (!description) {
-        customAlert.error('Preencha todos os campos.')
-      } else {
-        if (!linkedin) {
-          customAlert.error('Preencha todos os campos.')
-        } else {
-          if (!github) {
-            customAlert.error('Preencha todos os campos.')
-          } else {
-            if (!instagram) {
-              customAlert.error('Preencha todos os campos.')
-            } else {
-              if (!selectedFile) {
-                customAlert.error('Envie uma foto.')
-              } else {
-                try {
-                  await api.post(`/update/${user.id}`, data)
-                  history.push('/login')
-                } catch (err) {
-                  console.log(err);
-                  alert("Erro ao atualizar, tente novamente");
-                }
-              }
-            }
-          }
-        }
-      }
+    try {
+      await api.post(`/update/${user.id}`, data)
+      history.push('/login')
+    } catch (err) {
+      console.log(err);
+      alert("Erro ao atualizar, tente novamente");
     }
   }
 

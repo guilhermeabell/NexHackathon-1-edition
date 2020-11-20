@@ -1,0 +1,126 @@
+.profilePrivate-bio {
+  width: 100%;
+  margin: 0 0 5vh 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.profilePrivate-bio .profilePrivate-bio-content {
+  width: 81%;
+  height: 45vh;
+  background: var(--foreground-color);
+  border-radius: 15px;
+  padding: 45px 45px;
+  min-height: 309px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5vh;
+}
+
+.profilePrivate-bio .profilePrivate-bio-content .bio-title {
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--text-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profilePrivate-bio .profilePrivate-bio-content .profilePrivate-bio-description {
+  width: 100%;
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.profilePrivate-bio .profilePrivate-bio-content .linksContact-bio {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.handlelink-bio-false {
+  filter: opacity(30%);
+}
+
+.profilePrivate-bio .profilePrivate-bio-content .linksContact-bio .handlelink-bio-false .link-bio-item {
+  background: #404040;
+  padding: 10px 20px;
+  border-radius: 10px;
+  min-height: 50px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.profilePrivate-bio .profilePrivate-bio-content .linksContact-bio .handlelink-bio .link-bio-item {
+  background: #404040;
+  padding: 10px 20px;
+  border-radius: 10px;
+  min-height: 50px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.profilePrivate-bio .profilePrivate-bio-content .linksContact-bio .handlelink-bio:hover .link-bio-item {
+  filter: brightness(90%);
+  transform: translateY(1px);
+}
+
+.profilePrivate-bio .profilePrivate-bio-content .linksContact-bio .link-bio-item p {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+@media (max-width: 700px) {
+
+  .profilePrivate-bio {
+    margin-bottom: 5vh;
+  }
+
+  .profilePrivate-bio .profilePrivate-bio-content .linksContact-bio {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .profilePrivate-bio .profilePrivate-bio-content {
+    width: 90%;
+    height: 100%;
+    padding: 35px 45px;
+  }
+}
+
+@media (max-width: 470px) {
+
+  .profilePrivate-bio {
+    margin-bottom: 5vh;
+  }
+
+  .profilePrivate-bio .profilePrivate-bio-content .linksContact-bio {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .profilePrivate-bio .profilePrivate-bio-content {
+    width: 90%;
+    height: 100%;
+    padding: 35px 45px;
+  }
+}

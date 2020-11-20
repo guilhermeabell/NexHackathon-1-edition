@@ -17,6 +17,7 @@ import Materials from './Pages/private_access/materials/index'
 import UpdateProfile from './Pages/private_access/updateProfile/index'
 import CreateTeamPage from './Pages/private_access/createTeam/index'
 import ChatPage from './Pages/private_access/chat/index'
+import Users from './Pages/private_access/usersProfile/index'
 
 
 
@@ -31,6 +32,7 @@ const Routes = () => {
             <Route component={Home} path="/home" />
             <Route component={Rank} path="/rank" />
             <Route component={Profile} path="/profile" />
+            <Route component={Users} path="/user/:id" />
             <Route component={UpdateProfile} path="/update-profile" />
             <Route component={UsersProfile} path="/user-profile" />
             <Route component={Teams} path="/teams" />

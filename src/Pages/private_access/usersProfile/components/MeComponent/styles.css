@@ -1,0 +1,100 @@
+.profilePrivate-me {
+  width: 90%;
+  margin: 5vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+.profilePrivate-me .profilePrivate-me-content {
+  width: 90%;
+  height: 51vh;
+  background: var(--foreground-color);
+  border-radius: 15px;
+  padding: 0px 5px;
+  min-height: 349px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.profilePrivate-me .profilePrivate-me-content .me-editicon {
+  top: 25px;
+  width: 90%;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profilePrivate-me .profilePrivate-me-content .me-editicon svg:hover {
+  transition: 0.2s;
+  cursor: pointer;
+  filter: brightness(60%);
+  transform: translateY(1px);
+}
+
+.profilePrivate-me .profilePrivate-me-content .profilePrivate-me-img .me-img-content {
+  width: 170px;
+  height: 170px;
+  border: 3px solid var(--quintenary-color);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profilePrivate-me .profilePrivate-me-content .profilePrivate-me-img .me-img-content img {
+  width: 154px;
+  height: 154px;
+  border-radius: 20px;
+}
+
+.profilePrivate-me .profilePrivate-me-content .me-username {
+  margin: 20px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.profilePrivate-me .profilePrivate-me-content .aboutContact-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profilePrivate-me .profilePrivate-me-content .aboutContact-me .aboutContact-email {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.profilePrivate-me .profilePrivate-me-content .aboutContact-me p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-secondary-color);
+}
+
+@media (max-width: 840px) {
+  .profilePrivate-me {
+    width: 100%;
+  }
+
+  .profilePrivate-me .profilePrivate-me-content .me-editicon {
+    top: 25px;
+  }
+}
+
+@media (max-width: 360px) {
+  .profilePrivate-me .profilePrivate-me-content .aboutContact-me p {
+    font-size: 0.99rem;
+    text-align: center;
+  }
+
+  .profilePrivate-me .profilePrivate-me-content .me-editicon {
+    top: 15px;
+  }
+}

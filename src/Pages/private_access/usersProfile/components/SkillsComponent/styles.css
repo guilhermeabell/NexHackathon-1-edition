@@ -1,0 +1,65 @@
+.profilePrivate-skills {
+  width: 50%;
+  margin-top: 5vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+.profilePrivate-skills .profilePrivate-skills-content {
+  width: 90%;
+  height: 51vh;
+  background: var(--foreground-color);
+  border-radius: 15px;
+  padding: 25px 25px;
+  min-height: 349px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.profilePrivate-skills .profilePrivate-skills-content .skills-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profilePrivate-skills .profilePrivate-skills-content .skills-header .skills-header-title {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.profilePrivate-skills .profilePrivate-skills-content svg:hover {
+  transition: 0.2s;
+  cursor: pointer;
+  filter: brightness(60%);
+  transform: translateY(1px);
+}
+
+.profilePrivate-skills .profilePrivate-skills-content .skills-main .skill-item {
+  width: 99%;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profilePrivate-skills .profilePrivate-skills-content .skills-main .skill-item .skill-title {
+  border: 2px solid var(--quintenary-color);
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.profilePrivate-skills .profilePrivate-skills-content .skills-main .skill-item .skill-title p {
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+@media (max-width: 840px) {
+  .profilePrivate-skills {
+    width: 100%;
+    margin: 5vh 0;
+  }
+}

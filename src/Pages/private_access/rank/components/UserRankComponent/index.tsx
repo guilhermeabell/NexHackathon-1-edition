@@ -15,13 +15,18 @@ const UserRank: React.FC<UserRankProps> = (props) => {
     <div className="rankPrivate-userRank">
       <div className="rankPrivate-userRank-content">
           <div className="user-rank-info">
-            <img src={`${(props.profile_image == null ? DefaultImage : `http://3.228.101.223:3333/uploads/${props.profile_image}`)}`} />  
-            <div className="user-rank-title">
-              <p>Você tem <b>{props.points}</b> pontos {props.name}</p>
-              <p>Vamos {`${(props.points <= 10 ? 'subir' : 'subir ainda mais')}`} esse número?</p>
+            <div className="me-img-content">
+              <img src={`${(props.profile_image == null ? DefaultImage : `http://3.228.101.223:3333/uploads/${props.profile_image}`)}`} />  
             </div>
-          </div>   
-      </div>    
+            <div className="user-rank-title">
+              <p>{props.name}</p>
+              <p className="user-rank-points"><b>{props.points}</b> pontos</p>
+            </div>
+          </div> 
+
+          <div className="rankPrivate-line" ></div>   
+
+      </div> 
     </div>
   )
 }
