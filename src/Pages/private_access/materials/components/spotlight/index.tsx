@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaPlay } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 import './styles.css'
 
@@ -8,16 +9,21 @@ const MaterialsPage = () => {
       <div className="spotlight" style={{
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundImage: `url(https://i.imgur.com/ASa8vgJ.png)`
+        backgroundImage: `url(https://i.imgur.com/ynqyoR7.jpeg)`
       }}>
         <div className="spotlight-main">
           <div className="spotlight-info">
-              <div className="spotlight-title">Em breve nossas lives estarão aqui!</div>
-              <div className="spotlight-description">Assista  as nossas lives e fique por dentro de  tudo.</div>
-              <div className="spotlight-button">
-                  <FaPlay size="1rem" color="#020E17" />
-                  <p>Assistir</p>
-              </div>
+              <div className="spotlight-title">Live de Esquenta marcada para hoje!</div>
+              <div className="spotlight-description">A live vai começar as 18:00, aproveite para tirar suas dúvidas.</div>
+              <Link 
+                to={{ pathname: 'https://www.youtube.com/watch?v=ssB2x4nPuY8'}} 
+                target="_blank" 
+              >
+                <div className="spotlight-button">
+                    <FaPlay size="1rem" color="#020E17" />
+                    <p>Assistir</p>
+                </div>
+              </Link>
           </div>
 
           <div className="spotlight-title">

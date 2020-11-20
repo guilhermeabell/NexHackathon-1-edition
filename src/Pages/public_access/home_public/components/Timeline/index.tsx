@@ -17,29 +17,7 @@ const data = new Date()
 const formatData = ("0" + data.getDate()).substr(-2) + "/" 
 + ("0" + (data.getMonth() + 1)).substr(-2) + "/" + data.getFullYear()
 
-var value = "0%"
-
-switch(formatData) {
-    case "16/11/2020":
-      value = "5%";
-    break;
-
-    case "18/11/2020":
-      value = "24%";
-    break;
-
-    case "27/11/2020":
-      value = "47%";
-    break;
-
-    case "28/11/2020":
-      value = "70%";
-    break;
-
-    case "18/12/2020":
-      value = "92%";
-    break;
-}
+var value = "37%"
 
 const timelineStage = {
     width: `${value}`,  // Max-92%

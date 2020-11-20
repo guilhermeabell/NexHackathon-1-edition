@@ -21,11 +21,6 @@ const MeComponent : React.FC<UserMeProps> = (props) => {
     return (
         <div className="profilePrivate-me">
           <div className="profilePrivate-me-content">
-              <div className="me-editicon">
-                <Link to="/update-profile" >
-                  <FaPen size="15" color="#b7b7b7" />
-                </Link>
-              </div>
 
               <div className="profilePrivate-me-img">
                 <div className="me-img-content">
