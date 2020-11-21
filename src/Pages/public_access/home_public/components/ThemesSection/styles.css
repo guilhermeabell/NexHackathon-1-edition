@@ -1,6 +1,6 @@
 .homePublic-section2 {
   width: 100%;
-  margin-top: 178px;
+  margin-top: 27vh;
   background: var(--secondary-color);
 
   display: flex;
@@ -36,7 +36,7 @@
 .homePublic-section2 .section2-content .section2-cards .section2-card {
   width: 18vw;
   height: 300px;
-  border: 4px solid var(--text-color);
+  background: #15AB89;
   border-radius: 15px;
 
   display: flex;
@@ -88,7 +88,6 @@
   .homePublic-section2 .section2-content .section2-cards .section2-card {
     width: 100%;
     height: 250px;
-    border: 4px solid var(--text-color);
     border-radius: 15px;
   
     display: flex;
@@ -105,6 +104,10 @@
 }
 
 @media (max-width: 650px) {
+  .homePublic-section2 {
+    margin-top: 10vh;
+  }
+
   .homePublic-section2 .section2-content .section2-cards {
     width: 85%;
   
@@ -119,7 +122,6 @@
   .homePublic-section2 .section2-content .section2-cards .section2-card {
     width: 100%;
     height: 250px;
-    border: 4px solid var(--text-color);
     border-radius: 15px;
   
     display: flex;
@@ -132,5 +134,11 @@
   .InfoSectionWave {
     width: 100%;
     margin-top: -2px
+  }
+}
+
+@media (max-width: 450px) {
+  .homePublic-section2 {
+    margin-top: 15vh;
   }
 }

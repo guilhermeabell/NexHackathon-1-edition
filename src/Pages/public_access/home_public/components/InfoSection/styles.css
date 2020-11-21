@@ -1,6 +1,14 @@
+@keyframes colorCycle {
+  0%, 55% {
+    filter: brightness(0) invert(1);
+  }
+  11%, 33% {
+    filter: none;
+  }
+}
+
 .homePublic-section1 {
   margin-top: 20vh;
-  margin-bottom: 13vh;
   display: flex;
   justify-content: center;
 }
@@ -12,8 +20,45 @@
   justify-content: space-between;
 }
 
-.homePublic-section1 img {
-  width: 36vw;
+.homePublic-section1 .section1-title {
+  margin: 13vh 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.homePublic-section1 .section1-title h1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.homePublic-section1 .section1-title h1 span {
+
+  font-size: 10vh !important;
+  padding: 0 5px;
+  line-height: 100%;
+  letter-spacing: -0.4vw;
+  filter: brightness(0) invert(1);
+
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: colorCycle 10s ease-in-out infinite;
+}
+
+.homePublic-section1 .section1-title h1 span:nth-child(1) {
+  background-image: linear-gradient(90deg, #0E5159, #07F9A2);
+}
+
+.homePublic-section1 .section1-title h1 span:nth-child(2) {
+  background-image: linear-gradient(90deg, #07F9A2, #0E5159);
+  animation-delay: 3.33s;
+}
+
+.homePublic-section1 .section1-title h1 span:nth-child(3) {
+  background-image: linear-gradient(90deg, #0E5159, #07F9A2);
+  animation-delay: 6.66s;
 }
 
 .homePublic-section1 .section1-info {
@@ -40,7 +85,7 @@
   text-align: end;
 }
 
-.homePublic-section1 .section1-info .section1-info-bottom .section1-title {
+.homePublic-section1 .section1-info .section1-info-bottom .section1-info-title {
   margin-bottom: 15px;
 
   color: var(--text-color);
@@ -58,13 +103,13 @@
   text-align: right;
 }
 
-@keyframes mouse-scroll {
-  to {
-    transform: translate(0, 6px) scale(1, 0.8);
-  }
-}
-
 @media (max-width: 900px) {
+  .homePublic-section1 {
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
+  }
+
   .homePublic-section1 .section1-content {
     width: 100%;
 
@@ -73,22 +118,31 @@
     justify-content: center;
     align-items: center;
   }
-  
-  .homePublic-section1 img {
-    width: 300px;
-    margin: 0 0 50px 0;
+
+  .homePublic-section1 .section1-title {
+    margin: 5vh 0;
+  }
+
+  .homePublic-section1 .section1-title h1 {
+    align-items: center;
+  }
+
+  .homePublic-section1 .section1-title h1 span {
+    font-size: 6vh !important;
+    text-align: center;
   }
   
 
   .homePublic-section1 .section1-info {
     width: 85%;
+    margin: 5vh 0 0 0;
   
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
-  .homePublic-section1 .section1-info .section1-info-bottom .section1-title {
+  .homePublic-section1 .section1-info .section1-info-bottom .section1-info-title {
     margin-bottom: 15px;
     margin-top: 35px;
   
