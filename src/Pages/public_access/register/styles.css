@@ -5,177 +5,41 @@
 
 #registerPublic-page .registerPublic-content {
     width: 100%;
+    height: 100vh;
     display: flex;
-    gap: 10vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#registerPublic-page .registerPublic-content .registerPublic-header {
-    margin-top: 5vh;
-    width: 65%;
+#registerPublic-page .registerPublic-content .registerPublic-main {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-#registerPublic-page .registerPublic-content .registerPublic-header .register-backButton:hover {
-    transition: 0.2s;
-    cursor: pointer;
-    filter: opacity(70%);
-}
-
-#registerPublic-page .registerPublic-content .registerPublic-header .register-text {
-    color: var(--text-color);
-    font-weight: 600;
-    font-size: 2rem;
-    width: 200px;
-  
-    display: flex;
-    align-items: center;
-}
-
-#registerPublic-page .registerPublic-content .registerPublic-form {
-    width: 50%;
-}
-
-#registerPublic-page .registerPublic-content .registerPublic-form form .registerForm-field{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-#registerPublic-page .registerPublic-content .registerPublic-form form .registerForm-field span {
-    margin: 0 0 5px 10px;
-    color: var(--text-color);
-    font-weight: 500;
-    font-size: 16px;
-}
-
-#registerPublic-page .registerPublic-content .registerPublic-form form .registerForm-field input, select {
-    width: 100%;
-    margin-bottom: 10px;
-    background: var(--quarternary-color);
-    border-radius: 10px;
-    border: 0;
-    padding: 12px 14px;
-    font-size: 16px;
-    color: #2e2e2e;
-    outline: 0;
-}
-
-#registerPublic-page .registerPublic-content .registerPublic-form form .registerForm-field p {
-    margin: 5px 0;
-    color: var(--text-color);
-    font-weight: 300;
-    font-size: 1rem;
-
-    transition: 0.2s;
-}
-
-#registerPublic-page .registerPublic-content .registerPublic-form form .registerForm-field select{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 16px 14px;
-    color: #2e2e2e;
-    background: var(--quarternary-color) url('./assets/arrow.svg') 98% 50% no-repeat;
-
-}
-
-#registerPublic-page .registerPublic-content .registerPublic-form form .registerForm-field select > option {
-    appearance: none;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    color: #2e2e2e;
-}
-
-.forcebar {
-    width: 100%;
-    height: 0.5rem;
-    background: var(--foreground-color);
-    border-radius: 10px;
-
-    display: flex;
-}
-
-.forcebar .forcebar-load {
-    width: 40%;
-    height: 0.5rem;
-    background: var(--quintenary-color);
-    border-radius: 10px;
-
-    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-#registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton{
-    margin-top: 5vh;
-    display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 5vh;
 }
 
-#registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton button{
-    width: 65%;
-    padding: 10px 12px;
-    border-radius: 10px;
-    border: 0; 
-    background-color: var(--secondary-color);
+#registerPublic-page .registerPublic-content .registerPublic-main img {
+    width: 10vw;
+}
+
+#registerPublic-page .registerPublic-content .registerPublic-main p {
     color: var(--text-color);
+    font-weight: 400;
     font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.2s
-}
-
-#registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton button:hover{
-    cursor: pointer;
-    filter: opacity(70%);
-}
-
-#registerPublic-page .registerPublic-content .registerPublic-form .registerPublic-Footer{
-    margin: 5vh 0;
-}
-
-#registerPublic-page .registerPublic-content .registerPublic-form .registerPublic-Footer p{
-    color: var(--text-color);
+    width: 80%;
     text-align: center;
 }
 
-#registerPublic-page .registerPublic-content .registerPublic-form .registerPublic-Footer p > a{
-    color: var(--secondary-color);
-    transition: 0.2s
-}
-
-#registerPublic-page .registerPublic-content .registerPublic-form .registerPublic-Footer p > a:hover{
-    cursor: pointer;
-    filter: opacity(70%);
+#registerPublic-page .registerPublic-content .registerPublic-main p a {
+    color: var(--tertiary-color);
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 @media (max-width: 600px) {
-    #registerPublic-page .registerPublic-content .registerPublic-header{
-        width: 90%;
-    }
-
-    #registerPublic-page .registerPublic-content .registerPublic-form{
-        width: 80%;
-    }
-
-    #registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton a{
-        width: 100%;
-    }
-
-    #registerPublic-page .registerPublic-content .registerPublic-form form .form-submitButton input{
-        width: 100%;
-    }
-
-    #registerPublic-page .registerPublic-content .registerPublic-form .registerPublic-Footer p{
-        text-align: center;
-    }
-
-    #registerPublic-page .registerPublic-content .registerPublic-form .registerPublic-Footer p > a:hover{
-        opacity: none;
+    #registerPublic-page .registerPublic-content .registerPublic-main img {
+        width: 20vw;
     }
 }

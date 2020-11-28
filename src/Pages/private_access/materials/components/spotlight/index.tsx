@@ -9,14 +9,14 @@ const MaterialsPage = () => {
       <div className="spotlight" style={{
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundImage: `url(https://i.imgur.com/ynqyoR7.jpeg)`
+        backgroundImage: `url(https://i.imgur.com/nRj4xUw.jpeg)`
       }}>
         <div className="spotlight-main">
           <div className="spotlight-info">
-              <div className="spotlight-title">Live de Esquenta marcada para hoje!</div>
+              <div className="spotlight-title">O NEXPLAY está marcado para dia 27/11!</div>
               <div className="spotlight-description">A live vai começar as 18:00, aproveite para tirar suas dúvidas.</div>
               <Link 
-                to={{ pathname: 'https://www.youtube.com/watch?v=ssB2x4nPuY8'}} 
+                to={{ pathname: 'https://www.youtube.com/watch?v=SfH8Zqoh6GE'}} 
                 target="_blank" 
               >
                 <div className="spotlight-button">

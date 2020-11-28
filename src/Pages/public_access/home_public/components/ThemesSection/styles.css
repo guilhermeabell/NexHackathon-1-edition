@@ -65,12 +65,26 @@
   text-transform: uppercase;
 }
 
+.homePublic-section2 .section2-content .themesButton {
+  background: var(--primary-color);
+  padding: 12px 14px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.homePublic-section2 .section2-content .themesButton p {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.homePublic-section2 .section2-content .themesButton:hover {
+  background: var(--primary-dark-color);
+}
+
 .InfoSectionWave {
   width: 100%;
   margin-top: -1px;
 }
-
-
 
 @media (max-width: 1000px) {
 
