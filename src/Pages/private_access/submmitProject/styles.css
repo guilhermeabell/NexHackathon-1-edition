@@ -24,7 +24,6 @@
   filter: opacity(70%);
 }
 
-
 #submitProject-page .submitProject-content .submitProject-header .submitProject-text {
   color: var(--text-color);
   font-weight: 600;
@@ -38,6 +37,13 @@
   width: 50%;
   margin: 0 0 10vh 0;
 }
+
+#submitProject-page .submitProject-content .submitProject-form .submitProject-teamInfo p {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 18px;
+}
+
 
 #submitProject-page .submitProject-content .submitProject-form form .submitProject-field {
   display: flex;

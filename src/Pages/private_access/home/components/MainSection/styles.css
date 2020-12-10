@@ -38,11 +38,12 @@
   font-size: 1rem;
   font-weight: 700;
   outline: none;
+  text-transform: uppercase;
 }
 
 .homePrivate-main .homePrivate-main-content .main-section .main-item-container p {
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   outline: none;
 }

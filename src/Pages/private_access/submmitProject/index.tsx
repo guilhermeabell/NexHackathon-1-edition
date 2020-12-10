@@ -4,7 +4,8 @@ import { useAlert } from 'react-alert'
 import api from '../../../services/api'
 
 import { IoIosArrowRoundBack } from 'react-icons/io'
-import { AiOutlineLink } from 'react-icons/ai'
+import { AiOutlineLink, AiOutlineCode } from 'react-icons/ai'
+import { RiSlideshow2Line } from 'react-icons/ri'
 import { FiYoutube } from 'react-icons/fi'
 
 import './styles.css'
@@ -14,10 +15,13 @@ const LoginPage = () => {
 
     const alert = useAlert()
 
+    const [challenge, setChallenge] = useState('')
     const [description, setDescription] = useState('')
     const [name, setName] = useState('')
     const [pitch, setPitch] = useState('')
-    const [apresentation, setApresentation] = useState('')
+    const [presentation, setPresentation] = useState('')
+    const [code, setCode] = useState('')
+    const [other, setOther] = useState('')
 
     function handleSubmitProject() {
 
@@ -28,20 +32,32 @@ const LoginPage = () => {
             <div className="submitProject-content">
 
                 <div className="submitProject-header">
-                    <Link to="/" >
+                    <Link to="/home" >
                         <IoIosArrowRoundBack className="submitProject-backButton" size="50" color="#f4f4f4" />
                     </Link>
                     <p className="submitProject-text">Ufa, Vamos enviar nosso projeto!</p>
                 </div>
 
                 <div className="submitProject-form">
-                    <div className="submitProject-teamInfo">
-                        <p>Meu time</p>
-                    </div>
                     <form 
                         onSubmit={handleSubmitProject}
                         autoComplete="off"
                     >
+
+                        <div className="submitProject-field">	
+                            <span>Desafio</span>	
+                            <select 	
+                                name="school"  	
+                                id="school" 	
+                                onChange={e => setChallenge(e.target.value)}	
+                            >	
+                                <option value="" hidden selected disabled>Selecione um desafio</option>	
+                                <option value="Comunicação">Comunicação</option>	
+                                <option value="Educação">Educação</option>	
+                                <option value="Profissão">Profissão</option>	
+                                <option value="Saúde">Saúde</option>	
+                            </select>	
+                        </div>  
                         <div className="submitProject-field">
                         <span>Nome</span>
                             <input
@@ -60,7 +76,7 @@ const LoginPage = () => {
                                 name="description"
                                 id="description"
                                 autoCapitalize="none"
-                                placeholder="Conte sobre o projeto"
+                                placeholder="Conte-nos sobre o projeto"
                                 onChange={e => setDescription(e.target.value)}
                             />
                         </div>
@@ -85,22 +101,52 @@ const LoginPage = () => {
                         </div>
 
                         <div className="submitProject-field">
-                            <span>Apresentação <b>*</b></span>
+                            <span>Apresentação</span>
+                            <div className="submitProject-field-input">
+                                <RiSlideshow2Line size="26" color="#2FDF84" />
+                                <input
+                                    type="text"
+                                    name="presentation"
+                                    id="presentation"
+                                    autoCapitalize="none"
+                                    placeholder="Cole aqui o link do apresentação"
+                                    onChange={e => setPresentation(e.target.value)}
+                                />
+                            </div>
+                        </div>
+
+                        <div className="submitProject-field">
+                            <span>Código</span>
+                            <div className="submitProject-field-input">
+                                <AiOutlineCode size="26" color="#2FDF84" />
+                                <input
+                                    type="text"
+                                    name="code"
+                                    id="code"
+                                    autoCapitalize="none"
+                                    placeholder="Cole aqui o link do repositório no Github"
+                                    onChange={e => setCode(e.target.value)}
+                                />
+                            </div>
+                        </div>
+
+                        <div className="submitProject-field">
+                            <span>Outros</span>
                             <div className="submitProject-field-input">
                                 <AiOutlineLink size="26" color="#2FDF84" />
                                 <input
                                     type="text"
-                                    name="apresentação"
-                                    id="apresentação"
+                                    name="other"
+                                    id="other"
                                     autoCapitalize="none"
-                                    placeholder="Cole aqui o link do apresentação"
-                                    onChange={e => setApresentation(e.target.value)}
+                                    placeholder="Caso queira nos mostrar algo mais..."
+                                    onChange={e => setOther(e.target.value)}
                                 />
                             </div>
                         </div>
 
                         <div className="form-submitButton">
-                            <button type="submit">Enviar</button>
+                            <button disabled type="submit">Enviar</button>
                         </div>
                     </form>
                 </div>
