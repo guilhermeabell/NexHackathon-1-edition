@@ -13,15 +13,15 @@ const MaterialsPage = () => {
       }}>
         <div className="spotlight-main">
           <div className="spotlight-info">
-              <div className="spotlight-title">O NEXPLAY está marcado para dia 27/11!</div>
-              <div className="spotlight-description">A live vai começar as 18:00, aproveite para tirar suas dúvidas.</div>
+              <div className="spotlight-title">O NexHackathon está no final!</div>
+              <div className="spotlight-description">Confira os resultados no dia 18/12 ao vivo no Youtube, ja reserve sua agenda.</div>
               <Link 
-                to={{ pathname: 'https://www.youtube.com/watch?v=SfH8Zqoh6GE'}} 
+                to={{ pathname: 'https://www.youtube.com/channel/UCr5AwkfebU9WdrKzQ95zZqA'}} 
                 target="_blank" 
               >
                 <div className="spotlight-button">
                     <FaPlay size="1rem" color="#020E17" />
-                    <p>Assistir</p>
+                    <p>Em breve</p>
                 </div>
               </Link>
           </div>

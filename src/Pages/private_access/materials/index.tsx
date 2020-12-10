@@ -90,6 +90,19 @@ var marketing = [
     }
 ]
 
+var lives = [
+    {
+        id: 1,
+        link: "https://www.youtube.com/embed/ssB2x4nPuY8",
+        title: "Hacka NEX: Esquenta"
+    },
+    {
+        id: 2,
+        link: "https://www.youtube.com/embed/SfH8Zqoh6GE",
+        title: "Hacka NEX: O Nexplay"
+    }
+]
+
 const MaterialsPage = () => {
     return (
         <div id="materials-page">
@@ -99,6 +112,17 @@ const MaterialsPage = () => {
                 <Spotlight />
 
                 <div className="tutorials-media">
+                    <p className="category-title">Nossas Lives</p>
+                    <div className="materials-main">
+                        {lives.map((video, index) => (
+                            <div className="materials-item-container" key={video.id} >
+                                <iframe className="lives-frames" src={video.link} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+
+                                <p className="materials-item-title">{video.title}</p>
+                            </div>
+                        ))}
+                    </div>
+
                     <p className="category-title">Design</p>
                     <div className="materials-main">
                         {design.map((video, index) => (

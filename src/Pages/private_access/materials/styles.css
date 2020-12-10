@@ -39,6 +39,11 @@
   width: 20vw;
 }
 
+.materials-content .materials-main .materials-item-container .lives-frames {
+  height: 31vh;
+  width: 30vw;
+}
+
 .materials-content .materials-main .materials-item-container .materials-item-title {
   max-width: 20vw;
   overflow: hidden;
