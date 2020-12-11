@@ -49,23 +49,20 @@ const LoginPage = () => {
     async function handleSubmitProject(e) {
         e.preventDefault() 
 
-        try{
-            const response = await api.post('/submit-project', {
-                challenge,
-                description, 
-                name,
-                pitch, 
-                presentation, 
-                code, 
-                other,
-                team_id: user.team
-            })
-
+        await api.post('/submit-project', {
+            challenge,
+            description, 
+            name,
+            pitch, 
+            presentation, 
+            code, 
+            other,
+            team_id: user.team
+        }).then(() => {
             history.push('/home')
-        } catch (err) {
-            console.log(err);
+        }).catch(() => {
             alert.error('Ops! Tente novamente')
-        }
+        })
     }
 
     return (
