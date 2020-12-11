@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { useAlert } from 'react-alert'
 import api from '../../../services/api'
@@ -10,10 +10,33 @@ import { FiYoutube } from 'react-icons/fi'
 
 import './styles.css'
 
+interface User {
+    team: number
+}
+
 
 const LoginPage = () => {
 
     const alert = useAlert()
+
+    const history = useHistory()
+
+    const [user, setUser] = useState<User>({} as User);
+
+    const token = localStorage.getItem("Auth")
+    if (!token) {
+        history.push('/login')
+    }
+
+    useEffect(() => {
+        api.get('/user', {
+            headers: {
+                Authorization: token,
+            }
+        }).then(response => {  
+            setUser(response.data);
+          });
+    }, [token, user]);
 
     const [challenge, setChallenge] = useState('')
     const [description, setDescription] = useState('')
@@ -23,8 +46,26 @@ const LoginPage = () => {
     const [code, setCode] = useState('')
     const [other, setOther] = useState('')
 
-    function handleSubmitProject() {
+    async function handleSubmitProject(e) {
+        e.preventDefault() 
 
+        try{
+            const response = await api.post('/submit-project', {
+                challenge,
+                description, 
+                name,
+                pitch, 
+                presentation, 
+                code, 
+                other,
+                team_id: user.team
+            })
+
+            history.push('/home')
+        } catch (err) {
+            console.log(err);
+            alert.error('Ops! Tente novamente')
+        }
     }
 
     return (
