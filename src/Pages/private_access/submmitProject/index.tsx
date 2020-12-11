@@ -184,7 +184,7 @@ const LoginPage = () => {
                         </div>
 
                         <div className="form-submitButton">
-                            <button disabled type="submit">Enviar</button>
+                            <button type="submit">Enviar</button>
                         </div>
                     </form>
                 </div>
