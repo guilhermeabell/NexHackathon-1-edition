@@ -38,6 +38,13 @@ const LoginPage = () => {
           });
     }, [token, user]);
 
+    function onSuccess() {
+        history.push('/success-flash')
+    setTimeout(() => {
+        history.push('/home')
+    }, 3000);
+}
+
     const [challenge, setChallenge] = useState('')
     const [description, setDescription] = useState('')
     const [name, setName] = useState('')
@@ -59,7 +66,7 @@ const LoginPage = () => {
             other,
             team_id: user.team
         }).then(() => {
-            history.push('/home')
+            onSuccess()
         }).catch(() => {
             alert.error('Ops! Tente novamente')
         })
@@ -90,7 +97,7 @@ const LoginPage = () => {
                                 onChange={e => setChallenge(e.target.value)}	
                             >	
                                 <option value="" hidden selected disabled>Selecione um desafio</option>	
-                                <option value="Comunicação">Comunicação</option>	
+                                <option value="Comunicação">Comunidade</option>	
                                 <option value="Educação">Educação</option>	
                                 <option value="Profissão">Profissão</option>	
                                 <option value="Saúde">Saúde</option>	
