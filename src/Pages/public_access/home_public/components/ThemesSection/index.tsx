@@ -49,16 +49,24 @@ const ThemesSectionComponent = () => {
 
                 </div>
 
-                <Link 	                
-                    to={{ pathname: 'http://3.228.101.223:3333/uploads/nexplay.pdf'}} 	
-                    target="_blank" 	
-                >
-                    <div className="themesButton">
-                        <p>Acessar desafios</p>
-                    </div>
-                </Link>
+                <div className="section2-buttons">
+                    <Link 	                
+                        to={{ pathname: 'http://3.228.101.223:3333/uploads/nexplay.pdf'}} 	
+                        target="_blank" 	
+                    >
+                        <div className="themesButton">
+                            <p>Acessar desafios</p>
+                        </div>
+                    </Link>
+                    <Link 	                
+                        to="/projects"		
+                    >
+                        <div className="themesButton">
+                            <p>Ver projetos</p>
+                        </div>
+                    </Link> 
+                </div>
             </div>
-
         </div>
         <img className="InfoSectionWave" src={WaveSection1} />
         </>

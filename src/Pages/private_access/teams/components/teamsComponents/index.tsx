@@ -129,13 +129,6 @@ const TeamsPrivate = () => {
                     </div>
                 </Modal>
 
-                    <div className="teamsPrivate-main-button" style={verifyTeam}>
-                            <Link to="/create-team" style={verifyTeam}>
-                                <p style={verifyTeam}>Criar time</p>
-                                <AiOutlinePlus size="20" color="#fff" style={verifyTeam} />
-                            </Link>
-                    </div>
-
                     <div className="teamsPrivate-title-section">
                         <p className="teamsPrivate-title">Veja também outros times!</p>
                     </div>

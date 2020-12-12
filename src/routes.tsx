@@ -19,6 +19,7 @@ import CreateTeamPage from './Pages/private_access/createTeam/index'
 import ChatPage from './Pages/private_access/chat/index'
 import Users from './Pages/private_access/usersProfile/index'
 import SubmmitProject from './Pages/private_access/submmitProject/index'
+import Projects from './Pages/public_access/projects/index'
 
 
 
@@ -28,6 +29,7 @@ const Routes = () => {
             <Route component={HomePublic} path="/" exact />
             <Route component={Login} path="/login" />
             <Route component={Register} path="/register" />
+            <Route component={Projects} path="/projects" />
             <Route component={SuccessFlashPage} path="/success-flash" />
 
             <Route component={Home} path="/home" />

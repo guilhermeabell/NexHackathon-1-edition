@@ -11,10 +11,13 @@ const MainComponent = () => {
               <div className="main-section">
 
                 <div className="main-item-container">
-                    <p className="main-item-container-title">Estamos na reta final da maratona. Envie seu projeto!</p>
-                    <Link to="/submit-project">
+                    <p className="main-item-container-title">Estamos na reta final da maratona. Esperamos você em nossa live de encerramento</p>
+                    <Link 
+                        to={{ pathname: 'https://www.youtube.com/channel/UCr5AwkfebU9WdrKzQ95zZqA'}} 
+                        target="_blank" 
+                    >
                         <div className="main-item-button">
-                            <p>Enviar projeto</p>
+                            <p>Ir para a live</p>
                         </div>
                     </Link>
                 </div>
