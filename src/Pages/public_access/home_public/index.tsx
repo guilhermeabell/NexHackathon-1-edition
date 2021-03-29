@@ -15,7 +15,7 @@ import './styles.css'
 // Images
 import GreenHeart from './assets/Home/greenHeart.svg'
 
-const PublicHomePage = () => {
+const PublicHomePage = () => { // HomePage
 
     return (
         <div id="homePublic-page">
