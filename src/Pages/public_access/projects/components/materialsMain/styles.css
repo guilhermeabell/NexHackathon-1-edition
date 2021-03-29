@@ -1,11 +1,3 @@
-#materials-page {
-  width: 100%;
-}
-
-#materials-page .materials-content .tutorials-media {
-  margin: 5vh 0;
-}
-
 .category-title {
   margin-left: 5vw;
   font-weight: 500;
@@ -14,7 +6,7 @@
 }
 
 .materials-content .materials-main {
-  margin: 3vh 0 5vh 5vw;
+  margin: 20px 0px 5vh 5vw;
   display: flex;
   align-items: center;
   gap: 4vh;
@@ -39,11 +31,6 @@
   width: 20vw;
 }
 
-.materials-content .materials-main .materials-item-container .lives-frames {
-  height: 31vh;
-  width: 30vw;
-}
-
 .materials-content .materials-main .materials-item-container .materials-item-title {
   max-width: 20vw;
   overflow: hidden;
@@ -59,7 +46,7 @@
 }
 
 @media (max-width: 750px) {
-  .materials-content .materials-main .materials-item-container img, iframe {
+  .materials-content .materials-main .materials-item-container img {
     width: 55vw;
   }
 
@@ -69,7 +56,7 @@
 }
 
 @media (max-width: 450px) {
-  .materials-content .materials-main .materials-item-container img, iframe  {
+  .materials-content .materials-main .materials-item-container img {
     width: 55vw;
   }
 
@@ -79,7 +66,7 @@
 }
 
 @media (max-width: 375px) {
-  .materials-content .materials-main .materials-item-container img, iframe {
+  .materials-content .materials-main .materials-item-container img {
     width: 55vw;
   }
 

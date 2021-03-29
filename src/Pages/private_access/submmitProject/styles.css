@@ -1,0 +1,208 @@
+#submitProject-page .submitProject-content {
+  width: 100%;
+  margin-top: 5vh;
+
+  display: flex;
+  gap: 10vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#submitProject-page .submitProject-content .submitProject-header {
+  width: 65%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+#submitProject-page .submitProject-content .submitProject-header .submitProject-backButton:hover {
+  transition: 0.2s;
+  cursor: pointer;
+  filter: opacity(70%);
+}
+
+#submitProject-page .submitProject-content .submitProject-header .submitProject-text {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1.7rem;
+
+  display: flex;
+  align-items: center;
+}
+
+#submitProject-page .submitProject-content .submitProject-form {
+  width: 50%;
+  margin: 0 0 10vh 0;
+}
+
+#submitProject-page .submitProject-content .submitProject-form .submitProject-teamInfo p {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+
+#submitProject-page .submitProject-content .submitProject-form form .submitProject-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#submitProject-page .submitProject-content .submitProject-form form .submitProject-field span {
+  margin: 0 0 5px 10px;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+#submitProject-page .submitProject-content .submitProject-form form .submitProject-field p {
+  margin: 3vh 0;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+#submitProject-page .submitProject-content .submitProject-form form .submitProject-field b {
+  color: var(--tertiary-color);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+#submitProject-page .submitProject-content .submitProject-form form .submitProject-field {
+  margin: 3vh 0;
+}
+
+#submitProject-page .submitProject-content .submitProject-form form .submitProject-field input {
+  width: 100%;
+
+  background: var(--quarternary-color);
+  border-radius: 10px;
+  border: 0;
+  padding: 12px 14px;
+  font-size: 16px;
+  color: #2e2e2e;
+  outline: 0;
+}
+
+#submitProject-page .submitProject-content .submitProject-form form .submitProject-field textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  resize: vertical;
+  min-height: 140px;
+  background: var(--quarternary-color);
+  border-radius: 10px;
+  border: 0;
+  padding: 12px 14px;
+  font-size: 16px;
+  color: #2e2e2e;
+  outline: 0;
+}
+
+#submitProject-page .submitProject-content .submitProject-form form .submitProject-field .submitProject-field-input {
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+
+#submitProject-page .submitProject-content .submitProject-form form .form-submitButton {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+#submitProject-page .submitProject-content .submitProject-form form .form-submitButton button {
+  width: 65%;
+  background: var(--primary-color);
+  border-radius: 10px;
+  border: 0;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+  outline: 0;
+  transition: 0.2s;
+}
+
+#submitProject-page .submitProject-content .submitProject-form form .form-submitButton button:hover {
+  background: var(--primary-dark-color);
+  cursor: pointer;
+}
+
+#submitProject-page .submitProject-content .submitProject-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#submitProject-page .submitProject-content .submitProject-footer p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-color);
+}
+
+#submitProject-page .submitProject-content .submitProject-footer a {
+  margin-left: 5px;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+#submitProject-page .submitProject-content .submitProject-footer a:hover {
+  filter: opacity(70%);
+}
+
+@media (max-width: 600px) {
+
+  #submitProject-page .submitProject-content .submitProject-header {
+    width: 90%;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  #submitProject-page .submitProject-content .submitProject-form {
+    width: 80%;
+  }
+
+  #submitProject-page .submitProject-content .submitProject-form form .form-submitButton a {
+    width: 100%;
+  }
+
+  #submitProject-page .submitProject-content .submitProject-form form .form-submitButton button {
+    width: 100%;
+  }
+
+  #submitProject-page .submitProject-content .submitProject-footer p {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--text-color);
+  }
+  
+  #submitProject-page .submitProject-content .submitProject-footer a {
+    margin-left: 5px;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 300px) {
+  #submitProject-page .submitProject-content .submitProject-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+

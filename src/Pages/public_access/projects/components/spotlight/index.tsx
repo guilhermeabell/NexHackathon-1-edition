@@ -9,7 +9,7 @@ const MaterialsPage = () => {
       <div className="spotlight" style={{
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundImage: `url(https://i.imgur.com/nRj4xUw.jpeg)`
+        backgroundImage: `url(https://i.imgur.com/dkaVHnb.jpeg)`
       }}>
         <div className="spotlight-main">
           <div className="spotlight-info">
@@ -27,8 +27,8 @@ const MaterialsPage = () => {
           </div>
 
           <div className="spotlight-title">
-              <p className="title">Materiais de apoio</p>
-              <p className="description">Veja os materiais de apoio que preparamos para você!</p>
+              <p className="title">Projetos participantes</p>
+              <p className="description">Veja os projetos dos participantes!</p>
           </div>
         </div>
 

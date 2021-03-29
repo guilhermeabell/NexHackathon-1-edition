@@ -12,6 +12,7 @@ import BusinessIcon from '../../assets/Home/cardIcons/business.svg'
 import WaveSection1 from '../../assets/Home/waves/waveSection1.svg'
 
 import './styles.css'
+import { Link } from 'react-router-dom'
 
 const ThemesSectionComponent = () => {
     return (
@@ -47,8 +48,25 @@ const ThemesSectionComponent = () => {
                     </div>
 
                 </div>
-            </div>
 
+                <div className="section2-buttons">
+                    <Link 	                
+                        to={{ pathname: 'http://3.228.101.223:3333/uploads/nexplay.pdf'}} 	
+                        target="_blank" 	
+                    >
+                        <div className="themesButton">
+                            <p>Acessar desafios</p>
+                        </div>
+                    </Link>
+                    <Link 	                
+                        to="/projects"		
+                    >
+                        <div className="themesButton">
+                            <p>Ver projetos</p>
+                        </div>
+                    </Link> 
+                </div>
+            </div>
         </div>
         <img className="InfoSectionWave" src={WaveSection1} />
         </>

@@ -70,7 +70,7 @@
 
 @media (max-width: 450px) {
   .materials-content .materials-main .materials-item-container img, iframe  {
-    width: 55vw;
+    width: 91vw !important;
   }
 
   .materials-content .materials-main .materials-item-container .materials-item-title {
@@ -80,7 +80,7 @@
 
 @media (max-width: 375px) {
   .materials-content .materials-main .materials-item-container img, iframe {
-    width: 55vw;
+    width: 91vw !important;
   }
 
   .materials-content .materials-main .materials-item-container .materials-item-title {

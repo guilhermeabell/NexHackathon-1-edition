@@ -1,7 +1,7 @@
 .homePublic-section2 {
   width: 100%;
   margin-top: 27vh;
-  background: var(--secondary-color);
+  background: #15AB89;
 
   display: flex;
   justify-content: center;
@@ -65,12 +65,49 @@
   text-transform: uppercase;
 }
 
+.homePublic-section2 .section2-content .section2-buttons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homePublic-section2 .section2-content .section2-buttons a:nth-child(1) {
+  border-width: 3px;
+  border-style: solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(120deg, #0E5159, #07F9A2);
+  padding: 12px 14px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.homePublic-section2 .section2-content .section2-buttons a:nth-child(2) {
+  background: var(--text-color);
+  padding: 12px 14px;
+  border-radius: 1px;
+  transition: 0.2s;
+}
+
+.homePublic-section2 .section2-content .section2-buttons .themesButton p {
+  color: var(--background-color);
+  font-weight: 500;
+}
+
+.homePublic-section2 .section2-content .section2-buttons a:nth-child(1) p {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+
+.homePublic-section2 .section2-content .section2-buttons {
+  display: flex;
+  gap: 2vw;
+}
+
 .InfoSectionWave {
   width: 100%;
   margin-top: -1px;
 }
-
-
 
 @media (max-width: 1000px) {
 
@@ -129,6 +166,13 @@
     justify-content: center;
     align-items: center;
     transition: 0.2s;
+  }
+
+  .homePublic-section2 .section2-content .section2-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vh;
+    gap: 4vh;
   }
 
   .InfoSectionWave {

@@ -13,11 +13,8 @@ const timelineSpace = {
     marginLeft: "4vw",  // Max-92%
 } as React.CSSProperties;
 
-const data = new Date()
-const formatData = ("0" + data.getDate()).substr(-2) + "/" 
-+ ("0" + (data.getMonth() + 1)).substr(-2) + "/" + data.getFullYear()
 
-var value = "37%"
+var value = "67%"
 
 const timelineStage = {
     width: `${value}`,  // Max-92%
