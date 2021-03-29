@@ -7,7 +7,6 @@ import { IoIosArrowRoundBack } from 'react-icons/io'
 
 import './styles.css'
 
-
 const LoginPage = () => {
 
     const alert = useAlert()
