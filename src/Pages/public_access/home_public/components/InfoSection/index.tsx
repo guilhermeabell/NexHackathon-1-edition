@@ -1,17 +1,18 @@
 import React from 'react'
 
+import Montain from '../../assets/Home/Montain.png'
+
 import './styles.css'
+
 
 const InfoSectionComponent = () => {
     return (
         <div className="homePublic-section1">
             <div className="section1-content">
                 <div className="section1-title">
-                    <h1>
-                        <span>Criatividade.</span>
-                        <span>Conhecimento.</span>
-                        <span>Carreira.</span>
-                    </h1>
+                </div>
+                <div className="section-img">
+                    <img src={Montain} />
                 </div>
 
                 <div className="section1-info">
