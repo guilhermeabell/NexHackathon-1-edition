@@ -46,7 +46,6 @@ const ThemesSectionComponent = () => {
 
                         <p className="section2-card-title">Profissão</p>
                     </div>
-
                 </div>
 
                 <div className="section2-buttons">
